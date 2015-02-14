@@ -6,6 +6,17 @@ Remove the hassle in writing npm libraries in a transpiled language ([6to5], [Co
 
 With this technique, there's no need to maintain a full new directory of source files... just one pre-built `dist/` file.
 
+### Files
+
+```
+.
+├─ lib
+│  └─ index.coffee    - actual entry point
+├─ dist
+│  └─ js2coffee.js    - built package
+└─ index.js           - entry point (used in development)
+```
+
 ### Install the requisite packages
 
 ```sh
@@ -13,11 +24,11 @@ npm install --save-dev browserify coffeeify
 ```
 
 ### Make index.js
-Make your main `index.js` like this for development:
+Put your *actual* main entry point as, say, `./lib/index.coffee`. Then create an entry point `./index.js` like this for development:
 
 ```js
 require('coffee-script/register');
-require('./js2coffee.coffee');
+require('./lib/index');
 ```
 
 ### Set up compilation
@@ -30,6 +41,8 @@ Set up a compliation script in the prepublish hook:
   }
 }
 ```
+
+Options used:
 
 * `-s` - standalone (uses a UMD wrapper)
 * `--bare` - don't stub node builtins
@@ -50,7 +63,6 @@ Set `main` in `package.json` to the precompiled version:
 * Doing `require('js2coffee')` will point to the `dist/` version
 * Doing `require('../index')` in your tests will point to the source version
 * You can also do `require('js2coffee/index')` from other packages
-
 
 [6to5]: http://6to5.org/
 [CoffeeScript]: http://coffeescript.org/
