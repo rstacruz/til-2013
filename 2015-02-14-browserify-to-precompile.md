@@ -26,13 +26,13 @@ Set up a compliation script in the prepublish hook:
 ```js
 {
   "scripts": {
-    "prepublish": "browserify -s js2coffee -x fs -t [ coffeeify -x coffee ] ./js2coffee.coffee > dist/js2coffee.js"
+    "prepublish": "browserify -s js2coffee --bare -t [ coffeeify -x coffee ] ./js2coffee.coffee > dist/js2coffee.js"
   }
 }
 ```
 
 * `-s` - standalone (uses a UMD wrapper)
-* `-x` - don't stub these external modules
+* `--bare` - don't stub node builtins
 * `-t` - transform
 
 ### Point the package
