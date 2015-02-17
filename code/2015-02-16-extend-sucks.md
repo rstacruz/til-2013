@@ -1,5 +1,6 @@
 ---
 title: @extend sucks
+tags: [CSS]
 ---
 
 Using `@extend` in CSS preprocessors really suck... so use mixins instead. Consider this example:

@@ -1,5 +1,6 @@
 ---
 title: Use Browserify to precompile npm libraries
+tags: [JavaScript]
 ---
 
 Remove the hassle in writing npm libraries in a transpiled language ([6to5], [CoffeeScript], etc) by using browserify.
