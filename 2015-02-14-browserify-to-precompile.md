@@ -3,9 +3,9 @@ title: Use Browserify to precompile npm libraries
 tags: [JavaScript]
 ---
 
-Remove the hassle in writing npm libraries in a transpiled language ([6to5], [CoffeeScript], etc) by using browserify.
+Remove the hassle in writing npm libraries in a transpiled language ([babeljs], [CoffeeScript], etc) by using browserify.
 
-With this technique, there's no need to maintain a full new directory of source files... just one pre-built `dist/` file.
+With this technique, there's no need to maintain a full new directory of compiled files... just one pre-built `dist/` file.
 
 ### Files
 
@@ -65,6 +65,6 @@ Set `main` in `package.json` to the precompiled version:
 * Doing `require('../index')` in your tests will point to the source version
 * You can also do `require('js2coffee/index')` from other packages
 
-[6to5]: http://6to5.org/
+[babeljs]: http://babeljs.io/
 [CoffeeScript]: http://coffeescript.org/
 [browserify]: https://github.com/substack/node-browserify
