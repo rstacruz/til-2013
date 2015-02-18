@@ -1,5 +1,5 @@
 ---
-title: JavaScript ORMS suck
+title: JavaScript ORM's suck
 tags: [JavaScript]
 ---
 
