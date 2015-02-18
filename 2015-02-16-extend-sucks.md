@@ -1,5 +1,5 @@
 ---
-title: @extend sucks
+title: "@extend sucks"
 tags: [CSS]
 ---
 
