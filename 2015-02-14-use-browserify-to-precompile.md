@@ -38,10 +38,15 @@ Set up a compliation script in the prepublish hook:
 ```js
 {
   "scripts": {
-    "prepublish": "browserify -s js2coffee --bare -t [ coffeeify -x coffee ] ./js2coffee.coffee > dist/js2coffee.js"
+    "prepublish": "browserify -s js2coffee --bare -t [ coffeeify -x .coffee ] ./js2coffee.coffee > dist/js2coffee.js"
   }
 }
 ```
+
+You probably will want to use:
+
+* [coffeeify](https://github.com/jnordberg/coffeeify) for CoffeeScript (`-t [ coffeeify -x .coffee ]`)
+* [babelify](https://github.com/babel/babelify) for ES6/React (`-t [ babelify ]`)
 
 Options used:
 

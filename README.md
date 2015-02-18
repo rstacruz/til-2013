@@ -6,4 +6,4 @@ Got comments? Suggestions? Corrections? [I'd love to hear from you.](https://git
 
 ## Thanks
 
-:copyright: 2013+ Rico Sta. Cruz, licensed [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
+© 2013+ Rico Sta. Cruz, licensed [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
