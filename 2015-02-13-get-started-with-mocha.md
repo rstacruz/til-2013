@@ -111,7 +111,7 @@ expect(list).to.have.length(3);
 expect(list).to.have.length.gt(0);
 ```
 
-See: http://chaijs.com/api/bdd/ â€” other `expect()`ations
+See: http://chaijs.com/api/bdd/ for other `expect()`ations
 
 ## Further reading
 
