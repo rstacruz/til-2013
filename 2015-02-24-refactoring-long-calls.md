@@ -2,7 +2,7 @@
 title: Refactoring long calls
 ---
 
-Given this piece of code in a view:
+Consider seeing this code in a view. It seems a little long, and may be a candidate for refactoring.
 
 ```ruby
 = event.ticket.custom_message.to_s.strip.gsub("[URL]", site_url)
