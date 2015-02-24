@@ -8,6 +8,7 @@ Consider seeing this code in a view. It seems a little long, and may be a candid
 = event.ticket.custom_message.to_s.strip.gsub("[URL]", site_url)
 ```
 
+### Attempt #1
 One way to rewrite this is to make it as short as possible, ie, store all the complexity in a helper (`a_helper(object)`).
 
 ```ruby
@@ -23,6 +24,7 @@ In my opinion, this isn't really good because:
  * The complexity was simply moved from one part to another, instead of broken down into more easily-understandable chunks.
  * The method `custom_message_for` is too tightly coupled. To test this, you will need to create a mock event, with a mock ticket, with a mock custom message.
 
+### Attempt #2
 I would prefer this to be written as:
 
 ```ruby
