@@ -70,6 +70,14 @@ Set `main` in `package.json` to the precompiled version:
 * Doing `require('../index')` in your tests will point to the source version
 * You can also do `require('js2coffee/index')` from other packages
 
+### Babel
+
+For [babeljs], I recommend using `--loose` for libraries that will target legacy IE.
+
+```
+-t [ babelify --loose all ]
+```
+
 [babeljs]: http://babeljs.io/
 [CoffeeScript]: http://coffeescript.org/
 [browserify]: https://github.com/substack/node-browserify
