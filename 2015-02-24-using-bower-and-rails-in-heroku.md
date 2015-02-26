@@ -5,6 +5,15 @@ tags: [Ruby]
 
 This seems pretty easy until you realize that Bower (a Node.js package) is not available in the Heroku Ruby build pack.
 
+### bower-rails
+The gem [bower-rails](http://rubygems.org/gems/bower-rails) allows for easy Bower integration into Rails, but it won't work out of the box in Heroku.
+
+### Adding execjs
+The [Ruby buildpack](https://github.com/heroku/heroku-buildpack-ruby) has a magic behavior where if it detects the `execjs` gem, it will [bundle Node.js](https://github.com/heroku/heroku-buildpack-ruby#assets) with the build. This should make it work.
+
+    gem 'execjs'
+
+### Alternative: use multiple build packs
 Use the [Multi buildpack](https://github.com/ddollar/heroku-buildpack-multi) like so:
 
     heroku config:add BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
