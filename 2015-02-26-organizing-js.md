@@ -3,7 +3,7 @@ title: Organizing JavaScript for simple sites
 tags: [JavaScript]
 ---
 
-Some sites don't need big JavaScript architectures, only a bit of little behaviors that will affect certain types of elements.
+Some sites don't need big JavaScript architectures, only bits of small behaviors that will affect certain elements.
 
 I prefer to put them into a directory called `behaviors/` where each file is a self-contained piece of code that only affects *one* element type. They should also be independent of each other, and therefore, order-agnostic.
 
@@ -23,24 +23,21 @@ Name each one of the files according to the `class` (or `role`) it affects.
 ```
 
 ```js
-// js/behaviors/select2.js
-// affects `.select2`
+// select2.js -- affects `.select2`
 $(function () {
   $(".select2").select2();
 })
 ```
 
 ```js
-// js/behaviors/wow.js
-// affects `.wow`
+// wow.js -- affects `.wow`
 $(function () {
   new WOW().init();
 })
 ```
 
 ```js
-// js/tooltips.js
-// affects `.tooltip`
+// tooltips.js -- affects `.tooltip`
 $(document).on('hover', '.tooltip', function () {
   ...
 });
