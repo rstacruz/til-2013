@@ -7,10 +7,23 @@ Some sites don't need big JavaScript architectures, only a bit of little behavio
 
 I prefer to put them into a directory called `behaviors/` where each file is a self-contained piece of code that only affects *one* element type. They should also be independent of each other, and therefore, order-agnostic.
 
+Name each one of the files according to the `class` (or `role`) it affects.
+
 ### Examples
 
 ```js
-// js/behaviors/selecttrap.js
+...
+└── javascripts/
+    └── behaviors/
+        ├── colorpicker.js
+        ├── modal.js
+        ├── select2.js
+        ├── tooltip.js
+        └── wow.js
+```
+
+```js
+// js/behaviors/select2.js
 // affects `.select2`
 $(function () {
   $(".select2").select2();
