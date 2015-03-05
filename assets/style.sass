@@ -5,6 +5,7 @@
 @import url('//brick.a.ssl.fastly.net/Fira+Sans:700')
 @import url('//brick.a.ssl.fastly.net/Roboto:400,400i,700')
 @import 'normalize'
+@import 'utils'
 
 $text: #555
 $black: #020202
@@ -16,29 +17,6 @@ $accent: dodgerblue
 /*
  * fonts
  */
-
-= kernliga
-  font-size-adjust: none
-  // don't display digraphs in languages that don't support it
-  -webkit-font-language-override: normal
-  font-language-override: normal
-
-  // use font-defined kerning info
-  -webkit-font-kerning: auto
-  font-kerning: auto
-
-  // opentype options: kerning, ligatures, horiz ligatures, discretionary ligatures, contextual swash
-  // http://en.wikipedia.org/wiki/List_of_typographic_features
-  -webkit-font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh"
-  font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh"
-
-  // allow browser to auto-infer missing glyphs
-  font-synthesis: weight style
-
-  // swashes on first letters
-  // &:first-letter
-  //   font-feature-settings: "kern", "swsh"
-  //   -webkit-font-feature-settings: "kern", "swsh"
 
 = body-font
   font-family: 'Roboto', sans-serif
@@ -59,9 +37,7 @@ $accent: dodgerblue
  */
 
 *
-  text-rendering: optimizeLegibility
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
+  +antialias
 
 html
   font-size: 17px
@@ -118,8 +94,11 @@ html, input, textarea, td, th
     text-align: center
     margin-bottom: 0
     font-size: 2.8em
-    line-height: 1.3
+    line-height: 1.2
     +headline-font
+    width: 80%
+    margin-left: auto
+    margin-right: auto
 
     @media (max-width: 768px)
       font-size: 2em
@@ -142,7 +121,7 @@ html, input, textarea, td, th
   .meta a:visited
     color: $gray
 
-  a, a:visited
+  a, a:visited, a:focus, a:hover
     color: $black
     text-decoration: none
     box-shadow: none
@@ -155,19 +134,31 @@ a, a:visited
   color: $text
   text-decoration: none
   box-shadow: inset 0 -1px rgba(#888, 0.3)
+  transition: all 100ms linear
+
+a:focus, a:hover
+  box-shadow: inset 0 -1px rgba(mix($accent, #888, 50%), 0.5)
+  color: $black
+
+strong, b
+  &, a, a:visited
+    color: $black
 
 h3, p, ul, ol
   margin: 1.5em 0
 
 h2
-  color: $black
+  &, a, a:visited
+    color: $black
 
 h3
   font-family: 'fira sans', sans-serif
   font-weight: 700
   margin-top: 2em
-  color: $black
   font-size: 1.1em
+
+  &, a, a:visited
+    color: $black
 
   @media (max-width: 768px)
     margin-top: 1.5em
@@ -245,11 +236,13 @@ pre + pre
   .container
     padding: 15px 20px
     font-size: 0.9em
-    color: $gray
+    color: rgba($gray, 0.6)
     border-bottom: solid 1px #eee
 
   em
     +headline-font
+    font-size: 1.1em
+    color: $text
 
 /*
  * icon
