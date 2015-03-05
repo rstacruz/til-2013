@@ -10,11 +10,13 @@ Consider seeing this code in a view. It seems a little long, and may be a candid
 ```
 
 ### Attempt #1
-One way to rewrite this is to make it as short as possible, ie, store all the complexity in a helper (`a_helper(object)`).
+One way to rewrite this is to make it as short as possible, ie, store all the complexity in a helper function.
 
 ```ruby
 = custom_message_for(event)
+```
 
+```ruby
 def custom_message_for(event)
   event.ticket.custom_message.to_s.strip.gsub("[URL]", site_url)
 end
@@ -30,7 +32,9 @@ I would prefer this to be written as:
 
 ```ruby
 = format_message(event.ticket.custom_message)
+```
 
+```ruby
 def format_message(message)
   message.to_s.strip.gsub("[URL]", site_url)
 end
