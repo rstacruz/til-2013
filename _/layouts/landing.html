@@ -9,12 +9,12 @@
         <div class='post-item'>
           <div class='post-headline'>
             <h1>
-              <a href="{{ post.url }}">
+              <a href="{{ site.url }}{{ post.url }}">
                 {{ post.title }}
               </a>
             </h1>
             <h5 class='meta'>
-              <a href="{{ post.url }}">
+              <a href="{{ site.url }}{{ post.url }}">
                 <span class='author'>{{ site.meta.author }}</span>
                 &middot;
                 <span class='date'>{{ post.date | date_to_string }}</span>
