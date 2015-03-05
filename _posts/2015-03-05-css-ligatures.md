@@ -13,7 +13,8 @@ Headings can benefit from nice ligatures. Use the [font-feature-settings](https:
   /* use font-defined kerning info */
   font-kerning: auto;
 
-  /* opentype options: kerning, ligatures, horiz ligatures, discretionary ligatures, contextual swash */
+  /* opentype options: kerning, ligatures, horiz ligatures,
+   * discretionary ligatures, contextual swash */
   font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh";
 
   /* allow browser to auto-infer missing glyphs */
