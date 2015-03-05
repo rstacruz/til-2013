@@ -4,6 +4,7 @@
 @import url('//brick.a.ssl.fastly.net/EB+Garamond:400i')
 @import url('//brick.a.ssl.fastly.net/Fira+Sans:700')
 @import url('//brick.a.ssl.fastly.net/Roboto:400,400i,700')
+@import url('//fonts.googleapis.com/css?family=Fira+Mono')
 @import 'normalize'
 @import 'utils'
 
@@ -29,8 +30,10 @@ $accent: dodgerblue
   +kernliga
 
 = mono-font
-  font-family: menlo, monospace
+  font-family: 'fira mono', monospace
   font-weight: 400
+  letter-spacing: -0.5px
+  +no-antialias
 
 /*
  * resets
@@ -183,10 +186,9 @@ code
 
 pre > code
   +mono-font
-  display: block
-  line-height: 1.5em
   font-size: 0.8em
   color: $text
+  padding-right: 20px
   // box-shadow: inset 1px 1px rgba(black, 0.06)
 
 pre
@@ -194,6 +196,7 @@ pre
   border-radius: 4px
   background: #fafafa
   margin: 2.2em -50px
+  line-height: 1.25em
 
   @media (max-width: 768px)
     padding: 20px
