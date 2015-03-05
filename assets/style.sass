@@ -41,8 +41,8 @@ $accent: dodgerblue
   -moz-osx-font-smoothing: grayscale
 
 html
-  font-size: 18px
-  line-height: 1.66
+  font-size: 17px
+  line-height: 1.7
   background: $bg
   color: $text
 
@@ -54,7 +54,7 @@ html, input, textarea, td, th
  */
 
 .post-item
-  max-width: 640px
+  max-width: 620px
   margin: 0 auto
 
 .post-list
@@ -81,7 +81,7 @@ html, input, textarea, td, th
   h1
     text-align: center
     margin-bottom: 0
-    font-size: 2.7em
+    font-size: 2.8em
     line-height: 1.3
     +headline-font
 
@@ -89,11 +89,15 @@ html, input, textarea, td, th
     display: block
     text-align: center
     margin: 0
-    margin-top: 0.5em
+    margin-top: 1em
     font-weight: normal
     text-transform: uppercase
-    font-size: 0.9em
+    font-size: 0.85em
     letter-spacing: 1px
+
+  .meta .author,
+  .meta .date
+    margin: 0 5px
 
   .meta a,
   .meta a:visited
@@ -111,7 +115,7 @@ html, input, textarea, td, th
 a, a:visited
   color: $text
   text-decoration: none
-  box-shadow: inset 0 -1px rgba($line, 0.5)
+  box-shadow: inset 0 -1px rgba(#888, 0.3)
 
 h3, p, ul, ol
   margin: 1.5em 0
@@ -122,7 +126,7 @@ h2
 h3
   font-family: 'fira sans', sans-serif
   font-weight: 700
-  margin-top: 2.2em
+  margin-top: 2em
   color: $black
   font-size: 1.1em
 
