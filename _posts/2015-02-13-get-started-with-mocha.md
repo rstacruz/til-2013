@@ -5,6 +5,7 @@ tags: [JavaScript]
 
 Here's the condensed 1-minute guide to setting up tests on a Node.js project.
 
+### Start with a package
 Make a `package.json` file if you don't have one yet:
 
 ```sh
@@ -19,7 +20,7 @@ Install your weapons:
 npm install --save-dev mocha chai
 ```
 
-## Write tests
+### Write tests
 
 Make your first test file `test/my_test.js`:
 
@@ -43,7 +44,7 @@ Update your `package.json` to use mocha:
   },
 ```
 
-## Run tests
+### Run tests
 
 Run tests by typing `npm test`:
 
@@ -68,7 +69,7 @@ Run tests by typing `npm test`:
 
 Now go write tests that will pass!
 
-## Learn a bit more mocha
+### Learn a bit more mocha
 
 ```js
 describe('test suite', function () {
@@ -95,7 +96,7 @@ describe('test suite', function () {
 
 Also see http://mochajs.org/ - read up on Mocha's API
 
-## More on Chai
+### More on Chai
 
 ```js
 expect(3).to.eql(2);
@@ -113,7 +114,7 @@ expect(list).to.have.length.gt(0);
 
 See: http://chaijs.com/api/bdd/ for other `expect()`ations
 
-## Further reading
+### Further reading
 
 - http://sinonjs.org/ - use Sinon for mocks
 

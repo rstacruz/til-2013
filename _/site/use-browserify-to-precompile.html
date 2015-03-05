@@ -1,0 +1,162 @@
+<!doctype html>
+<!--
+
+    follow me on twitter.
+
+     ,-.          .                      
+    /,-.\ ,-. ,-. |- ,-. ,-. ,-. . . ,_, 
+    |,-|| |   `-. |  ,-| |   |   | |  /  
+    \`-^/ '   `-' `' `-^ `-' '   `-^ '"' 
+     `-'                                 
+
+-->
+<html class='no-js ' lang='en'>
+<head>
+  <meta charset='utf-8'>
+
+  
+  <title>Use Browserify to precompile npm libraries &mdash; Rico Sta. Cruz</title>
+  <meta content='Use Browserify to precompile npm libraries' property='og:title'>
+  <meta content='Use Browserify to precompile npm libraries' property='twitter:title'>
+  <meta content='article' property='og:type'>
+  
+
+  
+
+  
+  <link rel="canonical" href="/use-browserify-to-precompile.html">
+  <meta name="og:url" content="/use-browserify-to-precompile.html">
+  <link rel="prefetch" href="">
+  <link rel="prerender" href="">
+  
+
+  <meta content='Rico Sta. Cruz' property='og:site_name'>
+  <meta content='169204529787544' property='fb:app_id'>
+  <meta content='ricostacruz' property='fb:admins'>
+
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+  <link href='/favicon.png' rel='shortcut icon'>
+
+  <!-- <link rel="alternate" type="application/rss+xml" title="Rico Sta. Cruz" href="/atom.xml"> -->
+
+  <link href='assets/style.css' rel='stylesheet'>
+
+  <script>if(~location.hostname.indexOf("ricostacruz.com")){var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-20473929-1"]);_gaq.push(["_trackPageview"]);(function(){var ga=document.createElement("script");ga.async=true;ga.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga,s)})()}</script>
+
+</head>
+<body>
+<script>document.documentElement.className += ' loading';</script>
+
+
+<div class='post-list -single'>
+  <div class="post-item">
+    <div class="post-headline">
+      <h1>
+        <a href="/use-browserify-to-precompile.html" rel="bookmark" title="Use Browserify to precompile npm libraries">
+          Use Browserify to precompile npm libraries
+        </a>
+      </h1>
+      <h5 class='meta'>
+        <a href="/use-browserify-to-precompile.html" rel="bookmark" title="Use Browserify to precompile npm libraries">
+          <span class='author'>Rico Sta. Cruz</span>
+          &middot;
+          <span class='date'>February 14, 2015</span>
+        </a>
+      </h5>
+    </div>
+
+    <div class="post-content">
+      <p>Remove the hassle in writing npm libraries in a transpiled language (<a href="http://babeljs.io/">babeljs</a>, <a href="http://coffeescript.org/">CoffeeScript</a>, etc) by using browserify.</p>
+
+<p>With this technique, there’s no need to maintain a full new directory of compiled files… just one pre-built <code>dist/</code> file.</p>
+
+<h3 id="files">Files</h3>
+
+<pre><code>.
+├─ lib
+│  └─ index.coffee    - actual entry point
+├─ dist
+│  └─ js2coffee.js    - built package
+└─ index.js           - entry point (used in development)
+</code></pre>
+
+<h3 id="install-the-requisite-packages">Install the requisite packages</h3>
+
+<pre><code class="language-sh">npm install --save-dev browserify coffeeify
+</code></pre>
+
+<h3 id="make-indexjs">Make index.js</h3>
+<p>Put your <em>actual</em> main entry point as, say, <code>./lib/index.coffee</code>. Then create an entry point <code>./index.js</code> like this for development:</p>
+
+<pre><code class="language-js">require('coffee-script/register');
+require('./lib/index');
+</code></pre>
+
+<h3 id="set-up-compilation">Set up compilation</h3>
+<p>Set up a compliation script in the prepublish hook:</p>
+
+<pre><code class="language-js">{
+  "scripts": {
+    "prepublish": "browserify -s js2coffee --bare -t [ coffeeify -x .coffee ] ./js2coffee.coffee &gt; dist/js2coffee.js"
+  }
+}
+</code></pre>
+
+<p>You probably will want to use:</p>
+
+<ul>
+  <li><a href="https://github.com/jnordberg/coffeeify">coffeeify</a> for CoffeeScript (<code>-t [ coffeeify -x .coffee ]</code>)</li>
+  <li><a href="https://github.com/babel/babelify">babelify</a> for ES6/React (<code>-t [ babelify ]</code>)</li>
+</ul>
+
+<p>Options used:</p>
+
+<ul>
+  <li><code>-s</code> - standalone (uses a UMD wrapper)</li>
+  <li><code>--bare</code> - don’t stub node builtins</li>
+  <li><code>-t</code> - transform</li>
+</ul>
+
+<h3 id="point-the-package">Point the package</h3>
+<p>Set <code>main</code> in <code>package.json</code> to the precompiled version:</p>
+
+<pre><code class="language-js">{
+  "main": "dist/js2coffee.js"
+}
+</code></pre>
+
+<h3 id="all-done">All done</h3>
+
+<ul>
+  <li>Every time <code>npm publish</code> is called, the pre-built version (dist/js2coffee.js) gets built</li>
+  <li>Doing <code>require('js2coffee')</code> will point to the <code>dist/</code> version</li>
+  <li>Doing <code>require('../index')</code> in your tests will point to the source version</li>
+  <li>You can also do <code>require('js2coffee/index')</code> from other packages</li>
+</ul>
+
+<h3 id="babel">Babel</h3>
+
+<p>For <a href="http://babeljs.io/">babeljs</a>, I recommend using <code>--loose</code> for libraries that will target legacy IE.</p>
+
+<pre><code>-t [ babelify --loose all ]
+</code></pre>
+
+
+    </div>
+
+    <!--
+      <ul class="social-list">
+        <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/use-browserify-to-precompile.html" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+        <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/use-browserify-to-precompile.html" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+        <li class="googleplus"><a href="https://plus.google.com/share?url=/use-browserify-to-precompile.html" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+      </ul>
+    -->
+  </div>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
+

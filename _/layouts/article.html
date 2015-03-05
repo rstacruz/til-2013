@@ -1,0 +1,38 @@
+---
+---
+
+{% include head.html %}
+{% include body.html %}
+
+<div class='post-list -single'>
+  <div class="post-item">
+    <div class="post-headline">
+      <h1>
+        <a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">
+          {{ page.title }}
+        </a>
+      </h1>
+      <h5 class='meta'>
+        <a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">
+          <span class='author'>{{ site.meta.author }}</span>
+          &middot;
+          <span class='date'>{{ page.date | date: "%B %e, %Y" }}</span>
+        </a>
+      </h5>
+    </div>
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+    <!--
+      <ul class="social-list">
+        <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+        <li class="twitter"><a href="https://twitter.com/intent/tweet?text={{ site.url }}{{ page.url }}" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+        <li class="googleplus"><a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+      </ul>
+    -->
+  </div>
+</div>
+
+{% include end.html %}

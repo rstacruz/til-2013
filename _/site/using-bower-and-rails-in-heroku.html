@@ -1,0 +1,114 @@
+<!doctype html>
+<!--
+
+    follow me on twitter.
+
+     ,-.          .                      
+    /,-.\ ,-. ,-. |- ,-. ,-. ,-. . . ,_, 
+    |,-|| |   `-. |  ,-| |   |   | |  /  
+    \`-^/ '   `-' `' `-^ `-' '   `-^ '"' 
+     `-'                                 
+
+-->
+<html class='no-js ' lang='en'>
+<head>
+  <meta charset='utf-8'>
+
+  
+  <title>Using Bower and Rails in Heroku &mdash; Rico Sta. Cruz</title>
+  <meta content='Using Bower and Rails in Heroku' property='og:title'>
+  <meta content='Using Bower and Rails in Heroku' property='twitter:title'>
+  <meta content='article' property='og:type'>
+  
+
+  
+
+  
+  <link rel="canonical" href="/using-bower-and-rails-in-heroku.html">
+  <meta name="og:url" content="/using-bower-and-rails-in-heroku.html">
+  <link rel="prefetch" href="">
+  <link rel="prerender" href="">
+  
+
+  <meta content='Rico Sta. Cruz' property='og:site_name'>
+  <meta content='169204529787544' property='fb:app_id'>
+  <meta content='ricostacruz' property='fb:admins'>
+
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+  <link href='/favicon.png' rel='shortcut icon'>
+
+  <!-- <link rel="alternate" type="application/rss+xml" title="Rico Sta. Cruz" href="/atom.xml"> -->
+
+  <link href='assets/style.css' rel='stylesheet'>
+
+  <script>if(~location.hostname.indexOf("ricostacruz.com")){var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-20473929-1"]);_gaq.push(["_trackPageview"]);(function(){var ga=document.createElement("script");ga.async=true;ga.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga,s)})()}</script>
+
+</head>
+<body>
+<script>document.documentElement.className += ' loading';</script>
+
+
+<div class='post-list -single'>
+  <div class="post-item">
+    <div class="post-headline">
+      <h1>
+        <a href="/using-bower-and-rails-in-heroku.html" rel="bookmark" title="Using Bower and Rails in Heroku">
+          Using Bower and Rails in Heroku
+        </a>
+      </h1>
+      <h5 class='meta'>
+        <a href="/using-bower-and-rails-in-heroku.html" rel="bookmark" title="Using Bower and Rails in Heroku">
+          <span class='author'>Rico Sta. Cruz</span>
+          &middot;
+          <span class='date'>February 24, 2015</span>
+        </a>
+      </h5>
+    </div>
+
+    <div class="post-content">
+      <p>This seems pretty easy until you realize that Bower (a Node.js package) is not available in the Heroku Ruby build pack.</p>
+
+<h3 id="bower-rails">bower-rails</h3>
+<p>The gem <a href="http://rubygems.org/gems/bower-rails">bower-rails</a> allows for easy Bower integration into Rails, but it won’t work out of the box in Heroku.</p>
+
+<h3 id="adding-execjs">Adding execjs</h3>
+<p>The <a href="https://github.com/heroku/heroku-buildpack-ruby">Ruby buildpack</a> has a magic behavior where if it detects the <code>execjs</code> gem, it will <a href="https://github.com/heroku/heroku-buildpack-ruby#assets">bundle Node.js</a> with the build. This should make it work.</p>
+
+<pre><code>gem 'execjs'
+</code></pre>
+
+<h3 id="alternative-use-multiple-build-packs">Alternative: use multiple build packs</h3>
+<p>Use the <a href="https://github.com/ddollar/heroku-buildpack-multi">Multi buildpack</a> like so:</p>
+
+<pre><code>heroku config:add BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
+</code></pre>
+
+<p>To use both Ruby and Node.js buildpacks:</p>
+
+<pre><code># vim .buildpacks
+https://github.com/heroku/heroku-buildpack-nodejs.git#v60
+https://github.com/heroku/heroku-buildpack-ruby.git#v127
+</code></pre>
+
+<p>I recommend locking the versions (<code>#v60</code>) to ensure that you get versions that interoperate together (in case one upgrades and breaks interoperability).</p>
+
+<p>The last pack defined (Ruby in this case) is the “main” one that defines the process types (web, console, etc).</p>
+
+    </div>
+
+    <!--
+      <ul class="social-list">
+        <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/using-bower-and-rails-in-heroku.html" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+        <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/using-bower-and-rails-in-heroku.html" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+        <li class="googleplus"><a href="https://plus.google.com/share?url=/using-bower-and-rails-in-heroku.html" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+      </ul>
+    -->
+  </div>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
+

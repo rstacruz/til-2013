@@ -1,0 +1,174 @@
+---
+---
+
+@import url('//brick.a.ssl.fastly.net/EB+Garamond:400,400i')
+@import url('//brick.a.ssl.fastly.net/Karla:400,700')
+@import 'normalize'
+
+$text: #222
+$black: #020202
+$bg: #fff
+$line: #adf
+$gray: #808890
+$accent: dodgerblue
+
+/*
+ * fonts
+ */
+
+= body-font
+  font-family: 'Karla', sans-serif
+  font-weight: 400
+
+= headline-font
+  font-family: 'eb garamond', serif
+  font-weight: 400
+  font-style: italic
+  font-feature-settings: "kern", "liga", "dlig"
+
+= mono-font
+  font-family: menlo, monospace
+  font-weight: 400
+
+/*
+ * resets
+ */
+
+*
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+html
+  font-size: 19px
+  line-height: 1.6
+  background: $bg
+  color: $text
+
+html, input, textarea, td, th
+  +body-font
+
+/*
+ * each post
+ */
+
+.post-item
+  max-width: 600px
+  margin: 0 auto
+
+.post-list
+  margin: 40px auto
+  padding: 20px
+
+.post-list > .post-item:not(:first-child)
+  &:before
+    content: ''
+    display: block
+    width: 150px
+    height: 1px
+    background: $line
+    margin: 7em auto
+
+/*
+ * headline
+ */
+
+.post-headline
+  &
+    margin: 20px auto 40px auto
+
+  h1
+    text-align: center
+    margin-bottom: 0
+    font-size: 2.7em
+    line-height: 1.3
+    +headline-font
+
+  .meta
+    display: block
+    text-align: center
+    margin: 0
+    font-weight: normal
+    text-transform: uppercase
+    font-size: 0.9em
+    letter-spacing: 1px
+
+  .meta a,
+  .meta a:visited
+    color: $gray
+
+  a, a:visited
+    color: $black
+    text-decoration: none
+    box-shadow: none
+
+/*
+ * stuff
+ */
+
+a, a:visited
+  color: $text
+  text-decoration: none
+  box-shadow: inset 0 -1px rgba($line, 0.5)
+
+h3, p, ul, ol
+  margin: 1.5em 0
+
+h2
+  color: $black
+
+h3
+  margin-top: 2.5em
+  color: $black
+  font-size: 1.2em
+
+h3 + p
+  margin-top: -1.6em
+
+code
+  +mono-font
+  font-size: 0.9em
+
+/*
+ * code
+ */
+
+pre > code
+  +mono-font
+  display: block
+  background: #fafafa
+  padding: 20px 50px
+  border-radius: 4px
+  line-height: 1.5em
+  font-size: 0.75em
+  color: $text
+  // box-shadow: inset 1px 1px rgba(black, 0.06)
+
+pre
+  margin-left: -50px
+  margin-right: -50px
+
+/*
+ * hljs
+ */
+
+.hljs-literal,
+.hljs-number,
+.hljs-string,
+.hljs-symbol,
+.hljs-value
+  color: $accent
+
+.hljs-key,
+.hljs-attribute
+  color: darken($accent, 20%)
+
+.hljs-keyword,
+.hljs-constant
+  color: $black
+
+.hljs-comment
+  color: $gray
+  font-style: italic
+  
+

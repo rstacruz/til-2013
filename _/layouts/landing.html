@@ -1,0 +1,33 @@
+---
+---
+
+{% include head.html %}
+{% include body.html %}
+  {% if site.posts %}
+    <div class='post-list'>
+      {% for post in site.posts %}
+        <div class='post-item'>
+          <div class='post-headline'>
+            <h1>
+              <a href="{{ post.url }}">
+                {{ post.title }}
+              </a>
+            </h1>
+            <h5 class='meta'>
+              <a href="{{ post.url }}">
+                <span class='author'>{{ site.meta.author }}</span>
+                &middot;
+                <span class='date'>{{ post.date | date_to_string }}</span>
+              </a>
+            </h5>
+          </div>
+
+          <div class='post-content'>
+            {{ post.content }}
+          </div>
+        </div>
+
+      {% endfor %}
+    </div>
+  {% endif %}
+{% include end.html %}

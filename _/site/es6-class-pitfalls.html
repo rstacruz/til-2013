@@ -1,0 +1,108 @@
+<!doctype html>
+<!--
+
+    follow me on twitter.
+
+     ,-.          .                      
+    /,-.\ ,-. ,-. |- ,-. ,-. ,-. . . ,_, 
+    |,-|| |   `-. |  ,-| |   |   | |  /  
+    \`-^/ '   `-' `' `-^ `-' '   `-^ '"' 
+     `-'                                 
+
+-->
+<html class='no-js ' lang='en'>
+<head>
+  <meta charset='utf-8'>
+
+  
+  <title>ES6 class pitfalls &mdash; Rico Sta. Cruz</title>
+  <meta content='ES6 class pitfalls' property='og:title'>
+  <meta content='ES6 class pitfalls' property='twitter:title'>
+  <meta content='article' property='og:type'>
+  
+
+  
+
+  
+  <link rel="canonical" href="/es6-class-pitfalls.html">
+  <meta name="og:url" content="/es6-class-pitfalls.html">
+  <link rel="prefetch" href="">
+  <link rel="prerender" href="">
+  
+
+  <meta content='Rico Sta. Cruz' property='og:site_name'>
+  <meta content='169204529787544' property='fb:app_id'>
+  <meta content='ricostacruz' property='fb:admins'>
+
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+  <link href='/favicon.png' rel='shortcut icon'>
+
+  <!-- <link rel="alternate" type="application/rss+xml" title="Rico Sta. Cruz" href="/atom.xml"> -->
+
+  <link href='assets/style.css' rel='stylesheet'>
+
+  <script>if(~location.hostname.indexOf("ricostacruz.com")){var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-20473929-1"]);_gaq.push(["_trackPageview"]);(function(){var ga=document.createElement("script");ga.async=true;ga.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga,s)})()}</script>
+
+</head>
+<body>
+<script>document.documentElement.className += ' loading';</script>
+
+
+<div class='post-list -single'>
+  <div class="post-item">
+    <div class="post-headline">
+      <h1>
+        <a href="/es6-class-pitfalls.html" rel="bookmark" title="ES6 class pitfalls">
+          ES6 class pitfalls
+        </a>
+      </h1>
+      <h5 class='meta'>
+        <a href="/es6-class-pitfalls.html" rel="bookmark" title="ES6 class pitfalls">
+          <span class='author'>Rico Sta. Cruz</span>
+          &middot;
+          <span class='date'>February 25, 2015</span>
+        </a>
+      </h5>
+    </div>
+
+    <div class="post-content">
+      <p>ES6 makes it easy to define classes.</p>
+
+<pre><code class="language-js">class Shape {
+  get area() {
+    return this.width * this.height;
+  }
+}
+</code></pre>
+
+<p>But you can’t have decorated functions. For that, you’ll still need to drop to using <code>prototype</code>.</p>
+
+<pre><code class="language-js">Shape.prototype.iterate = memoize(function () {
+  ...
+})
+</code></pre>
+
+<p>Same with non-method attributes.</p>
+
+<pre><code class="language-js">Shape.prototype.template =
+  require('fs').readFileSync('./template.html', 'utf-8');
+</code></pre>
+
+    </div>
+
+    <!--
+      <ul class="social-list">
+        <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/es6-class-pitfalls.html" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+        <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/es6-class-pitfalls.html" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+        <li class="googleplus"><a href="https://plus.google.com/share?url=/es6-class-pitfalls.html" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+      </ul>
+    -->
+  </div>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
+
