@@ -3,14 +3,12 @@ title: Easy color computations
 tags: [CSS]
 ---
 
-Use [stylus]'s CLI.
-
 ```sh
 $ npm i -g stylus
 $ stylus -i
 ```
 
-Stylus CLI is faster than Sass and has shorter syntax for color computations. Here's *lighten* and *hue shift*:
+**Use [stylus]'s CLI.** Stylus CLI is faster than Sass and has shorter syntax for color computations. Here's *lighten* and *hue shift*:
 
 ```
 > #aaa + 10%
