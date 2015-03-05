@@ -144,7 +144,7 @@ html, input, textarea, td, th { font-family: "Karla", sans-serif; font-weight: 4
 /* headline */
 .post-headline { margin: 20px auto 40px auto; }
 .post-headline h1 { text-align: center; margin-bottom: 0; font-size: 2.7em; line-height: 1.3; font-family: "eb garamond", serif; font-weight: 400; font-style: italic; font-feature-settings: "kern", "liga", "dlig"; }
-.post-headline .meta { display: block; text-align: center; margin: 0; font-weight: normal; text-transform: uppercase; font-size: 0.9em; letter-spacing: 1px; }
+.post-headline .meta { display: block; text-align: center; margin: 0; margin-top: 0.5em; font-weight: normal; text-transform: uppercase; font-size: 0.9em; letter-spacing: 1px; }
 .post-headline .meta a, .post-headline .meta a:visited { color: #808890; }
 .post-headline a, .post-headline a:visited { color: #020202; text-decoration: none; box-shadow: none; }
 
