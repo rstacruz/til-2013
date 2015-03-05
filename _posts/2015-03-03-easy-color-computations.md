@@ -10,21 +10,19 @@ $ npm i -g stylus
 $ stylus -i
 ```
 
-Stylus CLI is faster than Sass and has shorter syntax for color computations. Here's lighten:
+Stylus CLI is faster than Sass and has shorter syntax for color computations. Here's *lighten* and *hue shift*:
 
 ```
 > #aaa + 10%
 => #b2b2b2
 ```
-
-Hue shift:
-
 ```
 > #ff0 - 10deg
 => #ffd500
 ```
 
-Or if you really want a one-liner:
+### One-liner version
+Not quite as elegant, but it can be useful.
 
 ```sh
 echo "*{a: #ff0 - 10deg}" | stylus -p
@@ -32,7 +30,7 @@ echo "*{a: #ff0 - 10deg}" | stylus -p
 ```
 
 ### Using Sass
-If you need Sass for some reason, it also takes `-i`:
+If you need Sass for some reason, it also takes `-i`.
 
 ``` sh
 $ gem install sass
