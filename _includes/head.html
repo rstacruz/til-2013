@@ -29,18 +29,25 @@
   {% if page.meta.description %}
   <meta content="{{ page.meta.description }}" name="description">
   <meta content="{{ page.meta.description }}" property="og:description">
+  {% else if page.url == '/index.html' && site.meta.description %}
+  <meta content="{{ site.meta.description }}" name="description">
+  <meta content="{{ site.meta.description }}" property="og:description">
   {% endif %}
 
   {% if page.url != '/index.html' %}
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-  <meta name="og:url" content="{{ site.url }}{{ page.url }}">
-  <link rel="prefetch" href="{{ site.url }}">
-  <link rel="prerender" href="{{ site.url }}">
+  <link rel="canonical" href="{{ site.meta.url }}{{ page.url }}">
+  <meta name="og:url" content="{{ site.meta.url }}{{ page.url }}">
+  <link rel="prefetch" href="{{ site.meta.url }}">
+  <link rel="prerender" href="{{ site.meta.url }}">
   {% endif %}
 
   <meta content='{{ site.meta.name }}' property='og:site_name'>
+  {% if site.facebook.app_id %}
   <meta content='{{ site.facebook.app_id }}' property='fb:app_id'>
+  {% endif %}
+  {% if site.facebook.admin %}
   <meta content='{{ site.facebook.admin }}' property='fb:admins'>
+  {% endif %}
 
   <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
   <meta content='width=device-width, initial-scale=1.0' name='viewport'>
