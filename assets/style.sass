@@ -86,6 +86,10 @@ html, input, textarea, td, th
 .post-headline
   &
     margin: 1.5em auto 3em auto
+    text-align: center
+
+  .post-icon
+    margin-bottom: 2px
 
   h1
     text-align: center
@@ -219,3 +223,55 @@ pre + pre
 
   em
     +headline-font
+
+/*
+ * icon
+ */
+
+$icon-size: 56px
+
+= iconify($color, $text)
+  &
+    background: $color
+    color: lighten($color, 50%)
+    box-shadow: -2px 2px #e67e22, 2px -2px #f1c40f, -3px -2px rgba($color, 0.2), 2px 3px rgba($color, 0.3)
+
+  &:after
+    content: $text
+
+.post-icon,
+abbr.post-icon
+  border: 0
+  margin: 0
+  display: inline-block
+  width: $icon-size
+  height: $icon-size
+  line-height: $icon-size + 2px
+  text-align: center
+  border-radius: 50%
+  color: white
+  background: #eee
+
+  font-family: 'fira sans', sans-serif
+  font-weight: 700
+  +body-font
+  font-size: 16px
+  letter-spacing: 1px
+
+  @media (max-width: 480px)
+    transform: scale(0.75)
+
+  &.-icon-CSS
+    +iconify(#3498db, 'CSS')
+    font-size: 14px
+    line-height: $icon-size + 2px
+  &.-icon-Development
+    +iconify(#34495e, 'DEV')
+    font-size: 14px
+    line-height: $icon-size + 2px
+  &.-icon-Ruby
+    +iconify(#e74c3c, 'RB')
+    text-indent: 2px
+  &.-icon-JavaScript
+    +iconify(#2ecc71, 'JS')
+    text-indent: 1px

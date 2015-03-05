@@ -1,6 +1,6 @@
 ---
 title: Inline partials
-tags: [Rails]
+tags: [Ruby]
 ---
 
 Ever find it annoying to have really long blocks of code being hard to parse in your head?

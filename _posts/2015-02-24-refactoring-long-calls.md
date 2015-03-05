@@ -1,5 +1,6 @@
 ---
 title: Refactoring long calls
+tags: [Development]
 ---
 
 Consider seeing this code in a view. It seems a little long, and may be a candidate for refactoring.

@@ -1,5 +1,6 @@
 ---
 title: Use Markdown for documentation
+tags: [Development]
 ---
 
 The most universal documentation "format" is a bunch of Markdown files inside a project's `doc/` directory.

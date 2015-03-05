@@ -10,6 +10,7 @@
       {% for post in site.posts %}
         <div class='post-item'>
           <div class='post-headline'>
+            <abbr class='post-icon -icon-{{ post.tags[0] | camelize }}' title='{{ post.tags[0] }}'></abbr>
             <h1>
               <a href=".{{ post.url }}">
                 {{ post.title }}

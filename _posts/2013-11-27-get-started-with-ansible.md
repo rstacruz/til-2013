@@ -1,6 +1,6 @@
 ---
 title: Get started with Ansible in 2 minutes
-tags: [Ansible]
+tags: [Development, Ansible]
 ---
 
  * http://ansibleworks.com
