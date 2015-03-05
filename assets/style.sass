@@ -19,13 +19,19 @@ $accent: dodgerblue
 
 = kernliga
   font-size-adjust: none
-  font-stretch: normal
+  // don't display digraphs in languages that don't support it
+  -webkit-font-language-override: normal
   font-language-override: normal
+
+  // use font-defined kerning info
+  -webkit-font-kerning: auto
   font-kerning: auto
+
   // opentype options: kerning, ligatures, horiz ligatures, discretionary ligatures, contextual swash
   // http://en.wikipedia.org/wiki/List_of_typographic_features
-  font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh"
   -webkit-font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh"
+  font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh"
+
   // allow browser to auto-infer missing glyphs
   font-synthesis: weight style
 
