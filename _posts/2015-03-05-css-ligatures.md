@@ -3,8 +3,7 @@ title: Ligatures in CSS
 tags: [CSS]
 ---
 
-Headings in CSS can benefit from nice ligatures. Use the [font-feature-settings](https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings) CSS property to enable these OpenType features.
-(See also: [List of OpenType features](http://en.wikipedia.org/wiki/List_of_typographic_features))
+Headings can benefit from nice ligatures. Use the [font-feature-settings](https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings) CSS property to enable these OpenType features.
 
 ```css
 .headings {
@@ -21,6 +20,10 @@ Headings in CSS can benefit from nice ligatures. Use the [font-feature-settings]
   font-synthesis: weight style;
 }
 ```
+
+Here is what they would look like with EB Garamond. Be sure to also check [List of OpenType features](http://en.wikipedia.org/wiki/List_of_typographic_features) for more features you can use.
+
+![](images/ligatures.png)
 
 ### Use brick.im
 Fonts from Typekit and Google Web Fonts may be stripped of all these extra OpenType information. Use fonts from [brick.im](http://brick.im/) instead.
