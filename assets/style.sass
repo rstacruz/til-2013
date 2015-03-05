@@ -46,6 +46,9 @@ html
   background: $bg
   color: $text
 
+  @media (max-width: 768px)
+    font-size: 14px
+
 html, input, textarea, td, th
   +body-font
 
@@ -61,6 +64,9 @@ html, input, textarea, td, th
   margin: 40px auto
   padding: 20px
 
+  @media (max-width: 768px)
+    margin: 0 auto
+
 .post-list > .post-item:not(:first-child)
   &:before
     content: ''
@@ -70,13 +76,16 @@ html, input, textarea, td, th
     background: $line
     margin: 7em auto
 
+    @media (max-width: 768px)
+      margin: 4em auto
+
 /*
  * headline
  */
 
 .post-headline
   &
-    margin: 20px auto 40px auto
+    margin: 1.5em auto 3em auto
 
   h1
     text-align: center
@@ -84,6 +93,9 @@ html, input, textarea, td, th
     font-size: 2.8em
     line-height: 1.3
     +headline-font
+
+    @media (max-width: 768px)
+      font-size: 2em
 
   .meta
     display: block
@@ -130,6 +142,9 @@ h3
   color: $black
   font-size: 1.1em
 
+  @media (max-width: 768px)
+    margin-top: 1.5em
+
 h3 + p
   margin-top: -1.7em
 
@@ -157,6 +172,10 @@ pre
   border-radius: 4px
   background: #fafafa
   margin: 2.2em -50px
+
+  @media (max-width: 768px)
+    padding: 20px
+    margin: 2em -20px
 
 pre + pre
   margin-top: -1.1em
