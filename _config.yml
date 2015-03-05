@@ -28,7 +28,7 @@ exclude: ["Makefile", "README.md", "_/Gemfile", "_/Gemfile.lock",  "CNAME"]
 meta:
   title: Rico Sta. Cruz
   author: Rico Sta. Cruz
-  name: Rico Sta. Cruz
+  name: Rico Sta. Cruz TIL
   hostname: ricostacruz.com
 
 facebook:
