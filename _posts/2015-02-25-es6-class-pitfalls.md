@@ -3,8 +3,6 @@ title: ES6 class pitfalls
 tags: [JavaScript]
 ---
 
-ES6 makes it easy to define classes.
-
 ```js
 class Shape {
   get area() {
@@ -13,7 +11,7 @@ class Shape {
 }
 ```
 
-But you can't have decorated functions. For that, you'll still need to drop to using `prototype`.
+ES6 makes it easy to define classes, but you can't have decorated functions. For that, you'll still need to drop to using `prototype`.
 
 ```js
 Shape.prototype.iterate = memoize(function () {
