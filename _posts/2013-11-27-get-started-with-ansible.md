@@ -7,6 +7,7 @@ tags: [Ansible]
  * https://github.com/ansible/ansible
 
 ### Install Ansible
+Officially available via `pip`.
 
 ~~~ sh
 $ brew install ansible            # OSX
@@ -14,6 +15,7 @@ $ [sudo] pip install ansible      # elsewhere
 ~~~
 
 ### Start your project
+Make the directory. Put this under version control, preferrably.
 
 ~~~ sh
 ~$ mkdir setup
@@ -21,7 +23,6 @@ $ [sudo] pip install ansible      # elsewhere
 ~~~
 
 ### Create an inventory file
-
 This is a list of hosts you want to manage, grouped into groups. (Hint: try
 using 127.0.0.1 to deploy to your local machine)
 
@@ -36,6 +37,7 @@ using 127.0.0.1 to deploy to your local machine)
 ~~~
 
 ### Create your first Playbook
+A playbook is just a YAML file.
 
 ~~~ yaml
 # ~/setup/playbook.yml
@@ -57,6 +59,7 @@ using 127.0.0.1 to deploy to your local machine)
 ~~~
 
 ### Run it
+Use the `ansible-playbook` command.
 
 ~~~ sh
 ~/setup$ ls

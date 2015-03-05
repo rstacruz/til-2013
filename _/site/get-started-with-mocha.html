@@ -70,14 +70,12 @@
       <p>Here’s the condensed 1-minute guide to setting up tests on a Node.js project.</p>
 
 <h3 id="start-with-a-package">Start with a package</h3>
-<p>Make a <code>package.json</code> file if you don’t have one yet:</p>
+<p>Make a <code>package.json</code> file if you don’t have one yet, then install your weapons of choice.</p>
 
 <pre><code class="language-sh">npm init
 # just keep pressing enter.
 # this will create the file `package.json`
 </code></pre>
-
-<p>Install your weapons:</p>
 
 <pre><code class="language-sh">npm install --save-dev mocha chai
 </code></pre>
@@ -96,7 +94,7 @@ describe('my test suite', function () {
 });
 </code></pre>
 
-<p>Update your <code>package.json</code> to use mocha:</p>
+<p><strong>Update scripts:</strong> update your <code>package.json</code> to use mocha.</p>
 
 <pre><code class="language-diff">  "scripts": {
 -   "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
@@ -128,7 +126,9 @@ describe('my test suite', function () {
 
 <p>Now go write tests that will pass!</p>
 
-<h3 id="learn-a-bit-more-mocha">Learn a bit more mocha</h3>
+<h3 id="learn-a-bit-more">Learn a bit more</h3>
+
+<p>Here’s a quick Mocha cheatsheet. Also see <a href="http://mochajs.org">mochajs.org</a>.</p>
 
 <pre><code class="language-js">describe('test suite', function () {
   beforeEach(function() { /*...*/ });
@@ -152,9 +152,7 @@ describe('my test suite', function () {
 });
 </code></pre>
 
-<p>Also see http://mochajs.org/ - read up on Mocha’s API</p>
-
-<h3 id="more-on-chai">More on Chai</h3>
+<p><strong>Chai:</strong> Here’s a quick Chai cheatsheet. See <a href="http://chaijs.com/api/bdd/">chaijs.com</a> for other <code>expect()</code>ations.</p>
 
 <pre><code class="language-js">expect(3).to.eql(2);
 
@@ -169,13 +167,9 @@ expect(list).to.have.length(3);
 expect(list).to.have.length.gt(0);
 </code></pre>
 
-<p>See: http://chaijs.com/api/bdd/ for other <code>expect()</code>ations</p>
-
 <h3 id="further-reading">Further reading</h3>
 
-<ul>
-  <li>http://sinonjs.org/ - use Sinon for mocks</li>
-</ul>
+<p>Use Sinon (<a href="http://sinonjs.org/">sinonjs.org</a>) for mocks.</p>
 
 
     </div>

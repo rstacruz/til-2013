@@ -73,19 +73,20 @@
 </ul>
 
 <h3 id="install-ansible">Install Ansible</h3>
+<p>Officially available via <code>pip</code>.</p>
 
 <pre><code class="language-sh">$ brew install ansible            # OSX
 $ [sudo] pip install ansible      # elsewhere
 </code></pre>
 
 <h3 id="start-your-project">Start your project</h3>
+<p>Make the directory. Put this under version control, preferrably.</p>
 
 <pre><code class="language-sh">~$ mkdir setup
 ~$ cd setup
 </code></pre>
 
 <h3 id="create-an-inventory-file">Create an inventory file</h3>
-
 <p>This is a list of hosts you want to manage, grouped into groups. (Hint: try
 using 127.0.0.1 to deploy to your local machine)</p>
 
@@ -99,6 +100,7 @@ using 127.0.0.1 to deploy to your local machine)</p>
 </code></pre>
 
 <h3 id="create-your-first-playbook">Create your first Playbook</h3>
+<p>A playbook is just a YAML file.</p>
 
 <pre><code class="language-yaml"># ~/setup/playbook.yml
 
@@ -119,6 +121,7 @@ using 127.0.0.1 to deploy to your local machine)</p>
 </code></pre>
 
 <h3 id="run-it">Run it</h3>
+<p>Use the <code>ansible-playbook</code> command.</p>
 
 <pre><code class="language-sh">~/setup$ ls
 hosts

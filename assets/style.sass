@@ -1,11 +1,12 @@
 ---
 ---
 
-@import url('//brick.a.ssl.fastly.net/EB+Garamond:400,400i')
-@import url('//brick.a.ssl.fastly.net/Karla:400,700')
+@import url('//brick.a.ssl.fastly.net/EB+Garamond:400i')
+@import url('//brick.a.ssl.fastly.net/Fira+Sans:700')
+@import url('//brick.a.ssl.fastly.net/Roboto:400,700')
 @import 'normalize'
 
-$text: #222
+$text: #555
 $black: #020202
 $bg: #fff
 $line: #adf
@@ -17,7 +18,7 @@ $accent: dodgerblue
  */
 
 = body-font
-  font-family: 'Karla', sans-serif
+  font-family: 'Roboto', sans-serif
   font-weight: 400
 
 = headline-font
@@ -40,8 +41,8 @@ $accent: dodgerblue
   -moz-osx-font-smoothing: grayscale
 
 html
-  font-size: 19px
-  line-height: 1.6
+  font-size: 18px
+  line-height: 1.66
   background: $bg
   color: $text
 
@@ -119,12 +120,16 @@ h2
   color: $black
 
 h3
-  margin-top: 2.5em
+  font-family: 'fira sans', sans-serif
+  margin-top: 2.2em
   color: $black
   font-size: 1.2em
 
 h3 + p
   margin-top: -1.6em
+
+// h3 + pre
+//   margin-top: -1em
 
 code
   +mono-font
@@ -137,17 +142,19 @@ code
 pre > code
   +mono-font
   display: block
-  background: #fafafa
-  padding: 20px 50px
-  border-radius: 4px
   line-height: 1.5em
-  font-size: 0.75em
+  font-size: 0.8em
   color: $text
   // box-shadow: inset 1px 1px rgba(black, 0.06)
 
 pre
-  margin-left: -50px
-  margin-right: -50px
+  padding: 20px 50px
+  border-radius: 4px
+  background: #fafafa
+  margin: 2.2em -50px
+
+pre + pre
+  margin-top: -1.1em
 
 /*
  * hljs
@@ -171,5 +178,3 @@ pre
 .hljs-comment
   color: $gray
   font-style: italic
-  
-

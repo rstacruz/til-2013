@@ -1,5 +1,6 @@
-@import url("//brick.a.ssl.fastly.net/EB+Garamond:400,400i");
-@import url("//brick.a.ssl.fastly.net/Karla:400,700");
+@import url("//brick.a.ssl.fastly.net/EB+Garamond:400i");
+@import url("//brick.a.ssl.fastly.net/Fira+Sans:700");
+@import url("//brick.a.ssl.fastly.net/Roboto:400,700");
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
 html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
@@ -130,9 +131,9 @@ td, th { padding: 0; }
 /* resets */
 * { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-html { font-size: 19px; line-height: 1.6; background: white; color: #222222; }
+html { font-size: 18px; line-height: 1.66; background: white; color: #555555; }
 
-html, input, textarea, td, th { font-family: "Karla", sans-serif; font-weight: 400; }
+html, input, textarea, td, th { font-family: "Roboto", sans-serif; font-weight: 400; }
 
 /* each post */
 .post-item { max-width: 600px; margin: 0 auto; }
@@ -149,22 +150,24 @@ html, input, textarea, td, th { font-family: "Karla", sans-serif; font-weight: 4
 .post-headline a, .post-headline a:visited { color: #020202; text-decoration: none; box-shadow: none; }
 
 /* stuff */
-a, a:visited { color: #222222; text-decoration: none; box-shadow: inset 0 -1px rgba(170, 221, 255, 0.5); }
+a, a:visited { color: #555555; text-decoration: none; box-shadow: inset 0 -1px rgba(170, 221, 255, 0.5); }
 
 h3, p, ul, ol { margin: 1.5em 0; }
 
 h2 { color: #020202; }
 
-h3 { margin-top: 2.5em; color: #020202; font-size: 1.2em; }
+h3 { font-family: "fira sans", sans-serif; margin-top: 2.2em; color: #020202; font-size: 1.2em; }
 
 h3 + p { margin-top: -1.6em; }
 
 code { font-family: menlo, monospace; font-weight: 400; font-size: 0.9em; }
 
 /* code */
-pre > code { font-family: menlo, monospace; font-weight: 400; display: block; background: #fafafa; padding: 20px 50px; border-radius: 4px; line-height: 1.5em; font-size: 0.75em; color: #222222; }
+pre > code { font-family: menlo, monospace; font-weight: 400; display: block; line-height: 1.5em; font-size: 0.8em; color: #555555; }
 
-pre { margin-left: -50px; margin-right: -50px; }
+pre { padding: 20px 50px; border-radius: 4px; background: #fafafa; margin: 2.2em -50px; }
+
+pre + pre { margin-top: -1.1em; }
 
 /* hljs */
 .hljs-literal, .hljs-number, .hljs-string, .hljs-symbol, .hljs-value { color: dodgerblue; }
