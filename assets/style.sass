@@ -17,6 +17,23 @@ $accent: dodgerblue
  * fonts
  */
 
+= kernliga
+  font-size-adjust: none
+  font-stretch: normal
+  font-language-override: normal
+  font-kerning: auto
+  // opentype options: kerning, ligatures, horiz ligatures, discretionary ligatures, contextual swash
+  // http://en.wikipedia.org/wiki/List_of_typographic_features
+  font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh"
+  -webkit-font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh"
+  // allow browser to auto-infer missing glyphs
+  font-synthesis: weight style
+
+  // swashes on first letters
+  // &:first-letter
+  //   font-feature-settings: "kern", "swsh"
+  //   -webkit-font-feature-settings: "kern", "swsh"
+
 = body-font
   font-family: 'Roboto', sans-serif
   font-weight: 400
@@ -25,7 +42,7 @@ $accent: dodgerblue
   font-family: 'eb garamond', serif
   font-weight: 400
   font-style: italic
-  font-feature-settings: "kern", "liga", "dlig"
+  +kernliga
 
 = mono-font
   font-family: menlo, monospace
