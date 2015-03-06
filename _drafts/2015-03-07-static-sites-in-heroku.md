@@ -1,5 +1,5 @@
 ---
-title: "How to host static sites in Heroku"
+title: "Hosting static sites in Heroku"
 tags: [Development]
 ---
 
