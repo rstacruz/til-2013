@@ -41,15 +41,15 @@
 {% if site.posts %}
 <div class='post-index'>
   <div class='container'>
-    <h2 class='bottom-space-1'>Previously</h2>
+    <h3 class='bottom-space-1'>Previously on TIL:</h3>
     {% for post in site.posts %}
-      <div class='post-index-item'>
+      <a class='post-index-item' href=".{{ post.url }}">
         <span class='date'>{{ post.date | date_to_string }}</span>
-        <a class='article' href=".{{ post.url }}">
+        <span class='article'>
           {{ post.title }}
-        </a>
+        </span>
         <strong class='tag'>{{ post.tags | first }}</strong>
-      </div>
+      </a>
     {% endfor %}
   </div>
 </div>
