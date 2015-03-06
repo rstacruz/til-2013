@@ -3,7 +3,10 @@ title: Get started with Mocha testing
 tags: [JavaScript]
 ---
 
-Here's the condensed 1-minute guide to setting up tests on a Node.js project.
+Testing Node.js packages is easy. Here's the condensed 1-minute guide to setting up tests on a Node.js project.
+{:.brief-intro.center}
+
+----
 
 ### Start with a package
 Make a `package.json` file if you don't have one yet, then install your weapons of choice.
@@ -33,7 +36,9 @@ describe('my test suite', function () {
 });
 ```
 
-**Update scripts:** update your `package.json` to use mocha.
+### Update scripts
+
+Update your `package.json` to use mocha.
 
 ```diff
   "scripts": {
@@ -44,7 +49,7 @@ describe('my test suite', function () {
 
 ### Run tests
 
-Run tests by typing `npm test`:
+Type `npm test` to run your tests. It should fail. Now go write tests that will pass!
 
 ```
   my test suite
@@ -65,7 +70,7 @@ Run tests by typing `npm test`:
       test/test.js:5:18: Context.<anonymous>
 ```
 
-Now go write tests that will pass!
+----
 
 ### Learn a bit more
 
@@ -94,7 +99,8 @@ describe('test suite', function () {
 });
 ```
 
-**Chai:** Here's a quick Chai cheatsheet. See [chaijs.com](http://chaijs.com/api/bdd/) for other `expect()`ations.
+### Expectations with Chai
+Here's a quick Chai cheatsheet. See [chaijs.com](http://chaijs.com/api/bdd/) for other `expect()`ations.
 
 ```js
 expect(3).to.eql(2);

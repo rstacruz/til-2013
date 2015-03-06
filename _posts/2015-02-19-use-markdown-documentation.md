@@ -3,9 +3,7 @@ title: Use Markdown for documentation
 tags: [Development]
 ---
 
-The most universal documentation "format" is a bunch of Markdown files inside a project's `doc/` directory.
-
-Here are some projects that follow that convention:
+The most universal documentation "format" is a bunch of Markdown files inside a project's `doc/` directory. Here are some projects that follow that convention:
 
 * [io.js](https://github.com/iojs/io.js/tree/v1.x/doc/api) (and Node.js)
 * [stylus](https://github.com/LearnBoost/stylus/tree/master/docs)

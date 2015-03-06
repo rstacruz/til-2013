@@ -3,12 +3,13 @@ title: Organizing JavaScript for simple sites
 tags: [JavaScript]
 ---
 
-Some sites don't need big JavaScript architectures, only bits of small behaviors that will affect certain elements.
+Some sites don't need big JavaScript architectures, only bits of small behaviors that will affect certain elements. I prefer to put them into a directory called `behaviors`.
 
-I prefer to put them into a directory called `behaviors/` where each file is a self-contained piece of code that only affects *one* element type. They should also be independent of each other, and therefore, order-agnostic.
+* Each file is a self-contained piece of code that only affects a *single* element type.
+* Name each one of the files according to the `class` (or `role`) it affects.
+* They should also be independent of each other, and therefore, order-agnostic.
 
-### Example project
-Name each one of the files according to the `class` (or `role`) it affects.
+## Example project
 
 ```js
 ...
@@ -20,8 +21,6 @@ Name each one of the files according to the `class` (or `role`) it affects.
         ├── tooltip.js
         └── wow.js
 ```
-
-### File examples
 
 ```js
 // select2.js -- affects `.select2`
@@ -44,8 +43,8 @@ $(document).on('hover', '.tooltip', function () {
 });
 ```
 
-### Including
-Then just include them all. In Rails, this should be as easy as:
+### Using behaviors
+Just include them all into one file. In Rails, this should be as easy as:
 
 ```js
 //= require_tree ./behaviors
