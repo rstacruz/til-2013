@@ -498,10 +498,23 @@ abbr.post-icon
   a, a:visited
     color: lighten($gray, 10%)
     box-shadow: inset 0 -1px rgba(black, 0.05)
+    padding-bottom: 2px
 
   a:hover, a:focus
     color: $black
     box-shadow: inset 0 -1px rgba(black, 0.2)
+
+  strong
+    +bold-font
+
+  strong a, strong a:visited
+    color: $black
+    padding-bottom: 2px
+    box-shadow: inset 0 -1px rgba($accent, 0.4)
+
+  strong a:hover, strong a:focus
+    color: $black
+    box-shadow: inset 0 -1px rgba($accent, 0.8)
 
   h3, h3 + p
     margin: 0 auto
@@ -528,6 +541,7 @@ abbr.post-icon
     vertical-align: middle
     color: $hairline
     margin: 0 7px
+
     @media (max-width: 768px)
       display: block
       margin: 5px auto
@@ -540,6 +554,7 @@ a.back-button
   width: 200px
   height: 40px
   line-height: 40px - 2px
+  padding: 0
   border: solid 2px rgba($accent, 0.5)
   border-radius: 30px
   font-size: 0.9em
