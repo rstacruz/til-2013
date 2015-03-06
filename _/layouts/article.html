@@ -35,5 +35,15 @@
   </div>
 </div>
 
+{% if page.previous %}
+<div class='next-article'>
+  <div class='container'>
+    <span class='heading'>Next article:</span>
+    <h3><a href=".{{ page.previous.url }}">{{ page.previous.title }}</a></h3>
+    <a class='big-button -next' href='.{{ page.previous.url }}'>Read more</a>
+  </div>
+</div>
+{% endif %}
+
 {% include about-the-author.html %}
 {% include end.html %}

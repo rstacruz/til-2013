@@ -557,8 +557,8 @@ abbr.post-icon
     content: ''
     position: absolute
     display: block
-    left: 20px
-    right: 20px
+    left: 0
+    right: 0
     top: 0
     border-top: solid 1px $hairline
 
@@ -581,8 +581,7 @@ abbr.post-icon
 
   strong a, strong a:visited
     color: $black
-    padding-bottom: 2px
-    box-shadow: inset 0 -1px rgba($accent, 0.4)
+    box-shadow: none
 
   strong a:hover, strong a:focus
     color: $black
@@ -594,8 +593,13 @@ abbr.post-icon
   h3
     +headline-font
     color: $black
-    font-size: 1.9em
-    margin-bottom: -3px
+    font-size: 2.0em
+    margin-top: -5px
+
+  h3 a,
+  h3 a:visited
+    color: black
+    box-shadow: none
 
   p
     margin: 1.5em 0
@@ -619,34 +623,86 @@ abbr.post-icon
       margin: 5px auto
       color: $accent
 
-.back-button,
-a.back-button
+.big-button,
+a.big-button
   display: inline-block
 
   width: 200px
   height: 40px
   line-height: 40px - 2px
   padding: 0
-  border: solid 2px rgba($accent, 0.5)
+  border: solid 2px rgba($accent, 1)
   border-radius: 30px
   font-size: 0.9em
   box-shadow: none
 
-  &:before
+  &.-back,
+  &.-back:visited
+    border: solid 2px $gray
+    color: $gray
+
+  &.-back:before,
+  &.-next:after
     font-family: Ionicons
-    content: '\f3cf'
-    margin-right: 16px
     font-size: 20px
     display: inline-block
     vertical-align: middle
 
+  &.-back:before
+    content: '\f38f'
+
+  &.-next:after
+    content: '\f3d1'
+    margin-left: 16px
+
+  &.-slim
+    width: 60px
+    border-width: 2px
+    height: 60px
+    line-height: 60px - 4px
+    border-radius: 50%
+
   &, &:visited
     color: $accent
 
-  &:hover, &:focus
+  &:hover, &:focus,
+  &.-back:hover, &.-back:focus
     background: $accent
+    border-color: transparent
     color: white
     box-shadow: none
+
+/* ]]]
+ * .next-article [[[
+ */
+
+.next-article
+  &
+    border-top: solid 1px $hairline
+    background: #fdfdfd
+
+  .container
+    text-align: center
+    padding: 4em 20px
+
+  h3
+    margin: 0 0 1em 0
+    padding: 0
+    font-size: 1.4em
+    +bold-font
+
+  a, a:visited
+    box-shadow: none
+
+  .heading
+    opacity: 0.6
+    text-transform: uppercase
+    font-size: 0.85em
+    letter-spacing: 1px
+    margin-bottom: 5px
+
+  .big-button
+    background: white
 
 // ]]]
 // [Custom blocks] [[[
