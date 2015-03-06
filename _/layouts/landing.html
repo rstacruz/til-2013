@@ -5,33 +5,55 @@
 {% include body.html %}
 {% include site-header.html %}
 
-  {% if site.posts %}
-    <div class='post-list'>
-      {% for post in site.posts %}
-        <div class='post-item'>
-          <div class='post-headline'>
-            <abbr class='post-icon -icon-{{ post.tags[0] | camelize }}' title='{{ post.tags[0] }}'></abbr>
-            <h1>
-              <a href=".{{ post.url }}">
-                {{ post.title }}
-              </a>
-            </h1>
-            <h5 class='meta'>
-              <a href=".{{ post.url }}">
-                <span class='author'>{{ site.meta.author }}</span>
-                &middot;
-                <span class='date'>{{ post.date | date_to_string }}</span>
-              </a>
-            </h5>
-          </div>
+{% if site.posts[0] %}
+  <div class='post-list'>
+    {% assign post = site.posts[0] %}
+    <div class='post-item'>
+      <div class='post-headline'>
+        <abbr class='post-icon -icon-{{ post.tags[0] | camelize }}' title='{{ post.tags[0] }}'></abbr>
+        <h1>
+          <a href=".{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </h1>
+        <h5 class='meta'>
+          <a href=".{{ post.url }}">
+            <span class='author'>{{ site.meta.author }}</span>
+            &middot;
+            <span class='date'>{{ post.date | date_to_string }}</span>
+          </a>
+        </h5>
+      </div>
 
-          <div class='post-content'>
-            {{ post.content }}
-          </div>
-        </div>
-
-      {% endfor %}
+      <div class='post-content'>
+        {{ post.content }}
+      </div>
     </div>
-  {% endif %}
+  </div>
+{% endif %}
+
+{% if site.posts[1] %}
+  {% assign nextpage = site.posts[1] %}
+  {% assign nextclass = '-lofi' %}
+  {% include next-article.html %}
+{% endif %}
+
+{% if site.posts %}
+<div class='post-index'>
+  <div class='container'>
+    <h2 class='bottom-space-1'>Previously</h2>
+    {% for post in site.posts %}
+      <div class='post-index-item'>
+        <span class='date'>{{ post.date | date_to_string }}</span>
+        <a class='article' href=".{{ post.url }}">
+          {{ post.title }}
+        </a>
+        <strong class='tag'>{{ post.tags | first }}</strong>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
 {% include about-the-author.html %}
 {% include end.html %}

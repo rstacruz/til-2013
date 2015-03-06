@@ -18,11 +18,14 @@
 $text: #555
 $black: #020202
 $bg: #fff
+
 $gray: #808890
-$lightgray: #ccc
+$lightgray: #c0d3da
+$hairline: #eef3fa
+
 $accent: dodgerblue
+
 $page-width: 620px
-$hairline: #eee
 
 /* ]]]
  * font mixins [[[
@@ -81,7 +84,7 @@ a, a:visited
   transition: all 100ms linear
 
 a:focus, a:hover
-  box-shadow: inset 0 -1px rgba(mix($accent, #888, 50%), 0.5)
+  box-shadow: inset 0 -2px rgba(mix($accent, #888, 75%), 0.5)
   color: $black
 
 strong, b
@@ -731,6 +734,49 @@ a.big-button
     font-size: 0.8em
     letter-spacing: 2px
     margin-bottom: 0.5em
+
+.next-article.-lofi
+  .container
+    background: #fcfcfc
+
+/* ]]]
+ * .post-index (et al) -- utility classes [[[
+ */
+
+.post-index
+  &
+    margin: 0 auto 4em auto
+    position: relative
+    padding-top: 4em
+    font-size: 0.9em
+
+  .container
+    overflow: hidden
+    max-width: $page-width
+    margin: 0 auto
+
+.post-index-item
+  display: block
+  overflow: hidden
+  padding: 4px 0
+
+  .date
+    float: left
+    width: 120px
+    font-size: 0.8em
+    color: $gray
+    margin-top: 0.3em
+
+  .article
+    float: left
+    color: $black
+
+  .tag
+    float: right
+    color: $gray
+    font-weight: normal
+    font-size: 0.8em
+    margin-top: 0.3em
 
 // ]]]
 // [Custom blocks] [[[

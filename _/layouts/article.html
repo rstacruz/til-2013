@@ -36,14 +36,8 @@
 </div>
 
 {% if page.previous %}
-<div class='next-article'>
-  <div class='container'>
-    <span class='heading'>Next article:</span>
-    <h3><a href=".{{ page.previous.url }}">{{ page.previous.title }}</a></h3>
-    {% comment %}<p class='excerpt'>{{ page.previous.content | strip_html | truncatewords: 15 }}</p>{% endcomment %}
-    <a class='big-button -next' href='.{{ page.previous.url }}'>Read more</a>
-  </div>
-</div>
+  {% assign nextpage = page.previous %}
+  {% include next-article.html %}
 {% endif %}
 
 {% include about-the-author.html %}
