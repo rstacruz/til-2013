@@ -232,7 +232,7 @@ pre + pre
 
 pre.large
   > code
-    font-size: 1.2em
+    font-size: 1.1em
   @media (min-width: 768px)
     padding-top: 30px
     padding-bottom: 30px
@@ -245,6 +245,9 @@ pre.terminal
     border: solid 1px $term-border
     position: relative
     padding-top: 56px
+
+    &.large
+      padding-top: 60px
 
   &:before
     content: ''
@@ -280,7 +283,7 @@ pre.terminal
     display: inline-block
     width: 3px
     height: 1em
-    transform: scaleY(1.5) translateY(-0.05em)
+    transform: scaleY(1.5) translateY(0.1em)
     margin-left: 0.4em
     background-color: $accent
     -webkit-animation: blink 700ms steps(2,end) infinite
@@ -769,6 +772,11 @@ a.back-button
     margin-left: calc(-50vw + #{$page-width} / 2)
 
 @keyframes blink
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+@-webkit-keyframes blink
   0%
     opacity: 0
   100%
