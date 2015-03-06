@@ -1,10 +1,17 @@
 ---
 ---
+// vim:foldmethod=marker,foldmarker=[[[,]]]
+
+/*
+ * imports and variables [[[
+ */
 
 @import url('//brick.a.ssl.fastly.net/EB+Garamond:400i')
 @import url('//brick.a.ssl.fastly.net/Fira+Sans:700')
 @import url('//brick.a.ssl.fastly.net/Roboto:400,400i,700')
 @import url('//fonts.googleapis.com/css?family=Fira+Mono:400,400i')
+@import url('//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+
 @import 'normalize'
 @import 'utils'
 
@@ -17,8 +24,8 @@ $lightgray: #ccc
 $accent: dodgerblue
 $page-width: 620px
 
-/*
- * fonts
+/* ]]]
+ * font mixins [[[
  */
 
 = body-font
@@ -41,8 +48,8 @@ $page-width: 620px
   font-family: 'fira sans', sans-serif
   font-weight: 700
 
-/*
- * resets
+/* ]]]
+ * html base (html, body) [[[
  */
 
 *
@@ -63,83 +70,8 @@ html, input, textarea, td, th
 html, body
   overflow-x: hidden
 
-/*
- * each post
- */
-
-.post-item
-  max-width: $page-width
-  margin: 0 auto
-
-.post-list
-  margin: 40px auto
-  padding: 20px
-
-  @media (max-width: 768px)
-    margin: 0 auto
-
-.post-list > .post-item:not(:first-child)
-  &:before
-    content: ''
-    display: block
-    width: 150px
-    height: 1px
-    background: $line
-    margin: 7em auto
-
-    @media (max-width: 768px)
-      margin: 4em auto
-
-/*
- * headline
- */
-
-.post-headline
-  &
-    margin: 1.5em auto 3em auto
-    text-align: center
-
-  .post-icon
-    margin-bottom: 2px
-
-  h1
-    text-align: center
-    margin-bottom: 0
-    font-size: 2.8em
-    line-height: 1.2
-    +headline-font
-    width: 80%
-    margin-left: auto
-    margin-right: auto
-
-    @media (max-width: 768px)
-      font-size: 2em
-
-  .meta
-    display: block
-    text-align: center
-    margin: 0
-    margin-top: 1em
-    font-weight: normal
-    text-transform: uppercase
-    font-size: 0.8em
-    letter-spacing: 1px
-
-  .meta .author,
-  .meta .date
-    margin: 0 5px
-
-  .meta a,
-  .meta a:visited
-    color: $gray
-
-  a, a:visited, a:focus, a:hover
-    color: $black
-    text-decoration: none
-    box-shadow: none
-
-/*
- * basic styles
+/* ]]]
+ * basic styles (a, p, img...) [[[
  */
 
 a, a:visited
@@ -183,7 +115,6 @@ ul > li:before
   @media (max-width: 768px)
     width: 3px
     height: 3px
-
 
 h2
   &, a, a:visited
@@ -273,8 +204,8 @@ th:last-child
   text-align: right
   padding-right: 0
 
-/*
- * code
+/* ]]]
+ * pre > code -- code blocks [[[
  */
 
 pre > code
@@ -298,8 +229,84 @@ pre
 pre + pre
   margin-top: -1.5em
 
-/*
- * hljs
+
+/* ]]]
+ * .post-item -- each post [[[
+ */
+
+.post-item
+  max-width: $page-width
+  margin: 0 auto
+
+.post-list
+  margin: 40px auto
+  padding: 20px
+
+  @media (max-width: 768px)
+    margin: 0 auto
+
+.post-list > .post-item:not(:first-child)
+  &:before
+    content: ''
+    display: block
+    width: 150px
+    height: 1px
+    background: $line
+    margin: 7em auto
+
+    @media (max-width: 768px)
+      margin: 4em auto
+
+/* ]]]
+ * .post-headline -- H1's of posts [[[
+ */ 
+
+.post-headline
+  &
+    margin: 1.5em auto 3em auto
+    text-align: center
+
+  .post-icon
+    margin-bottom: 2px
+
+  h1
+    text-align: center
+    margin-bottom: 0
+    font-size: 2.8em
+    line-height: 1.2
+    +headline-font
+    width: 80%
+    margin-left: auto
+    margin-right: auto
+
+    @media (max-width: 768px)
+      font-size: 2em
+
+  .meta
+    display: block
+    text-align: center
+    margin: 0
+    margin-top: 1em
+    font-weight: normal
+    text-transform: uppercase
+    font-size: 0.8em
+    letter-spacing: 1px
+
+  .meta .author,
+  .meta .date
+    margin: 0 5px
+
+  .meta a,
+  .meta a:visited
+    color: $gray
+
+  a, a:visited, a:focus, a:hover
+    color: $black
+    text-decoration: none
+    box-shadow: none
+
+/* ]]]
+ * .hljs -- syntax highlighting [[[
  */
 
 .hljs-literal,
@@ -321,8 +328,8 @@ pre + pre
   color: $gray
   font-style: italic
 
-/*
- * site header
+/* ]]]
+ * .site-header -- main header [[[
  */
 
 .site-header
@@ -340,8 +347,8 @@ pre + pre
     font-size: 1.1em
     color: $text
 
-/*
- * icon
+/* ]]]
+ * .post-icon -- category icons [[[
  */
 
 $icon-size: 56px
@@ -390,8 +397,77 @@ abbr.post-icon
     +iconify(#2ecc71, 'JS')
     text-indent: 1px
 
-/*
- * extras: utilities
+/* ]]]
+ * .social-list -- social share icons [[[
+ */
+
+.social-list
+  &, li
+    margin: 0
+    padding: 0
+
+  &
+    display: block
+    text-align: center
+    width: 100%
+    margin-top: 2em
+
+    @media (min-width: 768px)
+      margin-top: 6em
+
+  li
+    display: inline-block
+
+  a
+    border: solid 1px #ccc
+    border-radius: 50%
+    display: inline-block
+    width: 52px
+    height: 52px
+    line-height: 52px
+    text-align: center
+    box-shadow: none
+    margin: 0 12px
+
+  .text
+    display: none
+
+  a
+    border-color: rgba(black, 0.15)
+
+  a:before
+    font-family: 'Ionicons'
+    font-weight: normal
+    font-style: normal
+    font-size: 18px
+
+  = socialiconify($color, $content, $filled)
+    &
+      // border-color: rgba($color, 0.5)
+      color: $color
+    &:hover,
+    &:focus
+      border-color: transparent
+      background-color: $color
+      color: white
+    &:before
+      content: $filled
+    &:hover:before,
+    &:focus:before
+      content: $filled
+
+  .facebook a
+    +socialiconify(#4c66a4, '\f230', '\f231')
+  .twitter a
+    +socialiconify(dodgerblue, '\f242', '\f243')
+  .googleplus a
+    +socialiconify($gray, '\f234', '\f235')
+
+  li:before
+    display: none
+
+/* ]]]
+ * utilities [[[
  */
 
 .center
@@ -412,17 +488,16 @@ abbr.post-icon
     margin-top: 2em
     margin-bottom: 2em
 
-/*
- * extras: brief intro
+/* ]]]
+ * .brief-intro -- Brief introduction [[[
  */
-
 
 .brief-intro
   font-size: 1.1em
   color: $gray
 
-/*
- * extras
+/* ]]]
+ * .full-image -- full width image containers [[[
  */
 
 .full-image
@@ -459,8 +534,8 @@ abbr.post-icon
     width: 100vw
     margin-left: calc(-50vw + #{$page-width} / 2)
 
-/*
- * extras: wide
+/* ]]]
+ * extras: wide [[[
  */
 
 .wide
