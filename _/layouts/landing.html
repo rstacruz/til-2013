@@ -28,6 +28,9 @@
       <div class='post-content'>
         {{ post.content }}
       </div>
+
+      {% assign page = post %}
+      {% include social-list.html %}
     </div>
   </div>
 {% endif %}
