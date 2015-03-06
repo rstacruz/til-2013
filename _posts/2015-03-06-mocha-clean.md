@@ -25,15 +25,14 @@ it to your *test/mocha.opts* file.
 --require mocha-clean
 ```
 
-* * * *
-
-### Try it out
-
 It's available via npm, and works with Mocha 1.x in Node.js and in the browser. The source is available in GitHub: [rstacruz/mocha-clean][src].
 
 ```sh
-$ npm install --save-dev mocha-clean
+npm install --save-dev mocha-clean
 ```
+{:.terminal}
+
+* * * *
 
 ### Merging into Mocha?
 
