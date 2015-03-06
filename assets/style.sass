@@ -15,6 +15,7 @@ $line: #adf
 $gray: #808890
 $lightgray: #ccc
 $accent: dodgerblue
+$page-width: 620px
 
 /*
  * fonts
@@ -59,12 +60,15 @@ html
 html, input, textarea, td, th
   +body-font
 
+html, body
+  overflow-x: hidden
+
 /*
  * each post
  */
 
 .post-item
-  max-width: 620px
+  max-width: $page-width
   margin: 0 auto
 
 .post-list
@@ -179,6 +183,7 @@ h3 + p
 p > img:first-child:last-child
   display: block
   margin: 0 auto
+  max-width: 100%
 
 code
   +mono-font
@@ -210,19 +215,14 @@ hr
 
 table
   width: 100%
-
-  @media (min-width: 769px)
-    width: 140%
-    margin-left: -20%
-
   margin-top: 2em
   margin-bottom: 2em
   font-size: 0.9em
   border-top: solid 1px #888
   border-bottom: solid 1px #888
 
-thead > tr:first-child td,
-thead > tr:first-child th
+table > *:first-child > tr:first-child td,
+table > *:first-child > tr:first-child th
   border-top: 0
 
 td, th
@@ -362,12 +362,57 @@ abbr.post-icon
     text-indent: 1px
 
 /*
- * extras: brief intro
+ * extras: utilities
  */
 
 .center
   text-align: center
 
+.spaced
+  @media (min-width: 769px)
+    margin-top: 4em
+    margin-bottom: 4em
+
+.spaced-more
+  @media (min-width: 769px)
+    margin-top: 6em
+    margin-bottom: 6em
+
+.spaced-less
+  @media (min-width: 769px)
+    margin-top: 2em
+    margin-bottom: 2em
+
+/*
+ * extras: brief intro
+ */
+
+
 .brief-intro
   font-size: 1.1em
   color: $gray
+
+/*
+ * extras
+ */
+
+.full-image
+  &
+    background: #fcfcfc
+
+  @media (max-width: 768px)
+    margin-left: -20px
+    margin-right: -20px
+
+  @media (min-width: 769px)
+    width: 100vw
+    margin-left: calc(-50vw + #{$page-width} / 2)
+
+/*
+ * extras: wide
+ */
+
+.wide
+  @media (min-width: 769px)
+    width: 140%
+    margin-left: -20%

@@ -1,4 +1,5 @@
 ---
+title: Reference
 date: 1980-01-01
 ---
 
@@ -10,12 +11,32 @@ wild is nowadays hot.
 
 ----
 
+### Special blocks
+Fancy blocks that can be used, just append `{:.brief-intro}` at the end.
+
+| ---- | ---- |
+| `.brief-intro` | Big paragraph |
+| `.full-image` | Full width image |
+
+### Block modifiers
+These can apply to any block (above, or `table`, `p`, etc)
+
+| ---- | ---- |
+| `.center` | Centered text |
+| `.spaced` | Larger vertical spacing |
+| `.spaced-more` | Even larger |
+| `.wide` | Make it 140% the size |
+
+## Examples
+A judgement day did argue, then a four-wheel drive stood wonderfully. A force of nature will be first himself, then she will be never fast or her. A black truth was not tasty or itself. In addition to a dish of the day, a constitutional monarchy can smile. Incredibly, she is slippery heavily.
+
 ### Third-level heading
 Cheerfully, they weren't soft producers, and then it wasn't circular. Nothing is not scary today. An eagle was wonderfully red or wrong. Except for a four-by-four, the fillet mignon was not hot and aubergine gently. Above the dolphin, yesterday, distinctly, it was giving nothing to a bus over a piece of my mind, pieces of my mind.
 
-A judgement day did argue, then a four-wheel drive stood wonderfully. A force of nature will be first himself, then she will be never fast or her. A black truth was not tasty or itself. In addition to a dish of the day, a constitutional monarchy can smile. Incredibly, she is slippery heavily.
+![Image](http://lorempixel.com/1440/300/city/9)
+{:.full-image.spaced-more}
 
-## Tables
+## Wide tables
 
 | Resolution | DPPX | Actual resolution | PPI     | Actual PPI | Size | Devices    |
 | ---        | ---  | ---               | ---     | ---        | ---  | ---        |
@@ -26,6 +47,7 @@ A judgement day did argue, then a four-wheel drive stood wonderfully. A force of
 | 414 x 736  | @3x  | 1242 x 2208       | 133 ppi | 401 ppi    | 5.5" | iPhone 6+  |
 | ---        | ---  | ---               | ----    | ---        | ---  | ---        |
 | 360 x 640  | @3x  | 1080 x 1920       | 147 ppi | 441 ppi    | 5"   | Galaxy S4 |
+{:.wide}
 
 ## Another table
 
@@ -33,3 +55,12 @@ A judgement day did argue, then a four-wheel drive stood wonderfully. A force of
 | ---        | ---- | ---               | ---     | ---        | ---- | ---              |
 | 1024 x 768 | @2x  | 2048 x 1536       | 163 ppi | 326 ppi    | 7.9" | iPad Mini Retina |
 | 1024 x 768 | @2x  | 2048 x 1536       | 132 ppi | 264 ppi    | 9.7" | iPad Air         |
+{:.wide}
+
+----
+
+### Image
+This is a wide image (`.wide.spaced`).
+
+![Image](http://lorempixel.com/1000/300/city/8)
+{:.wide.spaced}
