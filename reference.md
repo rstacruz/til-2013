@@ -18,6 +18,13 @@ Fancy blocks that can be used, just append `{:.brief-intro}` at the end.
 | `.brief-intro` | Big paragraph |
 | `.full-image` | Full width image |
 
+### Full images
+These modifiers are available for `.full-image`:
+
+| ---- | ---- |
+| `.stretched` | Force image to width: 100% |
+| `.cropped` | Crop the bottom of the image |
+
 ### Block modifiers
 These can apply to any block (above, or `table`, `p`, etc)
 
