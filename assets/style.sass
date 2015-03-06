@@ -24,6 +24,7 @@ $lightgray: #c0d3da
 $hairline: #eef3fa
 
 $accent: dodgerblue
+$accent2: #f53
 
 $page-width: 620px
 
@@ -84,7 +85,7 @@ a, a:visited
   transition: all 100ms linear
 
 a:focus, a:hover
-  box-shadow: inset 0 -2px rgba(mix($accent, #888, 75%), 0.5)
+  box-shadow: inset 0 -2px $accent
   color: $black
 
 strong, b
@@ -635,11 +636,14 @@ a.big-button
   height: 40px
   line-height: 40px - 2px
   padding: 0
-  border: solid 2px rgba($accent, 1)
   border-radius: 30px
   font-size: 0.85em
   box-shadow: none
   background: white
+
+  &, &:visited
+    border: solid 2px $accent
+    color: $accent
 
   &.-back,
   &.-back:visited
@@ -661,6 +665,7 @@ a.big-button
   &.-next:after
     content: '\f3d1'
     margin-left: 16px
+    top: 0
 
   &.-slim
     width: 60px
@@ -669,15 +674,17 @@ a.big-button
     line-height: 60px
     border-radius: 50%
 
-  &, &:visited
-    color: $accent
-
-  &:hover, &:focus,
-  &.-back:hover, &.-back:focus
+  &:hover, &:focus
     background: $accent
     border-color: transparent
     color: white
     box-shadow: none
+
+  &.-back:hover,
+  &.-back:focus
+    background: $accent
+    color: white
+
 
 /* ]]]
  * .next-article -- lead into the next article [[[
@@ -685,10 +692,24 @@ a.big-button
 
 .next-article
   &
+    display: block
+    padding: 0
     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1500' height='20' version='1.1'><polyline fill='white' points='1500,0 0,0 0,20'/></svg>") -50px top / 110% auto no-repeat, #fdfdfd
     margin-left: 40px
     margin-right: 40px
     position: relative
+
+  &, &:hover, &:focus
+    box-shadow: none
+
+  &:hover, &:focus
+    // background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1500' height='20' version='1.1'><polyline fill='white' points='1500,0 0,0 0,20'/></svg>") -50px top / 110% auto no-repeat, rgba($accent, 0.02)
+
+    .heading
+      color: $accent
+
+    .h3
+      color: black
 
   &:after
     content: ''
@@ -712,6 +733,7 @@ a.big-button
       display: none
 
   .container
+    display: block
     text-align: center
     padding: 10em 20px
 
@@ -719,11 +741,14 @@ a.big-button
       margin-top: 6em
       padding: 8em 20px
 
-  h3
-    margin: 0 0 1em 0
+  .h3
+    display: block
+    margin: 0 auto 1em auto
+    max-width: 500px
     padding: 0
     font-size: 1.6em
     +bold-font
+    color: $black
 
   .excerpt
     max-width: 500px
@@ -734,20 +759,26 @@ a.big-button
     font-size: 0.9em
     line-height: 1.6em
 
-  a, a:visited
-    box-shadow: none
-
   h3 a:hover,
   h3 a:focus
     color: $accent
 
   .heading
     display: block
-    color: $accent
+    color: $gray
     text-transform: uppercase
     font-size: 0.8em
     letter-spacing: 2px
     margin-bottom: 0.5em
+
+  .heading:before
+    font-family: Ionicons
+    content: '\f4a8'
+    margin-right: 10px
+    font-size: 16px
+    display: inline-block
+    vertical-align: middle
+    color: $accent
 
 // .next-article.-lofi
 //   .container
