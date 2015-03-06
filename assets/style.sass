@@ -11,6 +11,7 @@
 @import url('//brick.a.ssl.fastly.net/Roboto:400,400i,700')
 @import url('//fonts.googleapis.com/css?family=Fira+Mono:400,400i')
 @import url('//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+@import url('//cdn.jsdelivr.net/hint.css/1.3.2/hint.min.css')
 
 @import 'normalize'
 @import 'utils'
@@ -427,6 +428,9 @@ abbr.post-icon
     text-align: center
     box-shadow: none
 
+  a:before, a:after
+    transition: all 100ms linear
+
   .text
     display: none
 
@@ -464,8 +468,20 @@ abbr.post-icon
   .googleplus a
     +socialiconify($gray, '\f234', '\f235')
 
-  li:before
-    display: none
+.hint--top, .hint--bottom
+  &:before
+    margin-top: -14px
+    margin-left: -8px
+    border-radius: 2px
+
+  &:before, &:after
+    transition-duration: 10ms
+
+  &:after
+    box-shadow: none
+    border-radius: 2px
+    text-shadow: none
+    margin-left: -55px
 
 /* ]]]
  * .about-the-author -- colophon [[[
