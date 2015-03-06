@@ -29,12 +29,15 @@ it to your *test/mocha.opts* file.
 
 ### Try it out
 
-It's available via npm, and works with Mocha 1.x in Node.js and in the browser.
-The source is available in GitHub: [rstacruz/mocha-clean][src].
+It's available via npm, and works with Mocha 1.x in Node.js and in the browser. The source is available in GitHub: [rstacruz/mocha-clean][src].
 
 ```sh
 $ npm install --save-dev mocha-clean
 ```
+
+### Merging into Mocha?
+
+A pull request is currently open in Mocha to integrate this functionality into Mocha itself. Check out [#1564](https://github.com/mochajs/mocha/pull/1564) and offer your support and comments.
 
 [src]: https://github.com/rstacruz/mocha-clean
 [Mocha]: http://visionmedia.github.io/mocha
