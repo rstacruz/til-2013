@@ -13,6 +13,7 @@ $black: #020202
 $bg: #fff
 $line: #adf
 $gray: #808890
+$lightgray: #aaa
 $accent: dodgerblue
 
 /*
@@ -34,6 +35,10 @@ $accent: dodgerblue
   font-weight: 400
   letter-spacing: -0.5px
   +no-antialias
+
+= bold-font
+  font-family: 'fira sans', sans-serif
+  font-weight: 700
 
 /*
  * resets
@@ -130,7 +135,7 @@ html, input, textarea, td, th
     box-shadow: none
 
 /*
- * stuff
+ * basic styles
  */
 
 a, a:visited
@@ -155,8 +160,7 @@ h2
     color: $black
 
 h3
-  font-family: 'fira sans', sans-serif
-  font-weight: 700
+  +bold-font
   margin-top: 2em
   font-size: 1.1em
 
@@ -179,6 +183,66 @@ p > img:first-child:last-child
 code
   +mono-font
   font-size: 0.9em
+
+h2
+  text-align: center
+  +headline-font
+  font-size: 2em
+  margin: 1.5em auto
+
+h2:before,
+h2:after
+  content: ''
+  display: inline-block
+  vertical-align: middle
+  width: 46px
+  height: 1px
+  background: $lightgray
+  margin: 0 30px
+
+hr
+  width: 200px
+  height: 1px
+  border: 0
+  background: $lightgray
+  margin: 3em auto
+  display: block
+
+table
+  width: 100%
+
+  @media (min-width: 769px)
+    width: 140%
+    margin-left: -20%
+
+  margin-top: 2em
+  margin-bottom: 2em
+  font-size: 0.9em
+  border-top: solid 1px #888
+  border-bottom: solid 1px #888
+
+thead > tr:first-child td,
+thead > tr:first-child th
+  border-top: 0
+
+td, th
+  text-align: center
+  border-top: solid 1px #eee
+  padding: 8px 10px
+
+th
+  +bold-font
+  color: $black
+
+td:first-child,
+th:first-child
+  text-align: left
+  padding-left: 0
+
+td:last-child,
+th:last-child
+  text-align: right
+  padding-right: 0
 
 /*
  * code
@@ -275,8 +339,6 @@ abbr.post-icon
   color: white
   background: #eee
 
-  font-family: 'fira sans', sans-serif
-  font-weight: 700
   +body-font
   font-size: 16px
   letter-spacing: 1px
@@ -298,3 +360,14 @@ abbr.post-icon
   &.-icon-JavaScript
     +iconify(#2ecc71, 'JS')
     text-indent: 1px
+
+/*
+ * extras: brief intro
+ */
+
+.center
+  text-align: center
+
+.brief-intro
+  font-size: 1.1em
+  color: $gray
