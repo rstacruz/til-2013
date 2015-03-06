@@ -17,12 +17,12 @@ permalink: /:title.html
 exclude: ["Makefile", "README.md", "_/Gemfile", "_/Gemfile.lock",  "CNAME"]
 
 # Site info
+url: http://ricostacruz.com/til
 meta:
   title: Rico Sta. Cruz TIL
   name: Rico Sta. Cruz TIL
   hostname: ricostacruz.com
   description: "TIL - a collection of things I learned on my day-to-day web development work."
-  url: http://ricostacruz.com/til
   author: Rico Sta. Cruz
 
 facebook:

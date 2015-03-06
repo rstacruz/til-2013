@@ -35,10 +35,10 @@
   {% endif %}
 
   {% if page.url != '/index.html' %}
-  <link rel="canonical" href="{{ site.meta.url }}{{ page.url }}">
-  <meta name="og:url" content="{{ site.meta.url }}{{ page.url }}">
-  <link rel="prefetch" href="{{ site.meta.url }}">
-  <link rel="prerender" href="{{ site.meta.url }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta name="og:url" content="{{ site.url }}{{ page.url }}">
+  <link rel="prefetch" href="{{ site.url }}">
+  <link rel="prerender" href="{{ site.url }}">
   {% endif %}
 
   <meta content='{{ site.meta.name }}' property='og:site_name'>
@@ -53,7 +53,7 @@
   <meta content='width=device-width, initial-scale=1.0' name='viewport'>
   <link href='/favicon.png' rel='shortcut icon'>
 
-  <link rel="alternate" type="application/rss+xml" title="{{ site.meta.title }}" href="{{ site.meta.url }}/atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.meta.title }}" href="{{ site.url }}/atom.xml">
 
   {% if site.analytics %}<script>if(~location.hostname.indexOf("{{site.meta.hostname}}")){var _gaq=_gaq||[];_gaq.push(["_setAccount","{{ site.analytics.id }}"]);_gaq.push(["_trackPageview"]);(function(){var ga=document.createElement("script");ga.async=true;ga.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga,s)})()}</script>{% endif %}
 
