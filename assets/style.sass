@@ -262,7 +262,7 @@ pre.terminal
     padding-top: 56px
 
     &.large
-      padding-top: 60px
+      padding-top: 65px
 
   &:before
     content: ''
@@ -280,13 +280,17 @@ pre.terminal
     +bold-font
 
   &:after
-    content: '···'
+    content: ''
     position: absolute
+    display: block
+    width: 4px
+    height: 4px
+    border-radius: 50%
     left: 15px
-    top: 9px
+    top: 15px
     font-size: 20px
-    letter-spacing: 5px
-    color: rgba($term-border, 0.5)
+    background-color: $term-border
+    box-shadow: 20px 0 $term-border, 40px 0 $term-border
 
   @media (max-width: 768px)
     margin-left: 0
