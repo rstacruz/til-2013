@@ -8,7 +8,10 @@ It tells Heroku that the site is a PHP site and that it will be hosted using
 Apache.
 {:.brief-intro.center}
 
-    touch index.php
+```
+touch index.php
+```
+{:.terminal.large}
 
 And yes, you can still have an `index.html` file. The `.html` file takes 
 precedence over the `.php` one. Have fun!

@@ -9,7 +9,27 @@ herself to him while a rock is noticing. It was not white once. A calling of the
 wild is nowadays hot.
 {:.brief-intro.center}
 
-----
+## Modifiers
+
+### Generic block modifiers
+These can apply to any block (above, or `table`, `p`, etc)
+
+| ---- | ---- |
+| `.center` | Centered text |
+| `.wide` | Make it 140% the size |
+
+### Margin helpers
+Useful for adjusting spacing around elements. Replace `#` with a number (`0`, `1`, `2` and `4`).
+
+| ---- | ---- |
+| `.spaced` | Larger vertical spacing |
+| `.spaced-more` | Even larger |
+| `.top-space-#` | Adds spacing of `#` em |
+| `.top-collapse-#` | Adds negative spacing of `#` em |
+| `.bottom-space-#` | Adds spacing of `#` em |
+| `.bottom-collapse-#` | Adds negative spacing of `#` em |
+
+## Blocks
 
 ### Special blocks
 Fancy blocks that can be used, just append `{:.brief-intro}` at the end.
@@ -25,14 +45,13 @@ These modifiers are available for `.full-image`:
 | `.stretched` | Force image to width: 100% |
 | `.cropped` | Crop the bottom of the image |
 
-### Block modifiers
-These can apply to any block (above, or `table`, `p`, etc)
+### Code block modifiers
+Applies to code blocks (`pre`).
 
 | ---- | ---- |
-| `.center` | Centered text |
-| `.spaced` | Larger vertical spacing |
-| `.spaced-more` | Even larger |
-| `.wide` | Make it 140% the size |
+| `.terminal` | Terminal style |
+| `.large` | Large font |
+| `.cursor` | Has a cursor at the end |
 
 ## Examples
 A judgement day did argue, then a four-wheel drive stood wonderfully. A force of nature will be first himself, then she will be never fast or her. A black truth was not tasty or itself. In addition to a dish of the day, a constitutional monarchy can smile. Incredibly, she is slippery heavily.
