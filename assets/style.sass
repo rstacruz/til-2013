@@ -18,7 +18,6 @@
 $text: #555
 $black: #020202
 $bg: #fff
-$line: #afe
 $gray: #808890
 $lightgray: #ccc
 $accent: dodgerblue
@@ -216,7 +215,7 @@ pre > code
 pre
   padding: 20px 50px
   border-radius: 4px
-  background: #fafafa
+  background: #fcfdfc
   margin: 2.2em -50px
   line-height: 1.25em
 
@@ -311,7 +310,7 @@ pre.terminal
     display: block
     width: 150px
     height: 1px
-    background: $line
+    background: $hairline
     margin: 7em auto
 
     @media (max-width: 768px)
@@ -522,7 +521,7 @@ abbr.post-icon
   .twitter a
     +socialiconify(dodgerblue, '\f242', '\f243')
   .googleplus a
-    +socialiconify($gray, '\f234', '\f235')
+    +socialiconify(#f53, '\f234', '\f235')
 
 .hint--top, .hint--bottom
   &:before
@@ -553,12 +552,16 @@ abbr.post-icon
     max-width: 500px
     margin: 0 auto
 
+    @media (max-width: 768px)
+      padding-left: 40px
+      padding-right: 40px
+
   &:before
     content: ''
     position: absolute
     display: block
-    left: 0
-    right: 0
+    left: 20px
+    right: 20px
     top: 0
     border-top: solid 1px $hairline
 
@@ -619,9 +622,7 @@ abbr.post-icon
     margin: 0 7px
 
     @media (max-width: 768px)
-      display: block
-      margin: 5px auto
-      color: $accent
+      display: none
 
 .big-button,
 a.big-button
@@ -633,8 +634,9 @@ a.big-button
   padding: 0
   border: solid 2px rgba($accent, 1)
   border-radius: 30px
-  font-size: 0.9em
+  font-size: 0.85em
   box-shadow: none
+  background: white
 
   &.-back,
   &.-back:visited
@@ -647,6 +649,8 @@ a.big-button
     font-size: 20px
     display: inline-block
     vertical-align: middle
+    position: relative
+    top: -1px
 
   &.-back:before
     content: '\f38f'
@@ -659,7 +663,7 @@ a.big-button
     width: 60px
     border-width: 2px
     height: 60px
-    line-height: 60px - 4px
+    line-height: 60px
     border-radius: 50%
 
   &, &:visited
@@ -673,17 +677,30 @@ a.big-button
     box-shadow: none
 
 /* ]]]
- * .next-article [[[
+ * .next-article -- lead into the next article [[[
  */
 
 .next-article
   &
-    border-top: solid 1px $hairline
-    background: #fdfdfd
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1500' height='20' version='1.1'><polyline fill='white' points='1500,0 0,0 0,20'/></svg>") left top / 100% auto no-repeat, #fdfdfd
+    margin-left: 40px
+    margin-right: 40px
+
+  @media (max-width: 768px)
+    margin-left: 0
+    margin-right: 0
+
+    // remove horizontal line
+    & + .about-the-author:before
+      display: none
 
   .container
     text-align: center
-    padding: 4em 20px
+    padding: 10em 20px
+
+    @media (min-width: 769px)
+      margin-top: 6em
+      padding: 8em 20px
 
   h3
     margin: 0 0 1em 0
@@ -691,18 +708,29 @@ a.big-button
     font-size: 1.4em
     +bold-font
 
+  .excerpt
+    max-width: 500px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 1.5em
+    color: $gray
+    font-size: 0.9em
+    line-height: 1.6em
+
   a, a:visited
     box-shadow: none
 
-  .heading
-    opacity: 0.6
-    text-transform: uppercase
-    font-size: 0.85em
-    letter-spacing: 1px
-    margin-bottom: 5px
+  h3 a:hover,
+  h3 a:focus
+    color: $accent
 
-  .big-button
-    background: white
+  .heading
+    display: block
+    color: $accent
+    text-transform: uppercase
+    font-size: 0.8em
+    letter-spacing: 2px
+    margin-bottom: 0.5em
 
 // ]]]
 // [Custom blocks] [[[
