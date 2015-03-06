@@ -1,8 +1,17 @@
-# today I learned
+# Today I learned
 
-Grab bag of random things I pick up.
+*Grab bag of random things I pick up.* Got comments? Suggestions? Corrections? [I'd love to hear from you.](https://github.com/rstacruz/til/issues)
 
-Got comments? Suggestions? Corrections? [I'd love to hear from you.](https://github.com/rstacruz/til/issues)
+## Development
+
+Local server:
+
+    make
+    PORT=4000 make
+
+Deployment:
+
+    git push
 
 ## Thanks
 
