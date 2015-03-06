@@ -52,6 +52,14 @@ $page-width: 620px
   font-family: 'fira sans', sans-serif
   font-weight: 700
 
+= clearfix
+  &:after
+    display: table
+    content: ''
+    clear: both
+    height: 0
+    zoom: 1
+
 /* ]]]
  * html base (html, body) [[[
  */
@@ -552,9 +560,9 @@ abbr.post-icon
 
   .container
     text-align: center
-    padding: 3em 20px
-    max-width: 500px
+    padding: 3em 80px
     margin: 0 auto
+    +clearfix
 
     @media (max-width: 768px)
       padding-left: 40px
@@ -594,25 +602,32 @@ abbr.post-icon
     color: $black
     box-shadow: inset 0 -1px rgba($accent, 0.8)
 
-  h3, h3 + p
-    margin: 0 auto
-
-  h3
+  .identity
+    margin: 0
+    margin-top: 0.2em
+    float: right
     +headline-font
-    color: $black
-    font-size: 2.0em
-    margin-top: -5px
+    font-size: 2.5em
 
-  h3 a,
-  h3 a:visited
-    color: black
+  .identity a,
+  .identity a:visited
+    color: $gray
     box-shadow: none
 
-  p
-    margin: 1.5em 0
+  .identity a:hover,
+  .identity a:focus
+    color: $black
 
-  p.back
-    margin: 2.5em 0
+  .blurb
+    margin: 0
+    max-width: 500px
+    text-align: left
+    float: left
+
+  .back
+    float: right
+    margin-top: 0.4em
+    margin-right: 2em
 
   .fleuron:before
     content: '\f492'
@@ -628,13 +643,25 @@ abbr.post-icon
     @media (max-width: 768px)
       display: none
 
+  @media (max-width: 768px)
+    .identity
+      float: left
+      clear: both
+    .blurb
+      float: none
+      margin-bottom: 1em
+      width: auto
+    .back
+      float: right
+      margin-right: 0
+
 .big-button,
 a.big-button
   display: inline-block
 
-  width: 200px
-  height: 40px
-  line-height: 40px - 2px
+  width: 180px
+  height: 50px
+  line-height: 50px - 2px
   padding: 0
   border-radius: 30px
   font-size: 0.85em
@@ -647,7 +674,7 @@ a.big-button
 
   &.-back,
   &.-back:visited
-    border: solid 2px $gray
+    border: solid 1px rgba($gray, 0.2)
     color: $gray
 
   &.-back:before,
@@ -673,6 +700,11 @@ a.big-button
     height: 60px
     line-height: 60px
     border-radius: 50%
+
+    @media (max-width: 768px)
+      width: 40px
+      height: 40px
+      line-height: 40px
 
   &:hover, &:focus
     background: $accent
@@ -738,7 +770,7 @@ a.big-button
     padding: 10em 20px
 
     @media (min-width: 769px)
-      margin-top: 6em
+      margin-top: 8em
       padding: 8em 20px
 
   .h3
@@ -746,7 +778,8 @@ a.big-button
     margin: 0 auto 1em auto
     max-width: 500px
     padding: 0
-    font-size: 1.6em
+    font-size: 2em
+    line-height: 1.3em
     +bold-font
     color: $black
 
