@@ -668,6 +668,11 @@ a.big-button
   box-shadow: none
   background: white
 
+  @media (max-width: 768px)
+    width: 140px
+    height: 40px
+    line-height: 40px - 2px
+
   &, &:visited
     border: solid 2px $accent
     color: $accent
@@ -783,6 +788,9 @@ a.big-button
     +bold-font
     color: $black
 
+    @media (max-width: 768px)
+      font-size: 1.5em
+
   .excerpt
     max-width: 500px
     margin-left: auto
@@ -807,7 +815,7 @@ a.big-button
   .heading:before
     font-family: Ionicons
     content: '\f4a8'
-    margin-right: 10px
+    margin-right: 15px
     font-size: 16px
     display: inline-block
     vertical-align: middle
