@@ -11,7 +11,7 @@
 $text: #555
 $black: #020202
 $bg: #fff
-$line: #adf
+$line: #afe
 $gray: #808890
 $lightgray: #ccc
 $accent: dodgerblue
@@ -159,9 +159,54 @@ strong, b
 h3, p, ul, ol
   margin: 1.5em 0
 
+ul, ol
+  padding-left: 1.5em
+
+ul
+  list-style: none
+
+ul > li
+  position: relative
+
+ul > li:before
+  content: ''
+  display: block
+  position: absolute
+  left: -1.4em
+  top: 0
+  margin-top: 0.7em
+  width: 4px
+  height: 4px
+  border-radius: 50%
+  border: solid 2px $lightgray
+
+  @media (max-width: 768px)
+    width: 3px
+    height: 3px
+
+
 h2
   &, a, a:visited
     color: $black
+
+h2
+  text-align: center
+  +headline-font
+  font-size: 2em
+  margin: 1.5em auto
+  @media (max-width: 768px)
+    font-size: 1.6em
+
+@media (min-width: 769px)
+  h2:before,
+  h2:after
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    width: 46px
+    height: 1px
+    background: $lightgray
+    margin: 0 30px
 
 h3
   +bold-font
@@ -189,22 +234,6 @@ code
   +mono-font
   font-size: 0.9em
 
-h2
-  text-align: center
-  +headline-font
-  font-size: 2em
-  margin: 1.5em auto
-
-h2:before,
-h2:after
-  content: ''
-  display: inline-block
-  vertical-align: middle
-  width: 46px
-  height: 1px
-  background: $lightgray
-  margin: 0 30px
-
 hr
   width: 200px
   height: 1px
@@ -214,7 +243,7 @@ hr
   display: block
 
 table
-  width: 100%
+  min-width: 100%
   margin-top: 2em
   margin-bottom: 2em
   font-size: 0.9em
@@ -413,6 +442,6 @@ abbr.post-icon
  */
 
 .wide
-  @media (min-width: 769px)
+  @media (min-width: 920px)
     width: 140%
     margin-left: -20%
