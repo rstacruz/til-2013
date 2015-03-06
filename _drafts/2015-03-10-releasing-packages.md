@@ -26,10 +26,9 @@ There are many change log tools available, but I've found that the sanest soluti
 * ...
 ```
 
-----
-{:.spaced}
-
 ### 3. Tag and release via [git-extras](https://github.com/tj/git-extras)
+{:.top-space-4}
+
 Git Extras comes with the `git release` command, which automates creating a release commit, tags it with the right version, and pushes it.
 
 ```sh
