@@ -64,6 +64,11 @@ $body-line-height: 1.7
   font-family: 'raleway', sans-serif
   font-weight: 800
 
+= bold-font-size($size, $line-height: none)
+  font-size: $size * 1.0
+  @if $line-height != none
+    line-height: $line-height
+
 = clearfix
   &:after
     display: table
@@ -165,8 +170,8 @@ h2
 
 h3
   +bold-font
+  +bold-font-size(1.1em)
   margin-top: 2em
-  font-size: 1.1em
 
   &, a, a:visited
     color: $black
@@ -611,7 +616,7 @@ abbr.post-icon
 
   a:hover, a:focus
     color: $black
-    box-shadow: inset 0 -1px rgba(black, 0.2)
+    box-shadow: inset 0 -2px $accent
 
   strong
     +bold-font
@@ -622,7 +627,7 @@ abbr.post-icon
 
   strong a:hover, strong a:focus
     color: $black
-    box-shadow: inset 0 -1px rgba($accent, 0.8)
+    box-shadow: inset 0 -2px $accent
 
   .identity
     margin: 0
