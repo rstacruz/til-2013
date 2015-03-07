@@ -7,6 +7,7 @@ tags: [CSS]
 $ npm i -g stylus
 $ stylus -i
 ```
+{:.terminal}
 
 **Use [stylus]'s CLI.** Stylus CLI is faster than Sass and has shorter syntax for color computations. Here's *lighten* and *hue shift*:
 

@@ -33,6 +33,8 @@ $page-width: 620px
  * font mixins [[[
  */
 
+$body-font-size: 17px
+$body-line-height: 1.7
 = body-font
   font-family: 'Roboto', sans-serif
   font-weight: 400
@@ -42,6 +44,15 @@ $page-width: 620px
   font-weight: 400
   font-style: italic
   +kernliga
+
+= headline-font-size($size, $line-height: none)
+  font-size: $size * 1.0
+  @if $line-height != none
+    line-height: $line-height
+
+= caps-font
+  text-transform: uppercase
+  letter-spacing: 1px
 
 = mono-font
   font-family: 'fira mono', monospace
@@ -69,13 +80,13 @@ $page-width: 620px
   +antialias
 
 html
-  font-size: 17px
-  line-height: 1.7
+  font-size: $body-font-size
+  line-height: $body-line-height
   background: $bg
   color: $text
 
   @media (max-width: 768px)
-    font-size: 14px
+    font-size: floor($body-font-size * 14/17)
 
 html, input, textarea, td, th
   +body-font
@@ -136,10 +147,10 @@ h2
 h2
   text-align: center
   +headline-font
-  font-size: 2em
+  +headline-font-size(2em, 1.4)
   margin: 2em auto 0 auto
   @media (max-width: 768px)
-    font-size: 1.6em
+    +headline-font-size(1.6em)
 
 @media (min-width: 769px)
   h2:before,
@@ -356,15 +367,14 @@ pre.terminal
   h1
     text-align: center
     margin-bottom: 0
-    font-size: 2.8em
-    line-height: 1.2
     +headline-font
+    +headline-font-size(2.8em, 1.2)
     width: 80%
     margin-left: auto
     margin-right: auto
 
     @media (max-width: 768px)
-      font-size: 2em
+      +headline-font-size(2em)
 
   .meta
     display: block
@@ -372,9 +382,8 @@ pre.terminal
     margin: 0
     margin-top: 1em
     font-weight: normal
-    text-transform: uppercase
+    +caps-font
     font-size: 0.8em
-    letter-spacing: 1px
 
   .meta .author,
   .meta .date
@@ -443,7 +452,7 @@ $icon-size: 56px
     color: lighten($color, 50%)
     box-shadow: -2px 2px #e67e22, 2px -2px #f1c40f, 1px -2px rgba($color, 0.2), 1px 3px rgba($color, 0.3)
 
-  &:after
+  span:after
     content: $text
 
 .post-icon,
@@ -466,18 +475,18 @@ abbr.post-icon
   @media (max-width: 480px)
     transform: scale(0.75)
 
-  &.-icon-CSS
+  &.-icon-css
     +iconify(#3498db, 'CSS')
     font-size: 14px
     line-height: $icon-size + 2px
-  &.-icon-Development
+  &.-icon-development
     +iconify(#34495e, 'DEV')
     font-size: 14px
     line-height: $icon-size + 2px
-  &.-icon-Ruby
+  &.-icon-ruby
     +iconify(#e74c3c, 'RB')
     text-indent: 2px
-  &.-icon-JavaScript
+  &.-icon-javascript
     +iconify(#2ecc71, 'JS')
     text-indent: 1px
 

@@ -4,21 +4,22 @@
 {% include head.html %}
 {% include body.html %}
 {% include site-header.html %}
+{% assign post = page %}
 
 <div class='post-list -single'>
   <div class="post-item">
     <div class="post-headline">
-      <abbr class='post-icon -icon-{{ page.tags[0] | camelize }}' title='{{ page.tags[0] }}'></abbr>
+      <abbr class='post-icon -icon-{{ post.tags | first | slugify }} hint--right' data-hint='{{ post.tags | first }}'><span></span></abbr>
       <h1>
-        <a href=".{{ page.url }}" rel="bookmark" title="{{ page.title }}">
-          {{ page.title }}
+        <a href=".{{ post.url }}" rel="bookmark" title="{{ post.title }}">
+          {{ post.title }}
         </a>
       </h1>
       <h5 class='meta'>
-        <a href=".{{ page.url }}" rel="bookmark" title="{{ page.title }}">
+        <a href=".{{ post.url }}" rel="bookmark" title="{{ post.title }}">
           <span class='author'>{{ site.meta.author }}</span>
           &middot;
-          <span class='date'>{{ page.date | date: "%B %e, %Y" }}</span>
+          <span class='date'>{{ post.date | date: "%B %e, %Y" }}</span>
         </a>
       </h5>
     </div>
