@@ -244,14 +244,17 @@ pre > code
 pre
   padding: 20px 50px
   border-radius: 4px
-  background: #fafafa
+  background: $wash
   margin: 2.2em -50px
   line-height: 1.25em
 
   @media (max-width: 768px)
     padding: 20px
     margin: 2em -20px
-    background: #f0f0f0
+    background: darken($wash, 3%)
+
+  @media (max-width: 660px)
+    border-radius: 0
 
 pre + pre
   margin-top: -1.5em
@@ -767,7 +770,7 @@ a.big-button
     position: relative
 
   @media (max-width: 480px)
-    background: url($notch) -50px top / 110% auto no-repeat, darken(#f4f5f7, 3%)
+    background: url($notch) -50px top / 110% auto no-repeat, darken($wash, 3%)
 
   &, &:hover, &:focus
     box-shadow: none
