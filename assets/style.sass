@@ -6,7 +6,6 @@
  */
 
 @import url('//brick.a.ssl.fastly.net/EB+Garamond:400i')
-// @import url('//brick.a.ssl.fastly.net/Fira+Sans:700')
 @import url('//fonts.googleapis.com/css?family=Raleway:800')
 @import url('//brick.a.ssl.fastly.net/Roboto:400,400i,700')
 @import url('//fonts.googleapis.com/css?family=Fira+Mono:400,400i')
@@ -635,16 +634,16 @@ abbr.post-icon
     margin-top: 0.2em
     float: right
     +headline-font
-    font-size: 2.5em
+    +headline-font-size(2.5em)
 
   .identity a,
   .identity a:visited
-    color: $gray
+    color: $black
     box-shadow: none
 
   .identity a:hover,
   .identity a:focus
-    color: $black
+    color: $accent
 
   .blurb
     margin: 0
