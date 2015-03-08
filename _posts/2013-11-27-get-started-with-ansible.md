@@ -5,7 +5,7 @@ description: |
   Provisioning servers is easy using Ansible. Here's a guide to set it up from scratch.
 ---
 
-[Ansible](http://ansibleworks.com) is a fantastic tool for provisioning servers. I personally prefer it over Chef, Puppet and Salt. Here's how to get an Ansible project started.
+[Ansible](http://ansible.com) is a fantastic tool for provisioning servers. I personally prefer it over Chef, Puppet and Salt. Here's how to get an Ansible project started.
 {:.brief-intro.center}
 
 ----
@@ -94,4 +94,4 @@ ok: [127.0.0.1]
 Ansible's source is available via GitHub: [ansible/ansible](https://github.com/ansible/ansible).
 
 * [Getting Started With Ansible](http://lowendbox.com/blog/getting-started-with-ansible/) (lowendbox.com)
-* [Ansible Documentation](http://www.ansibleworks.com/docs/modules.html) (ansible.com)
+* [Ansible Documentation](http://docs.ansible.com/modules.html) (ansible.com)
