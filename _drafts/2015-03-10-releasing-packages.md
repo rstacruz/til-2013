@@ -4,16 +4,13 @@ date: 2015/03/09
 tags: [Development]
 ---
 Releasing packages involves the same repetitive tasks: updating the change log, bumping versions, tagging a release, and so on. Here are a few tools to make this chore easier.
-{:.brief-intro}
+{:.brief-intro.center}
 
-----
-{:.spaced}
+![](https://camo.githubusercontent.com/b35364114a530e5b4066d719c150d7abaaf4e95f/687474703a2f2f63646e2e7261776769742e636f6d2f727374616372757a2f62756d702d636c692f613235316336332f62756d702e706e67)
+{:.full-image.cropped.bottom-space-2}
 
 ### 1. Bump versions via [bump-cli](http://npmjs.com/bump-cli)
 This utility allows you to increment versions of files through the command line. For JavaScript packages, this simply means bumping your `.json` files. This works with any file type with [semver](http://semver.org/) tags.
-
-![](https://camo.githubusercontent.com/b35364114a530e5b4066d719c150d7abaaf4e95f/687474703a2f2f63646e2e7261776769742e636f6d2f727374616372757a2f62756d702d636c692f613235316336332f62756d702e706e67)
-{:.full-image.cropped.bottom-space-4}
 
 ### 2. Continuously maintain the change log
 There are many change log tools available, but I've found that the sanest solution is to update the log as features get implemented. Maintain an "unreleased" list on top of the change log—on release time, you'll simply need to add a date.
