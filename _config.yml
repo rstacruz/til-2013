@@ -24,6 +24,7 @@ meta:
   hostname: ricostacruz.com
   description: "TIL - a collection of things I learned on my day-to-day web development work."
   author: Rico Sta. Cruz
+  author_ogp: ricostacruz # Facebook ID
 
 facebook:
   app_id: 169204529787544

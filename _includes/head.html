@@ -50,8 +50,8 @@
   {% if site.facebook.admin %}
   <meta content='{{ site.facebook.admin }}' property='fb:admins'>
   {% endif %}
-  {% if site.meta.author %}
-  <meta content='{{ site.meta.author }}' property='article:author'>
+  {% if site.meta.author_ogp %}
+  <meta content='{{ site.meta.author_ogp }}' property='article:author'>
   {% endif %}
   {% if page.date %}
   <meta content='{{ page.date | date: "%Y-%m-%d" }}' property='article:published_date'>
