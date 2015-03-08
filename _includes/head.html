@@ -26,9 +26,9 @@
   <meta content='blog' property='og:type'>
   {% endif %}
 
-  {% if page.meta.description %}
-  <meta content="{{ page.meta.description }}" name="description">
-  <meta content="{{ page.meta.description }}" property="og:description">
+  {% if page.description %}
+  <meta content="{{ page.description }}" name="description">
+  <meta content="{{ page.description }}" property="og:description">
   {% else if page.url == '/index.html' && site.meta.description %}
   <meta content="{{ site.meta.description }}" name="description">
   <meta content="{{ site.meta.description }}" property="og:description">

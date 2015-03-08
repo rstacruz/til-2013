@@ -1,6 +1,8 @@
 ---
 title: "@extend sucks"
 tags: [CSS]
+description: |
+  Let me tell you why you should never use @extend again.
 ---
 
 Using `@extend` in CSS preprocessors really suck... so use mixins instead. Consider this example:

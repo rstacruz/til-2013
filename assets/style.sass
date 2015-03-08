@@ -807,8 +807,7 @@ a.big-button
 
   .h3
     display: block
-    margin: 0 auto 1em auto
-    max-width: 500px
+    margin: 0 auto auto
     padding: 0
     font-size: 2.2em
     line-height: 1.3em
@@ -823,14 +822,22 @@ a.big-button
     @media (max-width: 768px)
       font-size: 1.5em
 
+  .h3, .excerpt
+    max-width: $page-width * 0.9
+
+  .h3 + .excerpt
+    margin-top: 0.5em
+
   .excerpt
-    max-width: 500px
+    display: block
     margin-left: auto
     margin-right: auto
-    margin-bottom: 1.5em
     color: $gray
-    font-size: 0.9em
+    font-size: 1em
     line-height: 1.6em
+
+  .big-button
+    margin-top: 2em
 
   h3 a:hover,
   h3 a:focus
@@ -842,7 +849,7 @@ a.big-button
     text-transform: uppercase
     font-size: 0.7em
     letter-spacing: 2px
-    margin-bottom: 0.5em
+    margin-bottom: 1em
 
   .heading:before
     font-family: Ionicons

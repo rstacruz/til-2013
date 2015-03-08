@@ -1,6 +1,8 @@
 ---
 title: Easy color computations
 tags: [CSS]
+description: |
+  Need to lighten/darken colors easily? Here's how.
 ---
 
 ```sh

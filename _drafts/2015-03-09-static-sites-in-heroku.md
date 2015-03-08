@@ -1,6 +1,8 @@
 ---
 title: "Hosting static sites in Heroku"
 tags: [Development]
+description: |
+  Serve simple websites for free using Heroku with this one simple tip.
 ---
 
 Just add an `index.php` to your repository.

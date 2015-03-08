@@ -1,6 +1,8 @@
 ---
 title: Use Bower packages like npm packages
 tags: [JavaScript]
+description: |
+  Ever wanted to use some frontend packages but they're not npm-compatible?
 ---
 
 [Napa] is a package that lets you install arbitrary projects (without package.json) into `node_modules`.

@@ -1,18 +1,23 @@
 ---
 title: Get started with Ansible in 2 minutes
-tags: [Development, Ansible]
+tags: [Development]
+description: |
+  Provisioning servers is easy using Ansible. Here's a guide to set it up from scratch.
 ---
 
- * http://ansibleworks.com
- * https://github.com/ansible/ansible
+[Ansible](http://ansibleworks.com) is a fantastic tool for provisioning servers. I personally prefer it over Chef, Puppet and Salt. Here's how to get an Ansible project started.
+{:.brief-intro.center}
+
+----
 
 ### Install Ansible
 Officially available via `pip`.
 
 ~~~ sh
-$ brew install ansible            # OSX
-$ [sudo] pip install ansible      # elsewhere
+brew install ansible            # OSX
+[sudo] pip install ansible      # elsewhere
 ~~~
+{:.terminal}
 
 ### Start your project
 Make the directory. Put this under version control, preferrably.
@@ -82,7 +87,11 @@ ok: [127.0.0.1]
 ...
 ~~~
 
-### Read more
+----
 
-  * http://lowendbox.com/blog/getting-started-with-ansible/
-  * http://www.ansibleworks.com/docs/modules.html
+### Further reading
+
+Ansible's source is available via GitHub: [ansible/ansible](https://github.com/ansible/ansible).
+
+* [Getting Started With Ansible](http://lowendbox.com/blog/getting-started-with-ansible/) (lowendbox.com)
+* [Ansible Documentation](http://www.ansibleworks.com/docs/modules.html) (ansible.com)

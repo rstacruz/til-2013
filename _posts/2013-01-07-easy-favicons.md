@@ -1,6 +1,8 @@
 ---
 title: Easily make favicon.ico
 tags: [Development]
+description: |
+  Never look for a favicon generator again.
 ---
 
 To create `favicon.ico`, you don't need anything other than ImageMagick.

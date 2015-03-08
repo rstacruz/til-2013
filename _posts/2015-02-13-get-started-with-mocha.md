@@ -1,6 +1,8 @@
 ---
 title: Get started with Mocha testing
 tags: [JavaScript]
+description: |
+  In 60 seconds, let's learn how to write tests for any Node.js package.
 ---
 
 Testing Node.js packages is easy. Here's the condensed 1-minute guide to setting up tests on a Node.js project.

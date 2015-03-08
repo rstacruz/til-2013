@@ -2,6 +2,8 @@
 title: Tools to make releasing packages easier
 date: 2015/03/09
 tags: [Development]
+description: |
+  Make releasing packages easier with these 2 open-source tools.
 ---
 Releasing packages involves the same repetitive tasks: updating the change log, bumping versions, tagging a release, and so on. Here are a few tools to make this chore easier.
 {:.brief-intro.center}
@@ -24,7 +26,6 @@ There are many change log tools available, but I've found that the sanest soluti
 ```
 
 ### 3. Tag and release via [git-extras](https://github.com/tj/git-extras)
-{:.top-space-4}
 
 Git Extras comes with the `git release` command, which automates creating a release commit, tags it with the right version, and pushes it.
 

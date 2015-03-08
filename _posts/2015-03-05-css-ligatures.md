@@ -1,6 +1,8 @@
 ---
 title: Ligatures in CSS
 tags: [CSS]
+description: |
+  Implement fancy typographic ligatures with just CSS.
 ---
 
 Headings can benefit from nice ligatures. Use the [font-feature-settings](https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings) CSS property to enable these OpenType features.
