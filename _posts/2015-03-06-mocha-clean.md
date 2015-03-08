@@ -1,8 +1,7 @@
 ---
 title: Cleaner Mocha stack traces
 tags: [JavaScript]
-description: |
-  Get rid of stack trace frames from 3rd-party modules in Mocha.
+description: Get rid of stack trace frames from 3rd-party modules in Mocha.
 ---
 
 [Mocha] is a great way to test JavaScript, but its stack traces are riddled

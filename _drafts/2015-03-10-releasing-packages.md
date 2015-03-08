@@ -2,8 +2,7 @@
 title: Tools to make releasing packages easier
 date: 2015/03/09
 tags: [Development]
-description: |
-  Make releasing packages easier with these 2 open-source tools.
+description: Make releasing packages easier with these 2 open-source tools.
 ---
 Releasing packages involves the same repetitive tasks: updating the change log, bumping versions, tagging a release, and so on. Here are a few tools to make this chore easier.
 {:.brief-intro.center}

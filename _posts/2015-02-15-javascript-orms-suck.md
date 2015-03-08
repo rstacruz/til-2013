@@ -1,8 +1,7 @@
 ---
 title: JavaScript ORM's suck
 tags: [JavaScript]
-description: |
-  Database ORM's and JavaScript aren't a good mix. Here's why.
+description: Database ORM's and JavaScript aren't a good mix. Here's why.
 ---
 
 Consider this scenario: there's a strange bug in production's data that you need to inspect. In Rails, you can tell `rails console`: "show me all project IDs that are active and made by users that never logged in" like so:

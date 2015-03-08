@@ -1,8 +1,7 @@
 ---
 title: Use Markdown for documentation
 tags: [Development]
-description: |
-  Forget complex documentation schemes... it's really just this easy.
+description: Forget complex documentation schemes... it's really just this easy.
 ---
 
 The most universal documentation "format" is a bunch of Markdown files inside a project's `doc/` directory. Here are some projects that follow that convention:

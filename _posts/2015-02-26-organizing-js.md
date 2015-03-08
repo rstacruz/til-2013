@@ -1,8 +1,7 @@
 ---
 title: Organizing JavaScript for simple sites
 tags: [JavaScript]
-description: |
-  How do you sort JavaScript files in a Rails project? Here's one way.
+description: How do you sort JavaScript files in a Rails project? Here's one way.
 ---
 
 Some sites don't need big JavaScript architectures, only bits of small behaviors that will affect certain elements. I prefer to put them into a directory called `behaviors`.

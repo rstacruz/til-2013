@@ -1,8 +1,7 @@
 ---
 title: Using Bower and Rails in Heroku
 tags: [Ruby]
-description: |
-  Use the Bower package manager in Rails projects when deploying to Heroku.
+description: Use the Bower package manager in Rails projects when deploying to Heroku.
 ---
 
 This seems pretty easy until you realize that Bower (a Node.js package) is not available in the Heroku Ruby build pack.

@@ -1,8 +1,7 @@
 ---
 title: Inline SVG in CSS
 tags: [CSS]
-description: |
-  Create complex shapes easily by combining SVG and CSS.
+description: Create complex shapes easily by combining SVG and CSS.
 ---
 
 ```css

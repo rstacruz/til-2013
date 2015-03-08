@@ -1,8 +1,7 @@
 ---
 title: Get started with Ansible in 2 minutes
 tags: [Development]
-description: |
-  Provisioning servers is easy using Ansible. Here's a guide to set it up from scratch.
+description: Provisioning servers is easy using Ansible. Here's a guide to set it up from scratch.
 ---
 
 [Ansible](http://ansible.com) is a fantastic tool for provisioning servers. I personally prefer it over Chef, Puppet and Salt. Here's how to get an Ansible project started.

@@ -1,8 +1,7 @@
 ---
 title: Use Browserify to precompile npm libraries
 tags: [JavaScript]
-description: |
-  Keep large libraries sane using Browserify. With ES6 and CoffeeScript support!
+description: Keep large libraries sane using Browserify. With ES6 and CoffeeScript support!
 ---
 
 Remove the hassle in writing npm libraries in a transpiled language ([babeljs], [CoffeeScript], etc) by using browserify.

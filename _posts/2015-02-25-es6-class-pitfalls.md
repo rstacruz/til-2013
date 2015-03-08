@@ -1,8 +1,7 @@
 ---
 title: ES6 class pitfalls
 tags: [JavaScript]
-description: |
-  Keep aware of this one caveat when making classes in ES6.
+description: Keep aware of this one caveat when making classes in ES6.
 ---
 
 ```js

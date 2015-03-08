@@ -1,8 +1,7 @@
 ---
 title: Inline partials
 tags: [Ruby]
-description: |
-  Organize long views into smaller sub-views with this tip.
+description: Organize long views into smaller sub-views with this tip.
 ---
 
 Ever find it annoying to have really long blocks of code being hard to parse in your head?
