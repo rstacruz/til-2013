@@ -10,7 +10,7 @@ markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
-  parse_block_html: true
+  #parse_block_html: true
 
 # Site settings
 permalink: /:title.html
@@ -19,8 +19,7 @@ exclude: ["Makefile", "README.md", "_/Gemfile", "_/Gemfile.lock",  "CNAME"]
 # Site info
 url: http://ricostacruz.com/til
 meta:
-  title: Rico Sta. Cruz TIL
-  name: Rico Sta. Cruz TIL
+  title: Today I Learned
   hostname: ricostacruz.com
   description: "TIL - a collection of things I learned on my day-to-day web development work."
   author: Rico Sta. Cruz
