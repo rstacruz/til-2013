@@ -22,8 +22,6 @@ meta:
   title: Today I Learned
   hostname: ricostacruz.com
   description: "TIL - a collection of things I learned on my day-to-day web development work."
-  author: Rico Sta. Cruz
-  author_ogp: https://www.facebook.com/ricostacruz # Facebook ID
 
 facebook:
   app_id: 169204529787544
@@ -38,3 +36,5 @@ defaults:
     values:
       layout: "article"
       tags: []
+      author: Rico Sta. Cruz
+      author_ogp: https://www.facebook.com/ricostacruz # Facebook ID

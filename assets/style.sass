@@ -404,10 +404,20 @@ p > iframe
   .meta .author,
   .meta .date
     margin: 0 5px
+    padding-bottom: 2px
 
   .meta a,
   .meta a:visited
     color: $gray
+
+  .meta a:hover,
+  .meta a:focus
+    &, span
+      color: $gray
+
+    time
+      color: $black
+      box-shadow: inset 0 -2px $accent
 
   a, a:visited, a:focus, a:hover
     color: $black

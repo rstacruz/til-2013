@@ -41,8 +41,8 @@
   <link rel="prerender" href="{{ site.url }}">
   {% endif %}
 
-  {% if site.meta.author %}
-  <meta content='{{ site.meta.author }}' name='author'>
+  {% if page.author %}
+  <meta content='{{ page.author }}' name='author'>
   {% endif %}
   {% if site.meta.title %}
   <meta content='{{ site.meta.title }}' property='og:site_name'>
@@ -53,8 +53,8 @@
   {% if site.facebook.admin %}
   <meta content='{{ site.facebook.admin }}' property='fb:admins'>
   {% endif %}
-  {% if site.meta.author_ogp %}
-  <meta content='{{ site.meta.author_ogp }}' property='article:author'>
+  {% if page.author_ogp %}
+  <meta content='{{ page.author_ogp }}' property='article:author'>
   {% endif %}
   {% if page.date %}
   <meta content='{{ page.date | date: "%Y-%m-%d" }}' property='article:published_date'>

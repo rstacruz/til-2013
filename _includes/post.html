@@ -9,9 +9,9 @@
       </h1>
       <h5 class='meta'>
         <a href=".{{ post.url }}" rel="bookmark" title="{{ post.title }}">
-          <span class='author'>{{ site.meta.author }}</span>
+          <span class='author' itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">{{ post.author }}</span>
           &middot;
-          <span class='date'>{{ post.date | date: "%B %e, %Y" }}</span>
+          <time class='date' itemprop="datePublished" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %e, %Y" }}</time>
         </a>
       </h5>
     </div>
