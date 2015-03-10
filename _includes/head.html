@@ -42,7 +42,12 @@
   {% endif %}
 
   {% if page.author %}
-  <meta content='{{ page.author }}' name='author'>
+  {% for author in site.authors | where: "name", page.author %}
+    <meta content='{{ author.name }}' name='author'>
+    {% if author.ogp %}
+    <meta content='{{ author.ogp }}' property='article:author'>
+    {% endif %}
+  {% endfor %}
   {% endif %}
   {% if site.meta.title %}
   <meta content='{{ site.meta.title }}' property='og:site_name'>
@@ -52,9 +57,6 @@
   {% endif %}
   {% if site.facebook.admin %}
   <meta content='{{ site.facebook.admin }}' property='fb:admins'>
-  {% endif %}
-  {% if page.author_ogp %}
-  <meta content='{{ page.author_ogp }}' property='article:author'>
   {% endif %}
   {% if page.date %}
   <meta content='{{ page.date | date: "%Y-%m-%d" }}' property='article:published_date'>

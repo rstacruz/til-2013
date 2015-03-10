@@ -53,6 +53,10 @@ Applies to code blocks (`pre`).
 | `.large` | Large font |
 | `.cursor` | Has a cursor at the end |
 
+## Authors
+
+Put authors in `_authors/`. This allows you to pull their bio's, author URL's and such
+
 ## Examples
 A judgement day did argue, then a four-wheel drive stood wonderfully. A force of nature will be first himself, then she will be never fast or her. A black truth was not tasty or itself. In addition to a dish of the day, a constitutional monarchy can smile. Incredibly, she is slippery heavily.
 

@@ -9,7 +9,9 @@
       </h1>
       <h5 class='meta'>
         <a href=".{{ include.post.url }}" rel="bookmark" title="{{ include.post.title }}">
-          <span class='author' itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">{{ include.post.author }}</span>
+          {% for author in site.authors | where: "name", include.page.author %}
+            <span class='author' itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">{{ author.name }}</span>
+          {% endfor %}
           &middot;
           <time class='date' itemprop="datePublished" datetime="{{ include.post.date | date: "%Y-%m-%d" }}">{{ include.post.date | date: "%B %e, %Y" }}</time>
         </a>

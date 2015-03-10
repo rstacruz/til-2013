@@ -30,6 +30,10 @@ facebook:
 analytics:
   id: "UA-20473929-1"
 
+# Collections
+collections:
+  - authors
+
 defaults:
   - scope:
       path: ""
@@ -37,4 +41,3 @@ defaults:
       layout: "article"
       tags: []
       author: Rico Sta. Cruz
-      author_ogp: https://www.facebook.com/ricostacruz # Facebook ID
