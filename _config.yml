@@ -10,7 +10,6 @@ markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
-  #parse_block_html: true
 
 # Site settings
 permalink: /:title.html
@@ -23,10 +22,7 @@ meta:
   hostname: ricostacruz.com
   description: "TIL - a collection of things I learned on my day-to-day web development work."
 
-# facebook:
-#   app_id: 169204529787544
-#   admin: ricostacruz
-
+# Google analytics
 analytics:
   id: "UA-20473929-1"
 
@@ -34,6 +30,7 @@ analytics:
 collections:
   - authors
 
+# Default variables
 defaults:
   - scope:
       path: ""
