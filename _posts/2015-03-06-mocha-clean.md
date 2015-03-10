@@ -10,7 +10,7 @@ with useless frames from Mocha internals and 3rd-party modules. Let's try and
 clean it up.
 {:.brief-intro.center}
 
-![Image]({{ post.image }})
+![Image]({{ page.image }})
 {:.full-image.cropped}
 
 <br>
