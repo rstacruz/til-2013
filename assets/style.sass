@@ -78,9 +78,6 @@ strong, b
   &, a, a:visited
     color: $black
 
-em, i
-  +italic-font
-
 h3, p, ul, ol
   margin: 1.5em 0
 
@@ -153,7 +150,7 @@ p > img:first-child:last-child
 
 code
   +mono-font
-  font-size: 0.9em
+  +mono-font-size(0.9em)
 
 hr
   width: 200px
@@ -200,7 +197,7 @@ th:last-child
 
 pre > code
   +mono-font
-  font-size: 0.87em
+  +mono-font-size(0.87em)
   color: $text
   padding-right: 20px
   // box-shadow: inset 1px 1px rgba(black, 0.06)
