@@ -5,7 +5,7 @@ description: Serve simple websites for free using Heroku with this one simple ti
 ---
 
 Just add an `index.php` to your repository.
-It tells Heroku that the site is a PHP site and that it will be hosted using 
+It tells [Heroku](http://heroku.com) that the site is a PHP site and that it will be hosted using 
 Apache.
 {:.brief-intro.center}
 
