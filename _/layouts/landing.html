@@ -7,14 +7,12 @@
 
 {% if site.posts[0] %}
   {% assign post = site.posts[0] %}
-  {% assign content = post.content %}
-  {% include post.html %}
+  {% include post.html post=post content=post.content %}
 {% endif %}
 
 {% if site.posts[1] %}
-  {% assign nextpage = site.posts[1] %}
-  {% assign nextclass = '-lofi' %}
-  {% include next-article.html %}
+  {% assign next = site.posts[1] %}
+  {% include next-article.html page=next class="-lofi" %}
 {% endif %}
 
 {% if site.posts %}

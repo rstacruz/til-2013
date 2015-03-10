@@ -5,12 +5,10 @@
 {% include body.html %}
 {% include site-header.html %}
 
-{% assign post = page %}
-{% include post.html %}
+{% include post.html post=page content=content %}
 
 {% if page.previous %}
-  {% assign nextpage = page.previous %}
-  {% include next-article.html %}
+  {% include next-article.html page=page.previous %}
 {% endif %}
 
 {% include about-the-site.html %}

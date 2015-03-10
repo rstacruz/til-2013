@@ -1,23 +1,23 @@
 <div class='post-list'>
   <div class="post-item">
     <div class="post-headline">
-      <abbr class='post-icon -icon-{{ post.tags | first | slugify }} hint--right' data-hint='{{ post.tags | first }}'><span></span></abbr>
+      <abbr class='post-icon -icon-{{ include.post.tags | first | slugify }} hint--right' data-hint='{{ include.post.tags | first }}'><span></span></abbr>
       <h1>
-        <a href=".{{ post.url }}" rel="bookmark" title="{{ post.title }}">
-          {{ post.title }}
+        <a href=".{{ include.post.url }}" rel="bookmark" title="{{ include.post.title }}">
+          {{ include.post.title }}
         </a>
       </h1>
       <h5 class='meta'>
-        <a href=".{{ post.url }}" rel="bookmark" title="{{ post.title }}">
-          <span class='author' itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">{{ post.author }}</span>
+        <a href=".{{ include.post.url }}" rel="bookmark" title="{{ include.post.title }}">
+          <span class='author' itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">{{ include.post.author }}</span>
           &middot;
-          <time class='date' itemprop="datePublished" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %e, %Y" }}</time>
+          <time class='date' itemprop="datePublished" datetime="{{ include.post.date | date: "%Y-%m-%d" }}">{{ include.post.date | date: "%B %e, %Y" }}</time>
         </a>
       </h5>
     </div>
 
     <div class="post-content">
-      {{ content }}
+      {{ include.content }}
     </div>
 
     {% include social-list.html %}

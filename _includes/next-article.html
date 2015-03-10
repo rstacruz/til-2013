@@ -1,10 +1,10 @@
-<a class='next-article {{ nextclass }}' href=".{{ nextpage.url }}">
+<a class='next-article {{ include.class }}' href=".{{ include.page.url }}">
   <span class='container'>
     <span class='heading'>Next article:</span>
-    <span class='h3 unorphan'><span>{{ nextpage.title }}</span></span>
-    {% if nextpage.description %}
-      <span class='excerpt unorphan'>{{ nextpage.description }}</span>
+    <span class='h3 unorphan'><span>{{ include.page.title }}</span></span>
+    {% if include.page.description %}
+      <span class='excerpt unorphan'>{{ include.page.description }}</span>
     {% endif %}
-    <span class='big-button -next' href='.{{ nextpage.url }}'>Continue</a>
+    <span class='big-button -next' href='.{{ include.page.url }}'>Continue</a>
   </span>
 </a>
