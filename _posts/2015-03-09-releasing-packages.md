@@ -3,11 +3,12 @@ title: Tools to make releasing packages easier
 date: 2015/03/09
 tags: [Development]
 description: Make releasing packages easier with these 2 open-source tools.
+image: https://camo.githubusercontent.com/b35364114a530e5b4066d719c150d7abaaf4e95f/687474703a2f2f63646e2e7261776769742e636f6d2f727374616372757a2f62756d702d636c692f613235316336332f62756d702e706e67
 ---
 Releasing packages involves the same repetitive tasks: updating the change log, bumping versions, tagging a release, and so on. Here are a few tools to make this chore easier.
 {:.brief-intro.center}
 
-![](https://camo.githubusercontent.com/b35364114a530e5b4066d719c150d7abaaf4e95f/687474703a2f2f63646e2e7261776769742e636f6d2f727374616372757a2f62756d702d636c692f613235316336332f62756d702e706e67)
+![]({{ page.image }})
 {:.full-image.cropped.bottom-space-2}
 
 ### 1. Bump versions via [bump-cli](http://npmjs.com/bump-cli)

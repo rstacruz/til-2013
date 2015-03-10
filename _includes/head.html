@@ -59,6 +59,10 @@
   {% if page.date %}
   <meta content='{{ page.date | date: "%Y-%m-%d" }}' property='article:published_date'>
   {% endif %}
+  {% if page.image %}
+  <meta content='{{ page.image }}' property='og:image'>
+  <meta content='{{ page.image }}' name='twitter:image'>
+  {% endif %}
 
   {% if page.tags[0] %}
     <meta content='{{ page.tags[0] }}' property='article:section'>

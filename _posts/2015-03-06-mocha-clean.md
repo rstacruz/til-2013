@@ -2,6 +2,7 @@
 title: Cleaner Mocha stack traces
 tags: [JavaScript]
 description: Suppress stack trace frames from 3rd-party modules in Mocha.js.
+image: https://raw.githubusercontent.com/rstacruz/mocha-clean/gh-pages/comparison.png
 ---
 
 [Mocha] is a great way to test JavaScript, but its stack traces are riddled
@@ -9,7 +10,7 @@ with useless frames from Mocha internals and 3rd-party modules. Let's try and
 clean it up.
 {:.brief-intro.center}
 
-![Image](https://raw.githubusercontent.com/rstacruz/mocha-clean/gh-pages/comparison.png)
+![Image]({{ post.image }})
 {:.full-image.cropped}
 
 <br>
