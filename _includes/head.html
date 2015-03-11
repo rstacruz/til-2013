@@ -75,6 +75,10 @@
   {% endfor %}
   {% endif %}
 
+  {% if page.url | split: '/' | size == 3 %}<base href='..'>{% endif %}
+  {% if page.url | split: '/' | size == 4 %}<base href='../..'>{% endif %}
+  {% if page.url | split: '/' | size == 5 %}<base href='../../..'>{% endif %}
+
   <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
   <meta content='width=device-width, initial-scale=1.0' name='viewport'>
   <link href='/favicon.png' rel='shortcut icon'>
