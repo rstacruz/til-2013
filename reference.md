@@ -14,44 +14,62 @@ wild is nowadays hot.
 ### Generic block modifiers
 These can apply to any block (above, or `table`, `p`, etc)
 
-| ---- | ---- |
+| Class | Description |
+|:-----|-----:|
 | `.center` | Centered text |
 | `.wide` | Make it 140% the size |
+{:.no-head}
 
 ### Margin helpers
 Useful for adjusting spacing around elements. Replace `#` with a number (`0`, `1`, `2` and `4`).
 
-| ---- | ---- |
+| Class | Description |
+|:-----|-----:|
 | `.spaced` | Larger vertical spacing |
 | `.spaced-more` | Even larger |
 | `.top-space-#` | Adds spacing of `#` em |
 | `.top-collapse-#` | Adds negative spacing of `#` em |
 | `.bottom-space-#` | Adds spacing of `#` em |
 | `.bottom-collapse-#` | Adds negative spacing of `#` em |
+{:.no-head}
 
 ## Blocks
 
 ### Special blocks
 Fancy blocks that can be used, just append `{:.brief-intro}` at the end.
 
-| ---- | ---- |
+| Class | Description |
+|:-----|-----:|
 | `.brief-intro` | Big paragraph |
 | `.full-image` | Full width image |
+{:.no-head}
 
 ### Full images
 These modifiers are available for `.full-image`:
 
-| ---- | ---- |
+| Class | Description |
+|:-----|-----:|
 | `.stretched` | Force image to width: 100% |
 | `.cropped` | Crop the bottom of the image |
+{:.no-head}
 
 ### Code block modifiers
 Applies to code blocks (`pre`).
 
-| ---- | ---- |
+| Class | Description |
+|:-----|-----:|
 | `.terminal` | Terminal style |
 | `.large` | Large font |
 | `.cursor` | Has a cursor at the end |
+{:.no-head}
+
+### Table modifiers
+Applies to tables (`table`).
+
+| Class | Description |
+|:-----|-----:|
+| `.no-head` | Hide the `thead` |
+{:.no-head}
 
 ## Authors
 
@@ -69,7 +87,7 @@ Cheerfully, they weren't soft producers, and then it wasn't circular. Nothing is
 ## Wide tables
 
 | Resolution | DPPX | Actual resolution | PPI     | Actual PPI | Size | Devices    |
-| ---        | ---  | ---               | ---     | ---        | ---  | ---        |
+| ---        | ---  | ---               | ---     | ---        | ---  |-----------:|
 | 320 x 480  | @1x  | 320 x 480         | 163 ppi | 163 ppi    | 3.5" | iPhone 3GS |
 | 320 x 480  | @2x  | 640 x 960         | 163 ppi | 326 ppi    | 3.5" | iPhone 4S  |
 | 320 x 568  | @2x  | 640 x 1136        | 163 ppi | 326 ppi    | 4"   | iPhone 5   |
@@ -82,10 +100,28 @@ Cheerfully, they weren't soft producers, and then it wasn't circular. Nothing is
 ## Another table
 
 | Resolution | DPPX | Actual resolution | PPI     | Actual PPI | Size | Devices          |
-| ---        | ---- | ---               | ---     | ---        | ---- | ---              |
+| ---        | ---- | ---               | ---     | ---        | ---- |-----------------:|
 | 1024 x 768 | @2x  | 2048 x 1536       | 163 ppi | 326 ppi    | 7.9" | iPad Mini Retina |
 | 1024 x 768 | @2x  | 2048 x 1536       | 132 ppi | 264 ppi    | 9.7" | iPad Air         |
 {:.wide}
+
+## Key table
+
+|---|---|
+| Switch | Description |
+|---|---|
+| `-1` | One entry per line |
+| `-l` | Long view |
+| `-o` | Long view (without groups) |
+| `-C` | Multicolumn (sorted horizontally) |
+| `-x` | Multicolumn (sorted vertically) |
+|---
+| `-F` | Add / after directories |
+| `-G` | Color |
+{:.no-head}
+
+
+<br>
 
 ----
 

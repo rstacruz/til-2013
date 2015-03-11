@@ -165,15 +165,16 @@ table
   margin-top: 2em
   margin-bottom: 2em
   font-size: 0.9em
-  border-top: solid 1px #888
   border-bottom: solid 1px #888
 
-table > *:first-child > tr:first-child td,
-table > *:first-child > tr:first-child th
-  border-top: 0
+thead > tr:first-child > th,
+thead > tr:first-child > td,
+tbody > tr:first-child > th,
+tbody > tr:first-child > td
+  border-top: solid 1px #888
 
 td, th
-  text-align: center
+  text-align: left
   border-top: solid 1px #eee
   padding: 8px 10px
 
@@ -188,8 +189,16 @@ th:first-child
 
 td:last-child,
 th:last-child
-  text-align: right
   padding-right: 0
+
+tr > td:first-child > code
+  background: #fcfcfc
+  padding: 5px 10px
+  border-radius: 2px
+
+table.no-head
+  thead
+    display: none
 
 /* ]]]
  * pre > code -- code blocks [[[
