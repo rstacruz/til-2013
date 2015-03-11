@@ -191,14 +191,27 @@ td:last-child,
 th:last-child
   padding-right: 0
 
-tr > td:first-child > code
-  background: #fcfcfc
-  padding: 5px 10px
-  border-radius: 2px
-
 table.no-head
   thead
     display: none
+
+table.shortcuts
+  &
+    table-layout: fixed
+
+  thead
+    display: none
+
+  th:nth-child(1), td:nth-child(1)
+    width: 25%
+
+  th:nth-child(2), td:nth-child(2)
+    width: 75%
+
+  td:first-child > code
+    background: #fcfcfc
+    padding: 5px 10px
+    border-radius: 2px
 
 /* ]]]
  * pre > code -- code blocks [[[

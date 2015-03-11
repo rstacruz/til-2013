@@ -69,6 +69,7 @@ Applies to tables (`table`).
 | Class | Description |
 |:-----|-----:|
 | `.no-head` | Hide the `thead` |
+| `.shortcuts` | Table of shortcut keys |
 {:.no-head}
 
 ## Authors
@@ -105,21 +106,21 @@ Cheerfully, they weren't soft producers, and then it wasn't circular. Nothing is
 | 1024 x 768 | @2x  | 2048 x 1536       | 132 ppi | 264 ppi    | 9.7" | iPad Air         |
 {:.wide}
 
-## Key table
+## Shortcuts table
 
 |---|---|
 | Switch | Description |
 |---|---|
-| `-1` | One entry per line |
-| `-l` | Long view |
-| `-o` | Long view (without groups) |
-| `-C` | Multicolumn (sorted horizontally) |
-| `-x` | Multicolumn (sorted vertically) |
+| `⌘⌥1` | toggle left (layers) |
+| `⌘⌥2` | toggle right (inspector) |
+| `⌘⌥3` | toggle both |
+| `⌘.`  | presentation |
 |---
-| `-F` | Add / after directories |
-| `-G` | Color |
-{:.no-head}
-
+| `⌘0` | 100% |
+| `⌘1` | fit to screen |
+| `⌘2` | fit selection to screen |
+| `⌘3` | center selection |
+{:.shortcuts}
 
 <br>
 
