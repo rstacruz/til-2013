@@ -11,8 +11,7 @@ exclude: ["Makefile", "README.md", "_/Gemfile", "_/Gemfile.lock",  "CNAME"]
 
 # Site info
 url: http://ricostacruz.com/til
-meta:
-  title: Today I Learned
+title: Today I Learned
 
 # Google analytics
 analytics:
