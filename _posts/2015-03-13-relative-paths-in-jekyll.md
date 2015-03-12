@@ -1,10 +1,11 @@
 ---
 title: Relative paths in Jekyll
 tags: [Development, Jekyll]
+description: Fix the problem with GitHub Pages's relative URLs with this snippet.
 ---
 {%raw%}
 
-[Jekyll] is a fantastic static site tool. If you're using [GitHub Pages][gh-pages], it comes with it for free, making it a very useful tool for any public blog or website. It comes, though, with one common problem that I've yet to come across a good solution for: relative paths.
+[Jekyll] is a great static site tool. If you're using [GitHub Pages][gh-pages], it comes with it for free, making it a very useful tool for any public blog or website. It comes, though, with one common problem that I've yet to come across a good solution for: relative paths.
 {:.brief-intro.center}
 
 ## The problem
