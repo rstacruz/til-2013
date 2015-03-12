@@ -20,11 +20,9 @@ type: blog
   <div class='container'>
     <h3 class='bottom-space-1'>Previously on TIL:</h3>
     {% for post in site.posts %}
-      <a class='post-index-item' href=".{{ post.url }}">
+    <a class='post-index-item' href="{{ base }}{{ post.url }}">
         <span class='date'>{{ post.date | date_to_string }}</span>
-        <span class='article'>
-          {{ post.title }}
-        </span>
+        <span class='article'>{{ post.title }}</span>
         <strong class='tag'>{{ post.tags | first }}</strong>
       </a>
     {% endfor %}
