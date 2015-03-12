@@ -3,7 +3,7 @@
     <p class='blurb'>
       <strong>I'm <a href="http://ricostacruz.com">Rico Sta. Cruz</a></strong>, a web developer
       who makes open-source JavaScript projects. You're reading my
-      <a href="{{ site.url }}">Today I learned</a> blog.
+      <a href="{{ base }}">Today I learned</a> blog.
       <i class='fleuron'></i>
       Follow me on
       <a href="https://twitter.com/rstacruz">Twitter</a> for web development snark,
@@ -14,7 +14,7 @@
 
     {% if page.url != '/index.html' %}
     <p class='back'>
-      <a class='big-button -back -slim' href='.#toc'></a>
+      <a class='big-button -back -slim' href='{{ base }}#toc'></a>
     </p>
     {% endif %}
 
