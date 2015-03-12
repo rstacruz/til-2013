@@ -10,6 +10,7 @@ All block modifiers work, in addition to these:
 |:-----|-----:|
 | `.no-head` | Hide the `thead` |
 | `.shortcuts` | Table of shortcut keys |
+| `.lite-headings` | Lightey gray headings |
 {:.no-head}
 
 <br>

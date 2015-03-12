@@ -165,17 +165,17 @@ table
   margin-top: 2em
   margin-bottom: 2em
   font-size: 0.9em
-  border-bottom: solid 1px #888
+  border-bottom: solid 1px $gray
 
 thead > tr:first-child > th,
 thead > tr:first-child > td,
 tbody > tr:first-child > th,
 tbody > tr:first-child > td
-  border-top: solid 1px #888
+  border-top: solid 1px $gray
 
 td, th
   text-align: left
-  border-top: solid 1px #eee
+  border-top: solid 1px $hairline
   padding: 8px 10px
 
 th
@@ -212,6 +212,35 @@ table.shortcuts
     background: #fcfcfc
     padding: 5px 10px
     border-radius: 2px
+
+// table.usli
+//   @media (min-width: 768px)
+//     width: calc(#{$page-width} + 50px)
+//     margin-left: -25px
+
+//   td:first-child,
+//   th:first-child
+//     padding-left: 25px
+
+//   td:last-child,
+//   th:last-child
+//     padding-right: 25px
+
+table.lite-headings
+  &
+    border-bottom: solid 1px mix($gray, $lightgray, 50%)
+    
+  th
+    color: mix($gray, $lightgray, 50%)
+    font-size: 0.9em
+
+  thead > tr:first-child > td,
+  thead > tr:first-child > th
+    border-top: solid 1px mix($gray, $lightgray, 50%)
+
+  tbody > tr:first-child > td,
+  tbody > tr:first-child > th
+    border-top: solid 1px $hairline
 
 /* ]]]
  * pre > code -- code blocks [[[
@@ -252,6 +281,7 @@ pre.medium
 pre.large
   > code
     font-size: 1.1em
+    line-height: 1.4em
   @media (min-width: 768px)
     padding-top: 30px
     padding-bottom: 30px
