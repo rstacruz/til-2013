@@ -16,14 +16,14 @@
 <meta content='{{ page.full_title }}' property='twitter:title'>
 <meta content='article' property='og:type'>
 {% elsif page.title %}
-<title>{{ page.title }} &mdash; {{ site.meta.title }}</title>
+<title>{{ page.title }} &mdash; {{ site.title }}</title>
 <meta content='{{ page.title }}' property='og:title'>
 <meta content='{{ page.title }}' property='twitter:title'>
 <meta content='{{ page.type | default: "article" }}' property='og:type'>
 {% else %}
-<title>{{ site.meta.title }}</title>
-<meta content='{{ site.meta.title }}' property='og:title'>
-<meta content='{{ site.meta.title }}' property='twitter:title'>
+<title>{{ site.title }}</title>
+<meta content='{{ site.title }}' property='og:title'>
+<meta content='{{ site.title }}' property='twitter:title'>
 <meta content='{{ page.type | default: "website" }}' property='og:type'>
 {% endif %}
 
@@ -31,9 +31,6 @@
 {% if page.description %}
 <meta content="{{ page.description }}" name="description">
 <meta content="{{ page.description }}" property="og:description">
-{% elsif page.url == '/index.html' && site.meta.description %}
-<meta content="{{ site.meta.description }}" name="description">
-<meta content="{{ site.meta.description }}" property="og:description">
 {% endif %}
 
 {%comment%}<!-- canonical URL -->{%endcomment%}
@@ -55,8 +52,8 @@
 {% endif %}
 
 {%comment%}<!-- site name -->{%endcomment%}
-{% if site.meta.title %}
-<meta content='{{ site.meta.title }}' property='og:site_name'>
+{% if site.title %}
+<meta content='{{ site.title }}' property='og:site_name'>
 {% endif %}
 
 {%comment%}<!-- facebook -->{%endcomment%}
