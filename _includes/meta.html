@@ -7,6 +7,7 @@
 {% elsif depth == 2 %}{% assign base = '../' %}
 {% elsif depth == 3 %}{% assign base = '../../' %}
 {% elsif depth == 4 %}{% assign base = '../../../' %}{% endif %}
+{% assign timestamp = site.time | date: "%Y%m%d%H%M%S" %}
 
 {%comment%}<!-- title -->{%endcomment%}
 {% if page.full_title %}
@@ -30,7 +31,7 @@
 {% if page.description %}
 <meta content="{{ page.description }}" name="description">
 <meta content="{{ page.description }}" property="og:description">
-{% else if page.url == '/index.html' && site.meta.description %}
+{% elsif page.url == '/index.html' && site.meta.description %}
 <meta content="{{ site.meta.description }}" name="description">
 <meta content="{{ site.meta.description }}" property="og:description">
 {% endif %}
@@ -89,6 +90,5 @@
 {% if site.analytics %}<script>if(~location.hostname.indexOf("{{site.analytics.hostname}}")){var _gaq=_gaq||[];_gaq.push(["_setAccount","{{ site.analytics.id }}"]);_gaq.push(["_trackPageview"]);(function(){var ga=document.createElement("script");ga.async=true;ga.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga,s)})()}</script>{% endif %}
 
 <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-<meta content='{{ include.viewport | default: "width=device-width, initial-scale=1.0" }}' name='viewport'>
-<link href='{{ base }}/assets/favicon.png' rel='shortcut icon'>
-
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href='{{ base }}assets/favicon.png' rel='shortcut icon'>
