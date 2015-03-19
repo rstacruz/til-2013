@@ -14,7 +14,7 @@ list[list.length * Math.random() | 0]
 {:.terminal}
 
 ### Checking for -1
-The [Bitwise NOT](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT) operator will turn `-1` into zero. This makes indexOf checks less unweildy.
+The [Bitwise NOT](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT) operator will turn `-1` into zero. This makes substring checks with `indexOf()` a little shorter.
 
 ```js
 if (~string.indexOf("John")) {
