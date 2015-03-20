@@ -1,5 +1,5 @@
 ---
-title: JavaScript shortcuts with Bitwise operators
+title: JavaScript shortcuts using bitwise operators
 description: Learn some shorter ways to write some common JavaScript expressions.
 tags: [JavaScript]
 ---
