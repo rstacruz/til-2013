@@ -351,6 +351,16 @@ p > iframe
   margin: 0 auto
   display: block
 
+/* ]]]
+ * fouc prevention [[[
+ */
+
+body
+  transition: opacity 100ms linear
+
+html.no-js *
+  opacity: 0
+
 // ]]]
 // [Post things] [[[
 
