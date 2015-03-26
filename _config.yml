@@ -8,6 +8,8 @@ kramdown:
 # Site settings
 permalink: /:title.html
 exclude: ["Makefile", "README.md", "_/Gemfile", "_/Gemfile.lock",  "CNAME"]
+sass:
+  deploy_style: compressed
 
 # Site info
 url: http://ricostacruz.com/til
