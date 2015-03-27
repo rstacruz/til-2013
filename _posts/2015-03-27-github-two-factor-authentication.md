@@ -15,7 +15,7 @@ Enable [2 factor authentication](https://github.com/settings/security) on the Gi
 ### Prepare your phone
 Install [Google Authenticator](https://en.wikipedia.org/wiki/Google_Authenticator). Works for iOS and Android. In Authenticator, tap *Add*, then *Scan Barcode*. Take a picture of the QR code on your computer. ([More info on apps](https://help.github.com/articles/configuring-two-factor-authentication-via-a-totp-mobile-app/))
 
-### Enable password caching
+### Enable git credential caching
 On your computer, [enable caching your GitHub HTTPS credentials](https://help.github.com/articles/caching-your-github-password-in-git/). This allows you to store your 2FA token and not get asked for it everytime.
 
 ```
@@ -36,7 +36,7 @@ vim .git/config
 ```
 
 ### Git push
-Push a repo. You'll be asked for a password. Use the token for the password.
+Push a repo. You'll be asked for a password. Use the token for the password. You won't have to do this again if enabled credential caching.
 
 ```
 $ git push
