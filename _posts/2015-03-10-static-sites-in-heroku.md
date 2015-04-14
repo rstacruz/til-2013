@@ -1,6 +1,6 @@
 ---
 title: "Hosting static sites in Heroku"
-tags: [Development]
+tags: [Development, Heroku]
 description: Serve simple websites for free using Heroku with this one simple tip.
 ---
 
