@@ -24,11 +24,11 @@ Here's a convenient snippet you can use for almost any project. It's wrapped in 
 
 It seems that every project will need the same set of polyfills to enable modern features in legacy Internet Explorer.
 
- - **[json2]** for JSON parsing (IE7 below)
- - **[selectivizr]** for selectors (IE8 below)
- - **[nwmatcher]** selector engine for selectivizr
- - **[html5shiv]** for new HTML tags (IE8 below)
- - **[respond]** for media queries (IE8 below)
+ - **[respond]** enables `@media` queries for responsive design (IE8 below)
+ - **[selectivizr]** enables all modern CSS selectors (IE8 below)
+ - **[html5shiv]** enables new HTML5 tags like `<article>` (IE8 below)
+ - **[json2]** enables JSON parsing (IE7 below)
+ - **[nwmatcher]** is the selector engine for selectivizr
 
 ### Legacy IE cheatsheet
 I've put together a [Legacy IE cheatsheet](http://ricostacruz.com/cheatsheets/ie.html) to help you figure out what features you can use for older versions of IE.
