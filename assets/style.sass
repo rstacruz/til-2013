@@ -291,17 +291,21 @@ pre.large
     padding-top: 30px
     padding-bottom: 30px
 
-pre.terminal
-  $term-border: mix($accent, white, 50%)
+$term-border: mix($accent, white, 50%)
 
+pre.terminal,
+pre.light
   &
     background: white
     border: solid 1px $term-border
     position: relative
+
+pre.terminal
+  &
     padding-top: 56px
 
-    &.large
-      padding-top: 65px
+  &.large
+    padding-top: 65px
 
   &:before
     content: ''
