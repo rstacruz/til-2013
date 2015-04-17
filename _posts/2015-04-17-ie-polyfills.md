@@ -7,6 +7,7 @@ description: Speed along your legacy IE development with this all-purpose 7-line
 Here's a convenient snippet you can use for almost any project. It's wrapped in an [IE conditional comment][concom], so only the poor souls with outdated IE's will bear the extra load.
 {:.brief-intro.center}
 
+{:.wide.light}
 ```js
 <!--[if lt IE 9]>
 <script src='//cdnjs.cloudflare.com/ajax/libs/nwmatcher/1.2.5/nwmatcher.min.js'></script>
@@ -16,7 +17,6 @@ Here's a convenient snippet you can use for almost any project. It's wrapped in 
 <script src='//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js'></script>
 <![endif]--> 
 ```
-{:.wide.light}
 
 <br>
 
@@ -31,7 +31,9 @@ It seems that every project will need the same set of polyfills to enable modern
  - **[nwmatcher]** is the selector engine for selectivizr
 
 ### Selectivizr
-While Selectivizr has been abandoned at 1.0.2, there are new changes that haven't been officially released yet (see [#67](https://github.com/keithclark/selectivizr/issues/67)). This snippet uses rawgit.com to fetch the unreleased 1.0.3 from the fork [gisu/selectivizr](https://github.com/gisu/selectivizr), which fixes interoperability issues with respond.js.
+While Selectivizr has been abandoned at 1.0.2, there are new changes that haven't been officially released yet (see [#67](https://github.com/keithclark/selectivizr/issues/67)) that fixes interoperability with Respond.js. [This article](http://selectivizr.com/tests/respond) has the technical details, but is outdated in a few ways: Respond.js already [has support](https://github.com/scottjehl/Respond/pull/43) for selectivizr in upstream, and the selectivizr changes described are already sitting unreleased in the [master branch](https://github.com/keithclark/selectivizr).
+
+This snippet uses [rawgit.com](http://rawgit.com/) to fetch the unreleased 1.0.3 from the fork [gisu/selectivizr](https://github.com/gisu/selectivizr) to fix interoperability issues with respond.js.
 
 ### Legacy IE cheatsheet
 I've put together a [Legacy IE cheatsheet](http://ricostacruz.com/cheatsheets/ie.html) to help you figure out what features you can use for older versions of IE.
