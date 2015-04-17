@@ -22,7 +22,7 @@ Use this convenient snippet in almost any project. It will fill in some basic su
 
 ## What's going on?
 
-The world has largely moved on from IE6 to IE8, but this is the least you can do to make your sites at least don't appear too broken on older browsers. This snippet packs these 5 libraries which can be dropped into any project:
+The world has largely moved on from IE6 to IE8, but this is the least you can do to make your sites at least don't appear broken on older browsers. This snippet packs these 5 libraries which can be dropped into any project:
 
  - **[html5shiv]** — for new HTML5 tags like `<article>` (IE6-8)
  - **[respond]** — for `@media` queries for responsive design (IE6-8)
