@@ -1,10 +1,10 @@
 ---
 title: Legacy IE polyfills
-tags: [Development]
+tags: [CSS]
 description: Speed along your legacy IE development with this all-purpose 7-line snippet.
 ---
 
-Here's a convenient snippet you can use for almost any project. It's wrapped in an [IE conditional comment][concom], so only the poor souls with outdated IE's will bear the extra load.
+Use this convenient snippet in almost any project. It will fill in some basic support for modern CSS features for legacy IE versions.
 {:.brief-intro.center}
 
 {:.wide.light}
@@ -22,13 +22,15 @@ Here's a convenient snippet you can use for almost any project. It's wrapped in 
 
 ## What's going on?
 
-It seems that every project will need the same set of polyfills to enable modern features in legacy Internet Explorer.
+The world has largely moved on from IE6 to IE8, but this is the least you can do to make your sites at least don't appear too broken on older browsers. This snippet packs these 5 libraries which can be dropped into any project:
 
- - **[respond]** enables `@media` queries for responsive design (IE8 below)
- - **[selectivizr]** enables all modern CSS selectors (IE8 below)
- - **[html5shiv]** enables new HTML5 tags like `<article>` (IE8 below)
- - **[json2]** enables JSON parsing (IE7 below)
- - **[nwmatcher]** is the selector engine for selectivizr
+ - **[html5shiv]** — for new HTML5 tags like `<article>` (IE6-8)
+ - **[respond]** — for `@media` queries for responsive design (IE6-8)
+ - **[selectivizr]** — for all modern CSS selectors (IE6-8)
+ - **[json2]** — for JSON parsing (IE6-7)
+ - **[nwmatcher]** — the selector engine for selectivizr
+
+It's wrapped in an [IE conditional comment][concom], so only the poor souls with outdated IE's will bear the extra load.
 
 ### Selectivizr
 While Selectivizr has been abandoned at 1.0.2, there are new changes that haven't been officially released yet (see [#67](https://github.com/keithclark/selectivizr/issues/67)) that fixes interoperability with Respond.js. [This article](http://selectivizr.com/tests/respond) has the technical details, but is outdated in a few ways: Respond.js already [has support](https://github.com/scottjehl/Respond/pull/43) for selectivizr in upstream, and the selectivizr changes described are already sitting unreleased in the [master branch](https://github.com/keithclark/selectivizr).
