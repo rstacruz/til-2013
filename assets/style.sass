@@ -524,12 +524,18 @@ abbr.post-icon
   line-height: $icon-size + 2px
   text-align: center
   border-radius: 50%
-  color: white
+  color: #aaa
   background: #eee
 
   +body-font
   font-size: 16px
   letter-spacing: 1px
+
+  span:after
+    content: attr(data-label)
+    font-size: 0.9em
+    position: relative
+    top: -1px
 
   @media (max-width: 480px)
     transform: scale(0.75)
