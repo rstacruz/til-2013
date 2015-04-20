@@ -4,6 +4,9 @@ description: Speed through the Mac OS X GUI with these shortcuts.
 tags: [OSX]
 ---
 
+![Image]({{base}}/images/osx-keyboard.png){:style='max-width:600px;margin-bottom:-130px'}
+{:.full-image.cropped.bottom-space-4}
+
 After switching to OS X, one thing I've always missed in Windows and Linux is the ability to spawn menus using `Alt` `F`. Today I realized that OS X has two ways to accomplish this.
 {:.brief-intro}
 
