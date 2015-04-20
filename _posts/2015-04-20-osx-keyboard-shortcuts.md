@@ -8,7 +8,7 @@ After switching to OS X, one thing I've always missed in Windows and Linux is th
 {:.brief-intro}
 
 * **By arrows:** `Ctrl` + `F2` lets you navigate menus with arrow keys.
-* **By typing:** `⌘` `⌥` `/` will get you the help menu.
+* **By typing:** `⌘` `⇧` `/` will get you the help menu.
 
 ----
 
@@ -28,5 +28,5 @@ Under the *Keyboard* preference pane, there's an option for *Full Keyboard Acces
 | `^` `F5`    | Toolbar                     |
 | `^` `F6`    | Floating window             |
 | `^` `F8`    | Status menu                 |
-| `⌘` `⌥` `/` | Help                        |
+| `⌘` `⇧` `/` | Help                        |
 {:.shortcuts}
