@@ -1,6 +1,7 @@
 ---
 title: Navigate OS X with the keyboard
 description: Speed through the Mac OS X GUI with these shortcuts.
+image: images/osx-keyboard.png
 tags: [OSX]
 ---
 
