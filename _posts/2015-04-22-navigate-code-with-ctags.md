@@ -1,5 +1,6 @@
 ---
 title: Navigate code like a pro with Ctags
+description: Move through code fast. Set up Ctags. Here's how.
 tags: [Vim, Ctags]
 ---
 
