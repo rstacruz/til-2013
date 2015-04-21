@@ -1,0 +1,104 @@
+/*
+ * .next-article -- lead into the next article
+ */
+
+.next-article
+  $notch: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1500' height='20' version='1.1'><polyline fill='white' points='1500,0 0,0 0,20'/></svg>"
+
+  &
+    display: block
+    padding: 0
+    background: url($notch) -50px top / 110% auto no-repeat, $wash
+    margin-left: 40px
+    margin-right: 40px
+    position: relative
+
+  @media (max-width: 480px)
+    background: url($notch) -50px top / 110% auto no-repeat, darken($wash, 3%)
+
+  &, &:hover, &:focus
+    box-shadow: none
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    left: -20px
+    right: -20px
+    bottom: 0
+    border-bottom: solid 1px $hairline
+
+  // suppress its hairline
+  & + .about-the-site:before
+    display: none
+
+  @media (max-width: 768px)
+    margin-left: 0
+    margin-right: 0
+
+    // remove horizontal line
+    & + .about-the-site:before
+      display: none
+
+  .container
+    display: block
+    text-align: center
+    padding: 10em 20px
+
+    @media (min-width: 769px)
+      margin-top: 8em
+      padding: 8em 20px
+
+  .h3
+    display: block
+    margin: 0 auto auto
+    padding: 0
+    font-size: 2.2em
+    line-height: 1.3em
+    +bold-font
+    color: $black
+    transition: all 250ms linear
+
+    &:hover > span
+      box-shadow: inset 0 -2px $accent
+      text-shadow: 0 0 4px $wash, 0 0 4px $wash, 0 0 4px $wash, 0 0 4px $wash, 0 0 4px $wash, 0 0 4px $wash, 0 0 4px $wash, 0 0 4px $wash, 0 0 4px $wash
+
+    @media (max-width: 768px)
+      font-size: 1.5em
+
+  .h3, .excerpt
+    max-width: $page-width * 0.9
+
+  .h3 + .excerpt
+    margin-top: 0.5em
+
+  .excerpt
+    display: block
+    margin-left: auto
+    margin-right: auto
+    color: $gray
+    font-size: 1em
+    line-height: 1.6em
+
+  .big-button
+    margin-top: 2em
+
+  h3 a:hover,
+  h3 a:focus
+    color: $accent
+
+  .heading
+    display: block
+    color: $gray
+    +caps-font
+    font-size: 0.7em
+    margin-bottom: 1em
+
+  .heading:before
+    font-family: Ionicons
+    content: '\f4a8'
+    margin-right: 15px
+    font-size: 16px
+    display: inline-block
+    vertical-align: middle
+    color: $accent
