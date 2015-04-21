@@ -67,7 +67,7 @@
 
 {%comment%}<!-- page meta -->{%endcomment%}
 {% if page.date %}
-<meta content='{{ page.date | date: "%Y-%m-%d" }}' property='article:published_date'>
+<meta content='{{ page.date | date: "%Y-%m-%d" }}' property='article:published_time'>
 {% endif %}
 {% if page.image %}
   {% if page.image contains '://' %}
