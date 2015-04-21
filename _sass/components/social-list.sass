@@ -16,6 +16,12 @@
     @media (min-width: 768px)
       margin-top: 4em
 
+  &.-top
+    margin-top: -2em
+
+    @media (min-width: 768px)
+      margin-top: -1em
+
   li
     display: inline-block
 
@@ -46,7 +52,7 @@
 
   = socialiconify($color, $content, $filled)
     &
-      color: $lightgray
+      color: darken($lightgray, 10%)
 
     &:hover,
     &:focus
