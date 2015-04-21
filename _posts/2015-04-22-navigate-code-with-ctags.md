@@ -1,6 +1,6 @@
 ---
 title: Navigate code like a pro with Ctags
-tags: [Development, Ctags]
+tags: [Vim, Ctags]
 ---
 
 [Ctags] lets you navigate code fast, and is perhaps the single most useful productivity boosting tool in any developer's arsenal. If you're not using Ctags yet, let's get you started.

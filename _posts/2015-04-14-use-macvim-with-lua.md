@@ -1,7 +1,7 @@
 ---
 title: Speed up MacVim with Lua
 description: Make your OSX Vim experience better with this simple switch.
-tags: [Development, Vim]
+tags: [Vim]
 ---
 
 It's always a good idea to install [MacVim] with Lua support. [Homebrew] does not compile with Lua support by default. This gets you the benefit of a noticeably-faster [Unite.vim].
