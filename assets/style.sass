@@ -1,46 +1,31 @@
 ---
-# vim: set foldmethod=marker foldmarker=[[[,]]] :
 ---
-/*
- * imports and variables [[[
- */
-
-@import 'utils'
-@import 'typography'
-@import 'normalize'
 
 @import url('//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
 @import url('//cdn.jsdelivr.net/hint.css/1.3.2/hint.min.css')
-+font-imports
 
-$text: #555
-$black: #020202
-$bg: #fff
-$wash: #f4f5f7
+@import 'base/utils'
+@import 'base/typography'
+@import 'base/normalize'
 
-$gray: #808890
-$lightgray: #c0d3da
-$hairline: #eef3fa
+$text:        #555
+$black:       #020202
+$bg:          #fff
+$wash:        #f4f5f7
 
-$accent: dodgerblue
-$accent2: #f53
+$gray:        #808890
+$lightgray:   #c0d3da
+$hairline:    #eef3fa
 
-$page-width: 620px
+$accent:      dodgerblue
+$accent2:     #f53
 
-/* ]]]
- * utilities [[[
- */
+$term-border: mix($accent, white, 50%)
 
-= clearfix
-  &:after
-    display: table
-    content: ''
-    clear: both
-    height: 0
-    zoom: 1
+$page-width:  620px
 
-/* ]]]
- * html base (html, body) [[[
+/*
+ * html base (html, body)
  */
 
 *
@@ -65,8 +50,18 @@ html, input, textarea, td, th
 html, body
   overflow-x: hidden
 
-/* ]]]
- * basic styles (a, p, img...) [[[
+/*
+ * fouc prevention
+ */
+
+body
+  transition: opacity 100ms linear
+
+html.no-js *
+  opacity: 0
+
+/*
+ * basic styles (a, p, img...)
  */
 
 a, a:visited
@@ -85,6 +80,18 @@ strong, b
 
 h3, p, ul, ol
   margin: 1.5em 0
+
+/*
+ * iframes
+ */
+
+p > iframe
+  margin: 0 auto
+  display: block
+
+/*
+ * lists
+ */
 
 ul, ol
   padding-left: 1.5em
@@ -111,6 +118,10 @@ ul
     @media (max-width: 768px)
       width: 3px
       height: 3px
+
+/*
+ * headings
+ */
 
 h2
   &, a, a:visited
@@ -149,6 +160,10 @@ h3
 h3 + p
   margin-top: -1.7em
 
+/*
+ * images
+ */
+
 p > img:first-child:last-child
   display: block
   margin: 0 auto
@@ -165,6 +180,10 @@ hr
   background: $lightgray
   margin: 3em auto
   display: block
+
+/*
+ * table
+ */
 
 table
   min-width: 100%
@@ -219,19 +238,6 @@ table.shortcuts
     padding: 5px 10px
     border-radius: 2px
 
-// table.usli
-//   @media (min-width: 768px)
-//     width: calc(#{$page-width} + 50px)
-//     margin-left: -25px
-
-//   td:first-child,
-//   th:first-child
-//     padding-left: 25px
-
-//   td:last-child,
-//   th:last-child
-//     padding-right: 25px
-
 table.lite-headings
   &
     border-bottom: solid 1px mix($gray, $lightgray, 50%)
@@ -248,8 +254,8 @@ table.lite-headings
   tbody > tr:first-child > th
     border-top: solid 1px $hairline
 
-/* ]]]
- * pre > code -- code blocks [[[
+/*
+ * pre > code -- code blocks
  */
 
 pre > code
@@ -291,8 +297,6 @@ pre.large
   @media (min-width: 768px)
     padding-top: 30px
     padding-bottom: 30px
-
-$term-border: mix($accent, white, 50%)
 
 pre.terminal,
 pre.light
@@ -353,295 +357,20 @@ pre.terminal
     -moz-animation: blink 700ms steps(2,end) infinite
     animation: blink 700ms steps(2,end) infinite
 
-/* ]]]
- * iframes [[[
- */
+@import 'components/about-the-site'
+@import 'components/big-button'
+@import 'components/brief-intro'
+@import 'components/full-image'
+@import 'components/hint'
+@import 'components/hljs'
+@import 'components/next-article'
+@import 'components/post-headline'
+@import 'components/post-icon'
+@import 'components/post-index'
+@import 'components/post-list'
+@import 'components/site-header'
+@import 'components/social-list'
 
-p > iframe
-  margin: 0 auto
-  display: block
-
-/* ]]]
- * fouc prevention [[[
- */
-
-body
-  transition: opacity 100ms linear
-
-html.no-js *
-  opacity: 0
-
-// ]]]
-// [Post things] [[[
-
-/* ]]]
- * .post-item -- each post [[[
- */
-
-.post-item
-  max-width: $page-width
-  margin: 0 auto
-
-.post-list
-  margin: 40px auto
-  padding: 20px
-
-  @media (max-width: 768px)
-    margin: 0 auto
-
-.post-list > .post-item:not(:first-child)
-  &:before
-    content: ''
-    display: block
-    width: 150px
-    height: 1px
-    background: $hairline
-    margin: 7em auto
-
-    @media (max-width: 768px)
-      margin: 4em auto
-
-/* ]]]
- * .post-headline -- H1's of posts [[[
- */
-
-.post-headline
-  &
-    margin: 1.5em auto 3em auto
-    text-align: center
-
-  .post-icon
-    margin-bottom: 2px
-
-  h1
-    text-align: center
-    margin-bottom: 0
-    +headline-font
-    +headline-font-size(2.8em, 1.2)
-    width: 80%
-    margin-left: auto
-    margin-right: auto
-
-    @media (max-width: 768px)
-      +headline-font-size(2em)
-
-  .meta
-    display: block
-    text-align: center
-    margin: 0
-    margin-top: 1em
-    font-weight: normal
-    +caps-font
-    font-size: 0.8em
-
-  .meta .author,
-  .meta .date
-    margin: 0 5px
-    padding-bottom: 2px
-
-  .meta a,
-  .meta a:visited
-    color: $gray
-
-  .meta a:hover,
-  .meta a:focus
-    &, span
-      color: $gray
-
-    time
-      color: $black
-      box-shadow: inset 0 -2px $accent
-
-  a, a:visited, a:focus, a:hover
-    color: $black
-    text-decoration: none
-    box-shadow: none
-
-/* ]]]
- * .hljs -- syntax highlighting [[[
- */
-
-.hljs-literal,
-.hljs-number,
-.hljs-string,
-.hljs-symbol,
-.hljs-value
-  color: $accent
-
-.hljs-key,
-.hljs-attribute
-  color: darken($accent, 20%)
-
-.hljs-keyword,
-.hljs-constant
-  color: $black
-
-.hljs-comment
-  color: $gray
-  font-style: italic
-
-/* ]]]
- * .site-header -- main header [[[
- */
-
-.site-header
-  text-align: center
-  padding: 0 20px
-
-  .container
-    padding: 15px 20px
-    font-size: 0.9em
-    color: rgba($gray, 0.6)
-    border-bottom: solid 1px $hairline
-
-  em
-    +italic-font
-    +italic-font-size(1.1em)
-    font-size: 1.1em
-    color: $text
-
-/* ]]]
- * .post-icon -- category icons [[[
- */
-
-$icon-size: 56px
-
-= iconify($color, $text)
-  &
-    background: $color
-    color: lighten($color, 50%)
-    box-shadow: -2px 2px #e67e22, 2px -2px #f1c40f, 1px -2px rgba($color, 0.2), 1px 3px rgba($color, 0.3)
-
-  span:after
-    content: $text
-
-.post-icon,
-abbr.post-icon
-  border: 0
-  margin: 0
-  display: inline-block
-  width: $icon-size
-  height: $icon-size
-  line-height: $icon-size + 2px
-  text-align: center
-  border-radius: 50%
-  color: #aaa
-  background: #eee
-
-  +body-font
-  font-size: 16px
-  letter-spacing: 1px
-
-  span:after
-    content: attr(data-label)
-    font-size: 0.9em
-    position: relative
-    top: -1px
-
-  @media (max-width: 480px)
-    transform: scale(0.75)
-
-  &.-icon-css
-    +iconify(#3498db, 'CSS')
-    font-size: 14px
-    line-height: $icon-size + 2px
-  &.-icon-development
-    +iconify(#34495e, 'DEV')
-    font-size: 14px
-    line-height: $icon-size + 2px
-  &.-icon-ruby
-    +iconify(#e74c3c, 'RB')
-    text-indent: 2px
-  &.-icon-javascript
-    +iconify(#2ecc71, 'JS')
-    text-indent: 1px
-
-/* ]]]
- * .social-list -- social share icons [[[
- */
-
-.social-list
-  &, li
-    margin: 0
-    padding: 0
-
-  &
-    display: block
-    text-align: center
-    width: 100%
-    margin-top: 2em
-
-    @media (min-width: 768px)
-      margin-top: 4em
-
-  li
-    display: inline-block
-
-  a
-    display: inline-block
-    padding: 6px
-    text-align: center
-    box-shadow: none
-
-  a:before, a:after
-    transition: all 100ms linear
-
-  .text
-    display: none
-
-  a:before
-    font-family: 'Ionicons'
-    font-weight: normal
-    font-style: normal
-    font-size: 18px
-    width: 40px
-    height: 40px
-    line-height: 40px
-    display: inline-block
-    text-align: center
-    border: solid 2px transparent
-    border-radius: 50%
-
-  = socialiconify($color, $content, $filled)
-    &
-      color: $lightgray
-
-    &:hover,
-    &:focus
-      color: $color
-    &:before
-      content: $filled
-    &:hover:before,
-    &:focus:before
-      border-color: $color
-      content: $filled
-
-  .facebook a
-    +socialiconify(#4c66a4, '\f230', '\f231')
-  .twitter a
-    +socialiconify(dodgerblue, '\f242', '\f243')
-  .googleplus a
-    +socialiconify(#f53, '\f234', '\f235')
-
-.hint--top, .hint--bottom
-  &:before
-    margin-top: -14px
-    margin-left: -8px
-    border-radius: 2px
-
-  &:before, &:after
-    transition-duration: 10ms
-
-  &:after
-    box-shadow: none
-    border-radius: 2px
-    text-shadow: none
-    margin-left: -55px
-
-@import 'big-button'
-@import 'next-article'
-@import 'utilities'
-@import 'margins'
-@import 'brief-intro'
-@import 'full-image'
-@import 'blink'
+@import 'utilities/general'
+@import 'utilities/margins'
+@import 'utilities/blink'
