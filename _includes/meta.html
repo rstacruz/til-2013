@@ -1,14 +1,5 @@
 <meta charset='utf-8'>
 
-{%comment%}<!-- set the base -->{%endcomment%}
-{% assign base = '' %}
-{% assign depth = page.url | split: '/' | size | minus: 1 %}
-{% if depth == 1 %}{% assign base = '.' %}
-{% elsif depth == 2 %}{% assign base = '..' %}
-{% elsif depth == 3 %}{% assign base = '../..' %}
-{% elsif depth == 4 %}{% assign base = '../../..' %}{% endif %}
-{% assign timestamp = site.time | date: "%Y%m%d%H%M%S" %}
-
 {%comment%}<!-- title -->{%endcomment%}
 {% if page.full_title %}
 <title>{{ page.full_title }}</title>
@@ -45,9 +36,9 @@
 {%comment%}<!-- author -->{%endcomment%}
 {% if page.author %}
 {% for author in site.authors | where: "name", page.author %}
-  <meta content='{{ author.name }}' name='author'>
-  {% if author.ogp %}
-  <meta content='{{ author.ogp }}' property='article:author'>
+<meta content='{{ author.name }}' name='author'>
+{% if author.ogp %}
+<meta content='{{ author.ogp }}' property='article:author'>
   {% endif %}
 {% endfor %}
 {% endif %}
@@ -70,22 +61,22 @@
 <meta content='{{ page.date | date: "%Y-%m-%d" }}' property='article:published_time'>
 {% endif %}
 {% if page.image %}
-  {% if page.image contains '://' %}
-    <meta content='{{ page.image }}' property='og:image'>
-    <meta content='{{ page.image }}' name='twitter:image'>
-  {% else %}
-    <meta content='{{ site.url }}/{{ page.image }}' property='og:image'>
-    <meta content='{{ site.url }}/{{ page.image }}' name='twitter:image'>
-  {% endif %}
+{% if page.image contains '://' %}
+<meta content='{{ page.image }}' property='og:image'>
+<meta content='{{ page.image }}' name='twitter:image'>
+{% else %}
+<meta content='{{ site.url }}/{{ page.image }}' property='og:image'>
+<meta content='{{ site.url }}/{{ page.image }}' name='twitter:image'>
+{% endif %}
 {% endif %}
 
 {%comment%}<!-- tags -->{%endcomment%}
 {% if page.tags[0] %}
-  <meta content='{{ page.tags[0] }}' property='article:section'>
+<meta content='{{ page.tags[0] }}' property='article:section'>
 {% endif %}
 {% if page.tags %}
 {% for tag in page.tags %}
-  <meta content='{{ tag }}' property='article:tag'>
+<meta content='{{ tag }}' property='article:tag'>
 {% endfor %}
 {% endif %}
 
