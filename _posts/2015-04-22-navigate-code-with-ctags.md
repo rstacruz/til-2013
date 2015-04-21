@@ -2,7 +2,7 @@
 title: Navigate code like a pro with Ctags
 description: Move through code fast. Set up Ctags. Here's how.
 tags: [Vim, Ctags]
-image: ./images/unite-ctags.png
+image: images/unite-ctags.png
 ---
 
 [Ctags] lets you navigate code fast, and is perhaps the single most useful productivity boosting tool in any developer's arsenal. If you're not using Ctags yet, let's get you started.

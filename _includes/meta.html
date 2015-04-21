@@ -70,8 +70,13 @@
 <meta content='{{ page.date | date: "%Y-%m-%d" }}' property='article:published_date'>
 {% endif %}
 {% if page.image %}
-<meta content='{{ page.image }}' property='og:image'>
-<meta content='{{ page.image }}' name='twitter:image'>
+  {% if page.image contains '://' %}
+    <meta content='{{ page.image }}' property='og:image'>
+    <meta content='{{ page.image }}' name='twitter:image'>
+  {% else %}
+    <meta content='{{ site.url }}/{{ page.image }}' property='og:image'>
+    <meta content='{{ site.url }}/{{ page.image }}' name='twitter:image'>
+  {% endif %}
 {% endif %}
 
 {%comment%}<!-- tags -->{%endcomment%}
