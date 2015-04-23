@@ -15,9 +15,9 @@ image: images/unite-ctags.png
 
 Ctags lets you get an index of *tags* in a project. Coupled with some integration with your editor (shown: Vim's [unite-tag]), it will give you two interesting features to help you traverse code bases faster:
 
-1. Jump to where any class/module/method/function is defined, given it's name. (`:tag` in Vim)
+1. Jump to where any class, module, method, or function is defined given it's name. In vim, that's `:tag`.
 
-2. Place your cursor on a word, and jump to where it's defined with one keystroke. (`^]` in Vim)
+2. Place your cursor on a word, and jump to where it's defined with one keystroke. In vim, that's `^]`.
 
 ## Installing Ctags
 
