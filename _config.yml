@@ -5,7 +5,7 @@ kramdown:
 
 # Site settings
 permalink: /:title.html
-exclude: ["Makefile", "README.md", "_", "CNAME", "node_modules"]
+exclude: ["Makefile", "README.md", "./_/", "CNAME", "node_modules"]
 sass:
   style: compressed
 
