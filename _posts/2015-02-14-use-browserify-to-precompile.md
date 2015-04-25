@@ -13,7 +13,7 @@ With this technique, there's no need to maintain a full new directory of compile
 ```
 .
 ├─ lib
-│  └─ index.coffee    - actual entry point
+│  └─ index.js        - actual entry point
 ├─ dist
 │  └─ js2coffee.js    - built package
 └─ index.js           - entry point (used in development)
@@ -22,15 +22,15 @@ With this technique, there's no need to maintain a full new directory of compile
 ### Install the requisite packages
 
 ```sh
-npm install --save-dev browserify coffeeify
+npm install --save-dev browserify babelify
 ```
 
-### Make index.js
-Put your *actual* main entry point as, say, `./lib/index.coffee`. Then create an entry point `./index.js` like this for development:
+### Make the entry point
+Put your *actual* main entry point as, say, `./lib/index.js`. Then create an entry point `./index.js` like this for development:
 
 ```js
-require('coffee-script/register');
-require('./lib/index');
+require('babel/register');
+module.exports = require('./lib/index');
 ```
 
 ### Set up compilation
@@ -39,21 +39,19 @@ Set up a compliation script in the prepublish hook:
 ```js
 {
   "scripts": {
-    "prepublish": "browserify -s js2coffee --bare -t [ coffeeify -x .coffee ] ./js2coffee.coffee > dist/js2coffee.js"
+    "prepublish": "browserify -s js2coffee --bare -t [ babelify ] ./lib/index.js > dist/js2coffee.js"
   }
 }
 ```
 
-You probably will want to use:
-
-* [coffeeify](https://github.com/jnordberg/coffeeify) for CoffeeScript (`-t [ coffeeify -x .coffee ]`)
-* [babelify](https://github.com/babel/babelify) for ES6/React (`-t [ babelify ]`)
+For CoffeeScript support, use [coffeeify](https://github.com/jnordberg/coffeeify) for CoffeeScript (`-t [ coffeeify -x .coffee ]`).
 
 Options used:
 
 * `-s` - standalone (uses a UMD wrapper)
 * `--bare` - don't stub node builtins
-* `-t` - transform
+* `-t` - define transformations to use
+* `--no-bundle-external` - don't bundle required node modules. use this only for node.js apps, not browser apps.
 
 ### Point the package
 Set `main` in `package.json` to the precompiled version:
