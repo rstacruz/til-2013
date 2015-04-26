@@ -25,7 +25,7 @@ git config --global credential.helper cache         # Linux
 
 ### Generate an API key
 
-[Generate a GitHub API key](https://github.com/settings/applications#personal-access-tokens) under "Personal Access Tokens". You'll use this for the Git command line. Leave the scopes unchanged.
+[Generate a GitHub API key](https://github.com/settings/tokens) under "Personal Access Tokens". You'll use this for the Git command line. Leave the scopes unchanged.
 
 ### Use HTTPS on your repos
 If your git repos still use SSH (`git@github.com:user/repo.git`), change them to use HTTPS (`https://github.com/user/repo.git`). ([More info on remote URLs](https://help.github.com/articles/which-remote-url-should-i-use/#cloning-with-https-recommended))
