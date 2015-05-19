@@ -6,7 +6,7 @@ $term-border: mix($accent, white, 50%)
 
 pre > code
   +mono-font
-  +mono-font-size(0.87em)
+  +mono-font-size(0.82em)
   color: $text
   padding-right: 20px
   // box-shadow: inset 1px 1px rgba(black, 0.06)
@@ -16,7 +16,12 @@ pre
   border-radius: 4px
   background: $wash
   margin: 2.2em -50px
-  line-height: 1.25em
+  line-height: 1.2em
+
+  @media (min-width: 768px)
+    border-top: solid 1px #eef3fa
+    border-bottom: solid 1px #c7d7ee
+    border-radius: 4px
 
   @media (max-width: 768px)
     padding: 20px
@@ -50,6 +55,9 @@ pre.light
     background: white
     border: solid 1px $term-border
     position: relative
+
+pre.light
+  background: #fdfdff
 
 pre.terminal
   &
@@ -90,6 +98,9 @@ pre.terminal
     margin-left: 0
     margin-right: 0
 
+pre + pre
+  margin-top: -1.7em
+
 @media (min-width: 769px)
   pre.cursor > code > :last-child:after
     content: ''
@@ -103,3 +114,6 @@ pre.terminal
     -moz-animation: blink 700ms steps(2,end) infinite
     animation: blink 700ms steps(2,end) infinite
 
+h3 + pre,
+h3 + table
+  margin-top: -1em
