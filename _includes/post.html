@@ -26,3 +26,7 @@
   </div>
 </div>
 
+{% comment %}<!-- https://github.com/highlightjs/cdn-release/tree/master/build/languages -->{% endcomment %}
+{% for lang in include.post.hljs_languages %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/languages/{{lang}}.min.js"></script>
+{% endfor %}
