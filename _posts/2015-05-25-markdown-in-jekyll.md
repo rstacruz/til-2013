@@ -15,6 +15,7 @@ so and so
 {% endcapture %}{{ x | markdownify }}
 ```
 
+## Kramdown
 Also, it's preferred to use [kramdown] as your Markdown processor: it supports GitHub-like code fencing and many useful Markdown extensions.
 
 ```yaml
@@ -24,6 +25,20 @@ kramdown:
   input: GFM
 ```
 
+If you do, there's a great alternative. Name your HTML files as `.md`, which is fine, because Markdown will ignore HTML blocks by default. You can then opt into Markdown processing via `markdown="1"`. Hat tip to [@marksteve].
+
+```html
+<div>
+  <h3>I'm HTML</h3>
+  <div markdown="1">
+I am *Markdown text*. Be sure not to indent me, else
+I'll be interpreted as a code block.
+  </div>
+</div>
+
+```
+
 [kramdown]: http://kramdown.gettalong.org/
+[@marksteve]: http://marksteve.com
 
 {% endraw %}
