@@ -25,7 +25,7 @@ kramdown:
   input: GFM
 ```
 
-If you do, there's a great alternative. Name your HTML files as `.md`, which is fine, because Markdown will ignore HTML blocks by default. You can then opt into Markdown processing via `markdown="1"`. Hat tip to [@marksteve].
+If you do, there's a great alternative. Name your HTML files as `.md`, which is fine, because Markdown will ignore HTML blocks by default. You can then opt into Markdown processing via `markdown="1"`. More info on this on Kramdown's [documentation]. Hat tip to [@marksteve].
 
 ```html
 <div>
@@ -40,5 +40,5 @@ I'll be interpreted as a code block.
 
 [kramdown]: http://kramdown.gettalong.org/
 [@marksteve]: http://marksteve.com
-
+[documentation]: http://kramdown.gettalong.org/syntax.html#html-blocks
 {% endraw %}
