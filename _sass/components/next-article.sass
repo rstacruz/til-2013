@@ -2,15 +2,16 @@
  * .next-article -- lead into the next article
  */
 
-= recolor-article($bg)
+= recolor-article($bg, $bg2, $url: '', $a: 0.9)
   $w: 1500
   $h: 10
   $textcolor: mix(white, $bg, 75%)
   $notch: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='#{$w}' height='#{$h}' version='1.1'><polyline fill='white' points='#{$w},0 0,0 0,#{$h}'/></svg>"
+
   &
-    background: url($notch) -50px top / 110% auto no-repeat, linear-gradient(to right, adjust-color($bg, $lightness: -10%), adjust-color($bg, $hue: -50deg, $lightness: 10%, $saturation: 10%)), $bg
+    background: url($notch) -50px top / 110% auto no-repeat, linear-gradient(to right, rgba(adjust-color($bg, $lightness: 0%), $a), rgba(adjust-color($bg2, $lightness: 0%), $a)), linear-gradient(180deg - 3deg, rgba($bg, 0.0), rgba($bg, 0.9)), url($url) center center / cover, $bg
   &:hover, &:focus
-    background: url($notch) -50px top / 110% auto no-repeat, linear-gradient(to right, adjust-color($bg, $lightness: -9%), adjust-color($bg, $hue: -50deg, $lightness: 11%, $saturation: 10%)), $bg
+    background: url($notch) -50px top / 110% auto no-repeat, linear-gradient(to right, rgba(adjust-color($bg, $lightness: 1%), $a), rgba(adjust-color($bg2, $lightness: 1%), $a)), linear-gradient(180deg - 3deg, rgba($bg, 0.0), rgba($bg, 0.9)), url($url) center center / cover, $bg
   .excerpt, .heading
     color: $textcolor
 
@@ -124,8 +125,11 @@
       border-color: transparent
 
   &
-    +recolor-article(darken(#8e44ad, 15%))
+    +recolor-article(#612e76, #5867cc)
   &.-v3, &.-v4
-    +recolor-article(darken(#c0392b, 15%))
-  &.-v5, &.-v6
-    +recolor-article(#40485a)
+    +recolor-article(#1d2434, #3a4d70, "bg/roughwall.jpg", 0.93)
+  &.-v5
+    +recolor-article(#17283a, #25295e, "bg/stairs.jpg", 0.9)
+  &.-v6
+    +recolor-article(#0f705d, #0d4c5e, "bg/pebbles.jpg", 0.85)
+  // &.next-article
