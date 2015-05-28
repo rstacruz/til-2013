@@ -2,24 +2,29 @@
  * .next-article -- lead into the next article
  */
 
+= recolor-article($bg)
+  $w: 1500
+  $h: 10
+  $textcolor: mix(white, $bg, 75%)
+  $notch: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='#{$w}' height='#{$h}' version='1.1'><polyline fill='white' points='#{$w},0 0,0 0,#{$h}'/></svg>"
+  &
+    background: url($notch) -50px top / 110% auto no-repeat, linear-gradient(to right, adjust-color($bg, $lightness: -10%), adjust-color($bg, $hue: -50deg, $lightness: 10%, $saturation: 10%)), $bg
+  &:hover, &:focus
+    background: url($notch) -50px top / 110% auto no-repeat, linear-gradient(to right, adjust-color($bg, $lightness: -9%), adjust-color($bg, $hue: -50deg, $lightness: 11%, $saturation: 10%)), $bg
+  .excerpt, .heading
+    color: $textcolor
+
 .next-article
   $bg: darken(#8e44ad, 15%)
   $textcolor: mix(white, $bg, 75%)
 
-  $w: 1500
-  $h: 10
-  $notch: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='#{$w}' height='#{$h}' version='1.1'><polyline fill='white' points='#{$w},0 0,0 0,#{$h}'/></svg>"
-
   &
     display: block
     padding: 0
-    background: url($notch) -50px top / 110% auto no-repeat, linear-gradient(to right, adjust-color($bg, $lightness: -10%), adjust-color($bg, $hue: -50deg, $lightness: 10%, $saturation: 10%)), $bg
     margin-left: 40px
     margin-right: 40px
     position: relative
 
-  &:hover, &:focus
-    background: url($notch) -50px top / 110% auto no-repeat, linear-gradient(to right, adjust-color($bg, $lightness: -9%), adjust-color($bg, $hue: -50deg, $lightness: 11%, $saturation: 10%)), $bg
 
   &, &:hover, &:focus
     box-shadow: none
@@ -81,7 +86,6 @@
     display: block
     margin-left: auto
     margin-right: auto
-    color: $textcolor
     font-size: 1em
     line-height: 1.6em
 
@@ -94,7 +98,6 @@
 
   .heading
     display: block
-    color: $textcolor
     +caps-font
     font-size: 0.7em
     margin-bottom: 1em
@@ -119,3 +122,10 @@
     &:hover, &:focus
       background: $accent
       border-color: transparent
+
+  &
+    +recolor-article(darken(#8e44ad, 15%))
+  &.-v3, &.-v4
+    +recolor-article(darken(#c0392b, 15%))
+  &.-v5, &.-v6
+    +recolor-article(#40484f)
