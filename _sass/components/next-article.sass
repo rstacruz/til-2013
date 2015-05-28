@@ -3,18 +3,23 @@
  */
 
 .next-article
-  $notch: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1500' height='20' version='1.1'><polyline fill='white' points='1500,0 0,0 0,20'/></svg>"
+  $bg: darken(#8e44ad, 15%)
+  $textcolor: mix(white, $bg, 75%)
+
+  $w: 1500
+  $h: 10
+  $notch: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='#{$w}' height='#{$h}' version='1.1'><polyline fill='white' points='#{$w},0 0,0 0,#{$h}'/></svg>"
 
   &
     display: block
     padding: 0
-    background: url($notch) -50px top / 110% auto no-repeat, $wash
+    background: url($notch) -50px top / 110% auto no-repeat, linear-gradient(to right, adjust-color($bg, $lightness: -10%), adjust-color($bg, $hue: -50deg, $lightness: 10%, $saturation: 10%)), $bg
     margin-left: 40px
     margin-right: 40px
     position: relative
 
-  @media (max-width: 480px)
-    background: url($notch) -50px top / 110% auto no-repeat, darken($wash, 3%)
+  &:hover, &:focus
+    background: url($notch) -50px top / 110% auto no-repeat, linear-gradient(to right, adjust-color($bg, $lightness: -9%), adjust-color($bg, $hue: -50deg, $lightness: 11%, $saturation: 10%)), $bg
 
   &, &:hover, &:focus
     box-shadow: none
@@ -56,12 +61,12 @@
     font-size: 2.2em
     line-height: 1.3em
     +bold-font
-    color: $black
+    color: white
     transition: all 250ms linear
 
     &:hover > span
       box-shadow: inset 0 -2px $accent
-      text-shadow: 0 0 4px $wash, 0 0 4px $wash, 0 0 4px $wash, 0 0 4px $wash, 0 0 4px $wash, 0 0 4px $wash, 0 0 4px $wash, 0 0 4px $wash, 0 0 4px $wash
+      // text-shadow: 0 0 4px $bg, 0 0 4px $bg, 0 0 4px $bg, 0 0 4px $bg, 0 0 4px $bg, 0 0 4px $bg, 0 0 4px $bg, 0 0 4px $bg, 0 0 4px $bg
 
     @media (max-width: 768px)
       font-size: 1.5em
@@ -76,7 +81,7 @@
     display: block
     margin-left: auto
     margin-right: auto
-    color: $gray
+    color: $textcolor
     font-size: 1em
     line-height: 1.6em
 
@@ -89,7 +94,7 @@
 
   .heading
     display: block
-    color: $gray
+    color: $textcolor
     +caps-font
     font-size: 0.7em
     margin-bottom: 1em
@@ -102,3 +107,15 @@
     display: inline-block
     vertical-align: middle
     color: $accent
+
+  .big-button,
+  a.big-button
+    background: transparent
+
+    &, &:visited
+      border-color: $accent
+      color: white
+
+    &:hover, &:focus
+      background: $accent
+      border-color: transparent
