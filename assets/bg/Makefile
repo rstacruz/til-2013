@@ -16,3 +16,7 @@ pebbles.jpg:
 woodfloor.jpg:
 	@# http://jaymantri.com/post/117783615373/download#notes
 	${dl} http://40.media.tumblr.com/e347691fe1217667582940869044d344/tumblr_nnmqtgZFzv1qfirfao1_1280.jpg $@
+
+rosebench.jpg:
+	@# http://jaymantri.com/post/117170705152/download#notes
+	${dl} http://40.media.tumblr.com/48ac38622fd674a6d0ce70b68a7dd336/tumblr_nn8x5dIUIx1qfirfao1_1280.jpg $@
