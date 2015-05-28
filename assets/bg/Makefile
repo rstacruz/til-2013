@@ -12,3 +12,7 @@ roughwall.jpg:
 pebbles.jpg:
 	@# http://jaymantri.com/post/118956931828/download
 	${dl} http://41.media.tumblr.com/fe8834029a3ddb2b6db08bad2288dbb4/tumblr_noco7zrrF31qfirfao1_1280.jpg $@
+
+woodfloor.jpg:
+	@# http://jaymantri.com/post/117783615373/download#notes
+	${dl} http://40.media.tumblr.com/e347691fe1217667582940869044d344/tumblr_nnmqtgZFzv1qfirfao1_1280.jpg $@

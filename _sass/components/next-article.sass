@@ -2,19 +2,6 @@
  * .next-article -- lead into the next article
  */
 
-= recolor-article($bg, $bg2, $url: '', $a: 0.9)
-  $w: 1500
-  $h: 10
-  $textcolor: mix(white, $bg, 75%)
-  $notch: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='#{$w}' height='#{$h}' version='1.1'><polyline fill='white' points='#{$w},0 0,0 0,#{$h}'/></svg>"
-
-  &
-    background: url($notch) -50px top / 110% auto no-repeat, linear-gradient(to right, rgba(adjust-color($bg, $lightness: 0%), $a), rgba(adjust-color($bg2, $lightness: 0%), $a)), linear-gradient(180deg - 3deg, rgba($bg, 0.0), rgba($bg, 0.9)), url($url) center center / cover, $bg
-  &:hover, &:focus
-    background: url($notch) -50px top / 110% auto no-repeat, linear-gradient(to right, rgba(adjust-color($bg, $lightness: 1%), $a), rgba(adjust-color($bg2, $lightness: 1%), $a)), linear-gradient(180deg - 3deg, rgba($bg, 0.0), rgba($bg, 0.9)), url($url) center center / cover, $bg
-  .excerpt, .heading
-    color: $textcolor
-
 .next-article
   $bg: darken(#8e44ad, 15%)
   $textcolor: mix(white, $bg, 75%)
@@ -124,12 +111,29 @@
       background: $accent
       border-color: transparent
 
+= recolor-article($bg, $bg2, $url: '', $a: 0.9, $angle: 177deg)
+  $w: 1500
+  $h: 10
+  $textcolor: mix(white, $bg, 75%)
+  $notch: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='#{$w}' height='#{$h}' version='1.1'><polyline fill='white' points='#{$w},0 0,0 0,#{$h}'/></svg>"
+
   &
+    background: url($notch) -50px top / 110% auto no-repeat, linear-gradient(to right, rgba(adjust-color($bg, $lightness: 0%), $a), rgba(adjust-color($bg2, $lightness: 0%), $a)), linear-gradient($angle, rgba($bg, 0.0), rgba($bg, 0.9)), url($url) center center / cover, $bg
+  &:hover, &:focus
+    background: url($notch) -50px top / 110% auto no-repeat, linear-gradient(to right, rgba(adjust-color($bg, $lightness: 1%), $a), rgba(adjust-color($bg2, $lightness: 1%), $a)), linear-gradient($angle, rgba($bg, 0.0), rgba($bg, 0.9)), url($url) center center / cover, $bg
+  .excerpt, .heading
+    color: $textcolor
+
+.next-article
+  &
+    text-shadow: 0 1px 1px rgba(black, 0.5)
     +recolor-article(#612e76, #5867cc)
-  &.-v3, &.-v4
-    +recolor-article(#1d2434, #3a4d70, "bg/roughwall.jpg", 0.93)
+  &.-v3
+    +recolor-article(#1d2434, #202a3e, "bg/roughwall.jpg", 0.9, $angle: 1deg)
+  &.-v4
+    +recolor-article(#902014, #c77e0a, "bg/woodfloor.jpg", 0.45, $angle: 1deg)
   &.-v5
-    +recolor-article(#17283a, #25295e, "bg/stairs.jpg", 0.9)
+    +recolor-article(#17283a, #25295e, "bg/stairs.jpg", 0.85, $angle: 1deg)
   &.-v6
-    +recolor-article(#0f705d, #0d4c5e, "bg/pebbles.jpg", 0.85)
+    +recolor-article(#027d65, #00536b, "bg/pebbles.jpg", 0.7, $angle: 35deg)
   // &.next-article
