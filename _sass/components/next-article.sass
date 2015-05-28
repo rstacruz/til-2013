@@ -4,7 +4,7 @@
 
 .next-article
   $bg: darken(#8e44ad, 15%)
-  $textcolor: mix(white, $bg, 75%)
+  $textcolor: saturate(mix(white, $bg, 85%), 90%)
 
   &
     display: block
@@ -57,8 +57,8 @@
     color: white
     transition: all 250ms linear
 
-    &:hover > span
-      box-shadow: inset 0 -2px $accent
+    // &:hover > span
+      // box-shadow: inset 0 -2px $accent
       // text-shadow: 0 0 4px $bg, 0 0 4px $bg, 0 0 4px $bg, 0 0 4px $bg, 0 0 4px $bg, 0 0 4px $bg, 0 0 4px $bg, 0 0 4px $bg, 0 0 4px $bg
 
     @media (max-width: 768px)
@@ -126,14 +126,17 @@
 
 .next-article
   &
-    text-shadow: 0 1px 1px rgba(black, 0.5)
     +recolor-article(#612e76, #5867cc)
   &.-v2
+    text-shadow: 0 1px 1px rgba(black, 0.5)
     +recolor-article(#027d65, #00536b, "bg/pebbles.jpg", 0.7, $angle: 35deg)
   &.-v3
+    text-shadow: 0 1px 1px rgba(black, 0.5)
     +recolor-article(#1d2434, #202a3e, "bg/roughwall.jpg", 0.9, $angle: 1deg)
   &.-v4
+    text-shadow: 0 1px 1px rgba(black, 0.5)
     +recolor-article(#902014, #c77e0a, "bg/woodfloor.jpg", 0.45, $angle: 1deg)
   &.-v5
+    text-shadow: 0 1px 1px rgba(black, 0.5)
     +recolor-article(#17283a, #25295e, "bg/stairs.jpg", 0.85, $angle: 1deg)
   // &.next-article
