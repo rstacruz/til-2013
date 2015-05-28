@@ -1,10 +1,10 @@
-<a class='next-article {{ include.class }}' href="{{ base }}{{ include.page.url }}">
+<a class='next-article {{ include.class }}' href="{{ base }}{{ include.page.url }}" data-id="{{ include.page.id }}">
   <span class='container'>
     <span class='heading'>Next article:</span>
     <span class='h3 unorphan'><span>{{ include.page.title }}</span></span>
     {% if include.page.description %}
       <span class='excerpt unorphan'>{{ include.page.description }}</span>
     {% endif %}
-    <span class='big-button -next' href='{{ base }}{{ include.page.url }}'>Continue</a>
+    <span class='big-button -next' href='{{ base }}{{ include.page.url }}'>Read</a>
   </span>
 </a>
