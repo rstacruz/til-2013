@@ -1,4 +1,4 @@
-= kernliga
+@mixin kernliga
   font-size-adjust: none
   // don't display digraphs in languages that don't support it
   -webkit-font-language-override: normal
@@ -21,17 +21,17 @@
   //   font-feature-settings: "kern", "swsh"
   //   -webkit-font-feature-settings: "kern", "swsh"
 
-= antialias
+@mixin antialias
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-= no-antialias
+@mixin no-antialias
   text-rendering: auto
   -webkit-font-smoothing: subpixel-antialiased
   -moz-osx-font-smoothing: auto
 
-= clearfix
+@mixin clearfix
   &:after
     display: table
     content: ''

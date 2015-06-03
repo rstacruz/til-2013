@@ -6,38 +6,38 @@
 $body-font-size: 17px
 $body-line-height: 1.7
 
-= font-size($multiplier, $lhmultiplier, $size, $line-height)
+@mixin font-size($multiplier, $lhmultiplier, $size, $line-height)
   font-size: $size * $multiplier
   @if $line-height != none
     line-height: $line-height * $lhmultiplier
 
-= body-font
+@mixin body-font
   font-family: 'Roboto', sans-serif
   font-weight: 400
 
-= italic-font
+@mixin italic-font
   font-family: 'eb garamond', serif
   font-weight: 400
   font-style: italic
   +kernliga
 
-= headline-font
+@mixin headline-font
   font-family: 'eb garamond', serif
   font-weight: 400
   font-style: italic
   +kernliga
 
-= caps-font
+@mixin caps-font
   text-transform: uppercase
   letter-spacing: 2px
 
-= mono-font
+@mixin mono-font
   font-family: 'fira mono', monospace
   font-weight: 400
   letter-spacing: -0.5px
   +no-antialias
 
-= bold-font
+@mixin bold-font
   font-family: 'raleway', sans-serif
   font-weight: 800
 
@@ -45,14 +45,14 @@ $body-line-height: 1.7
  * sizes
  */
 
-= italic-font-size($size, $line-height: none)
+@mixin italic-font-size($size, $line-height: none)
   +font-size(1.0, 1.0, $size, $line-height)
 
-= headline-font-size($size, $line-height: none)
+@mixin headline-font-size($size, $line-height: none)
   +font-size(1.0, 1.0, $size, $line-height)
 
-= bold-font-size($size, $line-height: none)
+@mixin bold-font-size($size, $line-height: none)
   +font-size(1.0, 1.0, $size, $line-height)
 
-= mono-font-size($size, $line-height: none)
+@mixin mono-font-size($size, $line-height: none)
   +font-size(1.0, 1.0, $size, $line-height)
