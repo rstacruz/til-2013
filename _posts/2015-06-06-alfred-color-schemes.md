@@ -1,10 +1,11 @@
 ---
 title: Alfred color schemes
 description: Here's my nice color scheme for Alfred.
+image: images/alfred-dark.png
 tags: [OSX]
 ---
 
-![](./images/alfred-dark.png)
+![]({{ page.image }})
 {:.full-image.stretched}
 
 Today I learned you can change colors in [Alfred].<br>
