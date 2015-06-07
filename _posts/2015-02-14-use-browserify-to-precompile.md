@@ -51,7 +51,8 @@ Options used:
 * `-s` - standalone (uses a UMD wrapper)
 * `--bare` - don't stub node builtins
 * `-t` - define transformations to use
-* `--no-bundle-external` - don't bundle required node modules. use this only for node.js apps, not browser apps.
+
+For packages targeting Node.js, use `--node --no-bundle-external`. This will disable browser-field resolution in package.json and not bundle node_modules.
 
 ### Point the package
 Set `main` in `package.json` to the precompiled version:
