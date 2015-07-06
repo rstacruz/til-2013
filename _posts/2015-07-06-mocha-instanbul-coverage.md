@@ -2,7 +2,7 @@
 title: Getting Mocha coverage reports using Istanbul
 description: Here's how to get detailed coverage reports from Mocha via Istanbul.
 image: images/mocha-istanbul.png
-tags: []
+tags: [JavaScript]
 ---
 
 ![]({{ page.image }}){:style='max-width:600px;margin-bottom:-75px'}
