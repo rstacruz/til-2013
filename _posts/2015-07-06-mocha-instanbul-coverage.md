@@ -1,18 +1,19 @@
 ---
 title: Getting Mocha coverage reports using Istanbul
 description: Here's how to get detailed coverage reports from Mocha via Istanbul.
+image: images/mocha-istanbul.png
 tags: []
 ---
 
+![]({{ page.image }}){:style='max-width:600px;margin-bottom:-75px'}
+{:.full-image.cropped.bottom-space-4}
+
 This is all you really need to run coverage reports on [Mocha] tests via [Istanbul].
-{:.brief-intro.center}
 
 ```
 istanbul cover _mocha
 ```
 {:.terminal.large}
-
-----
 
 ### Opening reports
 Your reports will be available under `coverage/`. By default, you'll get  JSON files and an HTML report.
@@ -21,6 +22,8 @@ Your reports will be available under `coverage/`. By default, you'll get  JSON f
 open coverage/lcov-report/*.html
 ```
 {:.light}
+
+----
 
 ### Locking istanbul
 Preferrably, though, you'll want to add `istanbul` to your project so you can pin down the version you need and have it available on your CI.
