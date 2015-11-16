@@ -1,7 +1,7 @@
 ---
 title: Legacy IE polyfills
 tags: [CSS]
-description: Speed along your legacy IE development with this all-purpose 7-line snippet.
+description: Speed along your legacy IE development with this all-purpose 8-line snippet.
 ---
 
 Use this convenient snippet in almost any project. It will fill in some basic support for modern CSS features for legacy IE versions.
@@ -15,6 +15,7 @@ Use this convenient snippet in almost any project. It will fill in some basic su
 <script src='//cdn.rawgit.com/gisu/selectivizr/1.0.3/selectivizr.js'></script>
 <script src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'></script>
 <script src='//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.3.1/es5-shim.min.js'></script>
 <![endif]--> 
 ```
 
@@ -27,8 +28,9 @@ The world has largely moved on from IE6 to IE8, but this is the least you can do
  - **[html5shiv]** — for new HTML5 tags like `<article>` (IE6-8)
  - **[respond]** — for `@media` queries for responsive design (IE6-8)
  - **[selectivizr]** — for all modern CSS selectors (IE6-8)
- - **[json2]** — for JSON parsing (IE6-7)
+ - **[json2]** — for JSON parsing (IE6-7)
  - **[nwmatcher]** — the selector engine for selectivizr
+ - **[es5-shim]** — add ES5+ functions (IE6-8)
 
 It's wrapped in an [IE conditional comment][concom], so only the poor souls with outdated IE's will bear the extra load.
 
@@ -46,3 +48,4 @@ I've put together a [Legacy IE cheatsheet](http://ricostacruz.com/cheatsheets/ie
 [selectivizr]: http://selectivizr.com/
 [concom]: http://www.quirksmode.org/css/condcom.html
 [NWmatcher]: http://javascript.nwbox.com/NWMatcher/
+[es5-shim]: https://github.com/es-shims/es5-shim

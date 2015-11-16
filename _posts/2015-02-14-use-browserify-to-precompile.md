@@ -22,7 +22,7 @@ With this technique, there's no need to maintain a full new directory of compile
 ### Install the requisite packages
 
 ```sh
-npm install --save-dev browserify babelify
+npm install --save-dev browserify babelify babel-preset-es2015
 ```
 
 ### Make the entry point
@@ -39,7 +39,7 @@ Set up a compliation script in the prepublish hook:
 ```js
 {
   "scripts": {
-    "prepublish": "browserify -s js2coffee --bare -t [ babelify ] ./lib/index.js > dist/js2coffee.js"
+    "prepublish": "browserify -s js2coffee --bare -t [ babelify --presets [ es2015 ] ] ./lib/index.js > dist/js2coffee.js"
   }
 }
 ```
