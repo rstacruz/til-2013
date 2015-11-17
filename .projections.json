@@ -1,0 +1,13 @@
+{
+  "_posts/*.md": {
+    "type": "post",
+    "template": [
+      "---",
+      "title: {basename}",
+      "tags: [Development]",
+      "description: ...",
+      "---"
+    ]
+  }
+}
+
