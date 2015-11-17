@@ -4,23 +4,23 @@ tags: [Ruby]
 description: Use the web inspector in Capybara/Selenium tests.
 ---
 
-Want to use the Web Inspector in Capybara/Selenium tests? The first thing you'll probably try is to use [pry-byebug](https://rubygems.org/gems/pry-byebug) to pause your tests. You'll probably find that this doesn't work.
+Want to use the Web Inspector in Capybara/Selenium tests? The first thing you'll probably try is to use [pry-byebug](https://rubygems.org/gems/pry-byebug) to pause your tests. You'll probably find that this doesn't work as intended: it will halt everything, making your browser not load anything because Rails can't respond to the request.
 
 ```rb
-it 'my test' do
+scenario 'visiting the home page' do
   visit root_path
-  binding.pry # ←
+  binding.pry # ✗
 end
 ```
 
-A better alternative is to use `$stdin.gets`. This is what [poltergeist](https://rubygems.org/gems/poltergeist) uses to pause execution. That method is not available in Capybara/Selenium though, so you'll need to add it in yourself:
+A better alternative is to use `$stdin.gets`. This is what [Poltergeist](https://rubygems.org/gems/poltergeist) uses to pause execution. That method is not available in Capybara/Selenium though, so you'll need to add it in yourself:
 
 ```rb
 $stderr.write 'Press enter to continue'
 $stdin.gets
 ```
 
-## With rspec
+## With RSpec
 If you're using Capybara with Rspec, you can turn this into a helper. You can then just use `pause` in your tests.
 
 ```rb
@@ -42,4 +42,4 @@ end
 
 ## Using Poltergeist
 
-When using Poltergeist, just use its [Remote Debugging](https://github.com/teampoltergeist/poltergeist#remote-debugging-experimental) feature with the `inspector: true` flag.
+When using Poltergeist (for PhantomJS support), just use its [Remote Debugging](https://github.com/teampoltergeist/poltergeist#remote-debugging-experimental) feature with the `inspector: true` flag.
