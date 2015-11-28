@@ -47,9 +47,9 @@ You can set up a `factory_girl` factory to use this by passing a `class` option.
 
 ```rb
 class UserCreator
-  # Same as UserCreator.new(attrs).user
   def self.create(attrs)
     new(attrs).user
+    # ...same as UserCreator.new(attrs).user
   end
 end
 ```
