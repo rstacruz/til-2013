@@ -13,6 +13,12 @@ factory :user do
 end
 ```
 
+```rb
+create :user
+# same as User.create(name: 'John', email: 'john@example.com')
+```
+{:.light}
+
 At some point however, your models may get too complicated and you may need an actual [factory](https://en.wikipedia.org/wiki/Factory_method_pattern)—a class that constructs an object and performs actions along with it.
 
 ```rb
@@ -27,9 +33,12 @@ class UserCreator
     @user
   end
 end
+```
 
+```rb
 UserCreator.create(name: 'John')
 ```
+{:.light}
 
 You can set up a `factory_girl` factory to use this by passing a `class` option. This delegates to your class's `.create` class method. You will need to create an actual Factory
 
@@ -37,8 +46,11 @@ You can set up a `factory_girl` factory to use this by passing a `class` option.
 factory :real_user, class: 'UserCreator' do
   ...
 end
+```
 
+```rb
 create :real_user
 ```
+{:.light}
 
 Also see the [Factory Girl cheatsheet](http://ricostacruz.com/cheatsheets/factory_girl.html)!
