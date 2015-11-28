@@ -44,7 +44,7 @@ UserCreator.create(name: 'John')
 
 ### Setting it up
 
-You can set up a `factory_girl` factory to use this by passing a `class` option. This delegates to your class's `.create` class method. You will need to create an actual Factory
+You can set up a `factory_girl` factory to use this by passing a `class` option. This delegates to your class's `.create` class method. You will need to create a Factory that implements a `create` method that returns an object.
 
 ```rb
 factory :real_user, class: 'UserCreator' do
