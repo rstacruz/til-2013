@@ -27,7 +27,7 @@ At some point however, your models may get too complicated and you may need an a
 class UserCreator
   attr_reader :user
 
-  def self.create(attrs)
+  def initialize(attrs)
     @user = User.create(attrs)
     @user.profile = Profile.create(@user)
     @user.posts = create_sample_post
@@ -41,18 +41,17 @@ creator.user
 ```
 {:.light}
 
-### Setting it up
+### Setting it up (the hard way)
 
-You can set up a `factory_girl` factory to use this by passing a `class` option. This delegates to your class's `.create` class method. You will need to create a Factory that implements a `create` method that returns an object.
+Factory Girl will then consume a class in this manner:
 
-```rb
-class UserCreator
-  def self.create(attrs)
-    new(attrs).user
-    # ...same as UserCreator.new(attrs).user
-  end
-end
 ```
+user = User.new
+user.name = 'John'
+user.save!
+```
+
+You can set up a `factory_girl` factory to use this by passing a `class` option.  You'll have to make your factory implement these methods. This is silly and painful.
 
 ```rb
 factory :real_user, class: 'UserCreator' do
@@ -61,9 +60,17 @@ end
 ```
 
 ```rb
-create :real_user
+create(:real_user).user
 ```
 {:.light}
+
+## Even easier
+
+Why not use the [attributes_for](http://www.rubydoc.info/gems/factory_girl/file/GETTING_STARTED.md#Using_factories) helper instead?
+
+```rb
+UserCreator.create attributes_for(:user)
+```
 
 ## Also see
 
