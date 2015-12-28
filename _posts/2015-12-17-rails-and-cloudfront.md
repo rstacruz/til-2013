@@ -83,14 +83,28 @@ Set up your app to disallow Cloudfront from fetching anything but `/assets`. Thi
 If you miss this step, you'll be able to access the rest of your site in your CloudFront URL. While those aren't public, you'd best have them secured as it can open up security flaws and possibly lead to SEO penalties.
 
 ```rb
-class ApplicationController
-  before_action :deny_cloudfront
+# config/routes.rb
+Rails.application.routes.draw do
+  match '*path', via: :all, to: 'errors#not_found',
+    constraints: CloudfrontConstraint.new
 
-private
+  ...
+```
 
-  def deny_cloudfront
-    return unless request.env['HTTP_USER_AGENT'] == 'Amazon CloudFront'
-    render text: '', status: 404
+```rb
+# app/services/cloudfront_constraint.rb
+class CloudfrontConstraint
+  def matches?(request)
+    request.env['HTTP_USER_AGENT'] == 'Amazon CloudFront'
+  end
+end
+```
+
+```rb
+# app/controllers/errors_controller.rb
+class ErrorsController
+  def not_found
+    raise ActiveRecord::RecordNotFound
   end
 end
 ```

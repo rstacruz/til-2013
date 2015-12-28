@@ -10,13 +10,13 @@ Use this convenient snippet in almost any project. It will fill in some basic su
 {:.wide.light}
 ```js
 <!--[if lt IE 9]>
-<script src='//cdnjs.cloudflare.com/ajax/libs/nwmatcher/1.2.5/nwmatcher.min.js'></script>
-<script src='//cdnjs.cloudflare.com/ajax/libs/json2/20140204/json2.min.js'></script>
-<script src='//cdn.rawgit.com/gisu/selectivizr/1.0.3/selectivizr.js'></script>
-<script src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'></script>
-<script src='//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js'></script>
-<script src='//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.3.1/es5-shim.min.js'></script>
-<![endif]--> 
+<script src='https://cdn.jsdelivr.net/nwmatcher/1.2.5/nwmatcher.min.js'></script>
+<script src='https://cdn.jsdelivr.net/json2/0.2/json2.min.js'></script>
+<script src='https://cdn.rawgit.com/gisu/selectivizr/1.0.3/selectivizr.js'></script>
+<script scr='https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js'></script>
+<script src='https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js'></script>
+<script src='https://cdn.jsdelivr.net/es5.shim/4.4.1/es5-shim.min.js'></script>
+<![endif]-->
 ```
 
 <br>
