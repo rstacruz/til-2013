@@ -1,5 +1,7 @@
 ---
 title: Selective polyfilling
+tags: [JavaScript]
+description: Load JavaScript polyfills in a smart, controlled manner.
 ---
 
 Need to support legacy browsers, but don't want the full weight of [es5-shim] loaded for everyone? Sure, just load it for browsers that need it!
@@ -13,5 +15,6 @@ this.JSON||a('https://cdn.jsdelivr.net/json2/0.2/json2.min.js');
 this.Promise||a('https://www.promisejs.org/polyfills/promise-6.1.0.js');
 }())</script>
 ```
+{:.light}
 
 It should be easy enough to add more polyfills as you need them. You can also include some [legacy IE polyfills](ie-polyfills.html) to complete the experience.
