@@ -20,6 +20,7 @@ You can add more keys to an object, and it'll always end up in the end.
 ```js
 > obj.bravo = 1;
 > obj.alpha = 1;
+> obj
 { zulu: 1, yankee: 1, xray: 1, bravo: 1, alpha: 1 }
 ```
 
@@ -28,6 +29,7 @@ But there are special cases when the key is a string that is a number. Notice th
 
 ```js
 > obj['5'] = 1;
+> obj
 { '5': 1, zulu: 1, yankee: 1, xray: 1, bravo: 1, alpha: 1 }
 ```
 
@@ -35,6 +37,7 @@ This is only true for numbers-as-strings. Strings that begin with numbers aren't
 
 ```js
 > obj['5X'] = 1;
+> obj
 { '5': 1, zulu: 1, yankee: 1, xray: 1, bravo: 1, alpha: 1, '5X': 1 }
 ```
 
@@ -48,6 +51,7 @@ The number-like keys are going to be sorted numerically (not lexically) before t
 > obj['22'] = 1;
 > obj['5'] = 1;
 > obj['2'] = 1;
+> obj
 { '2': 1, '5': 1, '22': 1, y: 1, x: 1 }
 ```
 
