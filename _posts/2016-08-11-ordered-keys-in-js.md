@@ -24,7 +24,8 @@ You can add more keys to an object, and it'll always end up in the end.
 { zulu: 1, yankee: 1, xray: 1, bravo: 1, alpha: 1 }
 ```
 
-### Not really
+## Not really
+
 But there are special cases when the key is a string that is a number. Notice this puts the new key at the beginning:
 
 ```js
@@ -41,7 +42,8 @@ This is only true for numbers-as-strings. Strings that begin with numbers aren't
 { '5': 1, zulu: 1, yankee: 1, xray: 1, bravo: 1, alpha: 1, '5X': 1 }
 ```
 
-### Sorting behavior
+## Sorting behavior
+
 The number-like keys are going to be sorted numerically (not lexically) before the other keys.
 
 ```js
