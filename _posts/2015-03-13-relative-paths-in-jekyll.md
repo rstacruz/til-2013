@@ -59,7 +59,7 @@ This snippet below automatically determines the relative base and stores it in t
 <!-- _includes/base.html -->
 {% assign base = '' %}
 {% assign depth = page.url | split: '/' | size | minus: 1 %}
-{% if    depth == 1 %}{% assign base = '.' %}
+{% if    depth <= 1 %}{% assign base = '.' %}
 {% elsif depth == 2 %}{% assign base = '..' %}
 {% elsif depth == 3 %}{% assign base = '../..' %}
 {% elsif depth == 4 %}{% assign base = '../../..' %}{% endif %}

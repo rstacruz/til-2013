@@ -18,3 +18,5 @@ this.Promise||a('https://www.promisejs.org/polyfills/promise-6.1.0.js');
 {:.light}
 
 It should be easy enough to add more polyfills as you need them. You can also include some [legacy IE polyfills](ie-polyfills.html) to complete the experience.
+
+Alternatively, you can use the [polyfill.io](https://polyfill.io/) service which takes care of this for you and more.
