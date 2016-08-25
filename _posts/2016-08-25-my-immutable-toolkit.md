@@ -81,14 +81,14 @@ state = set(state, `albums.${id}`, album)
 get(state, `albums.${id}`)
 ```
 
-It comes with `101/del` as well as an immutable analogue for `delete`.
+It comes with `101/omit` as well as an immutable analogue for `delete`.
 
 ```js
 // Plain mutable JS
 delete state.albums[id]
 
 // Using 101
-import del from '101/del'
+import del from '101/omit'
 del(state, `albums.${id}`)
 ```
 
@@ -109,7 +109,7 @@ map(state.albums, (val, key) => { /*...*/ })
 // Setting and getting
 import set from '101/put'
 import get from '101/pluck'
-import del from '101/del'
+import del from '101/omit'
 
 state = set(state, `albums.${id}`, album)
 state = del(state, `albums.${id}`)
