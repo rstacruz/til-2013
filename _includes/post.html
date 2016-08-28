@@ -3,12 +3,12 @@
     <div class="post-headline">
       <abbr class='post-icon -icon-{{ include.post.tags | first | slugify }} hint--right' data-hint='{{ include.post.tags | first }}'><span data-label='{{ include.post.tags | first }}'></span></abbr>
       <h1>
-        <a href=".{{ include.post.url }}" rel="bookmark" title="{{ include.post.title }}">
+        <a href=".{{ include.post.url | replace: ".html", "" }}" rel="bookmark" title="{{ include.post.title }}">
           {{ include.post.title }}
         </a>
       </h1>
       <h5 class='meta'>
-        <a href=".{{ include.post.url }}" rel="bookmark" title="{{ include.post.title }}">
+        <a href=".{{ include.post.url | replace: ".html", "" }}" rel="bookmark" title="{{ include.post.title }}">
           {% for author in site.authors | where: "name", include.page.author %}
             <span class='author' itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">{{ author.name }}</span>
           {% endfor %}

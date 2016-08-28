@@ -27,8 +27,8 @@
 
 {%comment%}<!-- canonical URL -->{%endcomment%}
 {% if page.url != '/index.html' %}
-<link rel="canonical" href="{{ site.url }}{{ page.url }}">
-<meta name="og:url" content="{{ site.url }}{{ page.url }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url | replace: ".html", "" }}">
+<meta name="og:url" content="{{ site.url }}{{ page.url | replaec: ".html", "" }}">
 <link rel="prefetch" href="{{ site.url }}">
 <link rel="prerender" href="{{ site.url }}">
 {% endif %}

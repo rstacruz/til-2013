@@ -1,4 +1,4 @@
-<a class='next-article {{ include.class }}' href="{{ base }}{{ include.page.url }}" data-id="{{ include.page.id }}">
+<a class='next-article {{ include.class }}' href="{{ base }}{{ include.page.url | replace: ".html", "" }}" data-id="{{ include.page.id }}">
   <span class='container'>
     <span class='heading'>Next article:</span>
     <span class='h3 unorphan'><span>{{ include.page.title }}</span></span>
