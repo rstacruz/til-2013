@@ -19,3 +19,9 @@ To complete this, add this to your `~/.config/nvim/init.vim`:
 let g:python2_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 ```
+
+And of course, you have to have Neovim installed for this. The repo [homebrew-neovim](https://github.com/neovim/homebrew-neovim) has all the info on how to do this.
+
+```sh
+brew install neovim/neovim/neovim
+```
