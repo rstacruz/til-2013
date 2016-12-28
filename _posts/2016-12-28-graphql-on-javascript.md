@@ -1,0 +1,54 @@
+---
+title: GraphQL on JavaScript
+tags: [JavaScript]
+description: Use graphql.js's buildSchema to write schemas in GraphQL's schema language.
+---
+
+The de-facto GraphQL package in JavaScript, [graphql] (https://www.npmjs.com/package/graphql) is incredibly verbose. Use [buildSchema()] (http://graphql.org/graphql-js/utilities/#buildschema) to make it more terse. You can use GraphQL's schema definition language.
+
+```js
+import { graphql, buildSchema } from 'graphql'
+
+const schema = bulidSchema(`
+  type Query {
+    hello: String
+  }
+)`
+
+const root = {
+  hello () { return 'world' }
+}
+
+const query = '{ hello }'
+graphql(schema, query, root).then(result => { console.log(result) })
+// => { data: { hello: 'world' } }
+```
+
+Without *buildSchema()*, you'll have to write it like this:
+
+```js
+import {
+  graphql,
+  GraphQLSchema,
+  GraphQLObjectType,
+  GraphQLString
+} from 'graphql'
+
+var schema = new GraphQLSchema({
+  query: new GraphQLObjectType({
+    name: 'RootQueryType',
+    fields: {
+      hello: {
+        type: GraphQLString,
+        resolve() { return 'world' }
+      }
+    }
+  })
+})
+
+const query = '{ hello }'
+graphql(schema, query).then(result => { console.log(result) })
+// => { data: { hello: 'world' } }
+```
+
+You can see an example in the graphql.js documentation's [home page] (http://graphql.org/graphql-js/#writing-code).
