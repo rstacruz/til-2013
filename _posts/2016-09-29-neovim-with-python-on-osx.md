@@ -25,3 +25,7 @@ And of course, you have to have Neovim installed for this. The repo [homebrew-ne
 ```sh
 brew install neovim/neovim/neovim
 ```
+
+## Troubleshooting
+
+You can use the `:HealthCheck` command to see issues with your Python providers.
