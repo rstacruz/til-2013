@@ -4,7 +4,10 @@ tags: [JavaScript]
 description: Use graphql.js's buildSchema to write schemas in GraphQL's schema language.
 ---
 
-The de-facto GraphQL package in JavaScript, [graphql] (https://www.npmjs.com/package/graphql), is a bit verbose. Use [buildSchema()] (http://graphql.org/graphql-js/utilities/#buildschema) to make your life easier. You can use GraphQL's schema definition language to write your schemas.
+The de-facto GraphQL package in JavaScript, [graphql.js], is a bit verbose. Use [buildSchema()] to make your life easier. You can use GraphQL's schema definition language to write your schemas.
+
+[graphql.js]: https://www.npmjs.com/package/graphql
+[buildSchema()]: http://graphql.org/graphql-js/utilities/#buildschema
 
 ```js
 import { graphql, buildSchema } from 'graphql'
@@ -51,4 +54,4 @@ graphql(schema, '{ hello }')
 // => { data: { hello: 'world' } }
 ```
 
-You can see an example in the graphql.js documentation's [home page] (http://graphql.org/graphql-js/#writing-code).
+You can see an example in the graphql.js documentation's [home page](http://graphql.org/graphql-js/#writing-code).
