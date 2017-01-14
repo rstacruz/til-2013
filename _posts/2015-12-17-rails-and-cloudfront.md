@@ -64,7 +64,7 @@ This will make assets accessible from any website. You want to enable this becau
 
 ```rb
 # config/initializers/cors.rb
-Rails.application.config.middleware.insert_before 0, 'Rack::Cors' do
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     origins '*'
 
@@ -73,6 +73,9 @@ Rails.application.config.middleware.insert_before 0, 'Rack::Cors' do
       methods: [:get]
   end
 end
+
+# In older versions of Rails, you'll need to use
+# 'Rack::Cors' (as a string with quotes)
 ```
 
 ## Deny everything but /assets
@@ -83,28 +86,36 @@ Set up your app to disallow Cloudfront from fetching anything but `/assets`. Thi
 If you miss this step, you'll be able to access the rest of your site in your CloudFront URL. While those aren't public, you'd best have them secured as it can open up security flaws and possibly lead to SEO penalties.
 
 ```rb
-# config/routes.rb
-Rails.application.routes.draw do
-  match '*path', via: :all, to: 'errors#not_found',
-    constraints: CloudfrontConstraint.new
+# app/services/cloudfront_denier.rb
 
-  ...
-```
+# Middleware to deny CloudFront requests to non-assets
+# http://ricostacruz.com/til/rails-and-cloudfront
+class CloudfrontDenier
+  def initialize(app, options = {})
+    @app = app
+    @target = options[:target] || '/'
+  end
 
-```rb
-# app/services/cloudfront_constraint.rb
-class CloudfrontConstraint
-  def matches?(request)
-    request.env['HTTP_USER_AGENT'] == 'Amazon CloudFront'
+  def call(env)
+    if cloudfront?(env) && !asset?(env)
+      [302, { 'Location' => @target }, []]
+    else
+      @app.call(env)
+    end
+  end
+
+  def asset?(env)
+    env['PATH_INFO'] =~ %r{^/assets}
+  end
+
+  def cloudfront?(env)
+    env['HTTP_USER_AGENT'] == 'Amazon CloudFront'
   end
 end
 ```
 
 ```rb
-# app/controllers/errors_controller.rb
-class ErrorsController
-  def not_found
-    raise ActiveRecord::RecordNotFound
-  end
-end
+# config/initializers/cloudfront.rb
+Rails.application.config.middleware.use CloudfrontDenier,
+  target: 'https://www.yoursite.com/'
 ```

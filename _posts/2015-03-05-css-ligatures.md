@@ -38,3 +38,11 @@ First letters can look good with swashes (eg, an `R` with an extra long stem). J
   font-feature-settings: "kern", "swsh";
 }
 ```
+
+## Disabling
+
+You can turn off ligatures using:
+
+```css
+font-feature-settings: "liga" 0;
+```
