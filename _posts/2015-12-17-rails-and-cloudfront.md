@@ -40,6 +40,15 @@ If you use a reverse proxy like Nginx or Haproxy, skip this section and configur
 
 ```rb
 # config/environments/production.rb
+# Rails 5+
+config.public_file_server.enabled = true
+config.public_file_server.headers = {
+  'Cache-Control' => 'public, max-age=31536000'
+}
+```
+
+```rb
+# Rails 4.x and below
 config.serve_static_assets = true
 config.static_cache_control = 'public, max-age=31536000'
 ```
