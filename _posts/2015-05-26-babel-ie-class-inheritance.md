@@ -19,7 +19,7 @@ Using *super* is also not supported on IE8 and below, as it compiles down to usi
 
 To get around these caveats, use the [protoToAssign](http://babeljs.io/docs/advanced/transformers/spec/proto-to-assign/) transformer to make inheritance work, along with loose mode on classes to enable support for `super`.
 
-```sh
+```bash
 babel --optional spec.protoToAssign --loose es6.classes script.js
 ```
 {:.terminal}

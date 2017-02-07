@@ -16,7 +16,7 @@ b8ac838cad3266f6a7e414181875831fd9b86ed5
 ### Set up git tags
 This command will create a tag `_base` that will point to where they both diverged.
 
-```sh
+```bash
 git tag _base `git merge-base develop master`
 ```
 {:.terminal.large}
@@ -24,7 +24,7 @@ git tag _base `git merge-base develop master`
 ### Inspecting changes
 You can then use `git diff`, `git log`, or [tig] to inspect changes on either side:
 
-```sh
+```bash
 # Inspect changes in Gemfile on each side
 tig _base...develop -- Gemfile
 tig _base...master -- Gemfile
@@ -44,7 +44,7 @@ $ git merge-base develop master --independent
 
 If it only prints 1, it means only one side has changes.
 
-```sh
+```bash
 $ git merge-base develop master --independent
 8501118e0d958115caff692abda0f29ad530db4f
 ```

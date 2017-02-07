@@ -6,7 +6,7 @@ description: Ever feel guilty that your Jekyll sites don't have tests? Here's a 
 
 You can make a test script use `grep` and `test` to check for generated output. Since grep will die with an error code if it doesn't match anything, the test will be considered a failure.
 
-```sh
+```bash
 #!/usr/bin/env sh
 set -o errexit # die on errors
 
@@ -28,7 +28,7 @@ script: ./test/test.sh
 ### Makefiles
 Another good way is to use a `Makefile` so you can simply use `make test` to invoke tests.
 
-```sh
+```bash
 test: _site
     grep display _site/style.css >/dev/null
     grep function _site/script.js >/dev/null

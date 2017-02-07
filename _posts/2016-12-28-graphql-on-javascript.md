@@ -12,11 +12,11 @@ The de-facto GraphQL package in JavaScript, [graphql.js], is a bit verbose. Use 
 ```js
 import { graphql, buildSchema } from 'graphql'
 
-const schema = bulidSchema(`
+const schema = buildSchema(`
   type Query {
     hello: String
   }
-)`
+`)
 
 const root = {
   hello () { return 'world' }

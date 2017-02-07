@@ -29,7 +29,7 @@ it to your *test/mocha.opts* file.
 
 It's available via npm, and works with Mocha 1.x in Node.js and in the browser. The source is available in GitHub: [rstacruz/mocha-clean][src].
 
-```sh
+```bash
 npm install --save-dev mocha-clean
 ```
 {:.terminal}

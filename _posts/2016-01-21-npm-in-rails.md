@@ -20,7 +20,7 @@ Don't want to switch away from the asset pipeline? That's fine, read on for an a
 ### Add `node_modules` to your gitignore
 Because you don't want to commit those, just like you don't commit your gems.
 
-```sh
+```bash
 echo '/node_modules' >> .gitignore
 ```
 
@@ -50,7 +50,7 @@ system 'npm install' if Rails.env.development? || Rails.env.test?
 ### Heroku: add Node.js support
 If you're deploying to Heroku, the default Ruby buildpack doesn't include Node, which you need to use npm. Add both the Node.js and Ruby buildpacks:
 
-```sh
+```bash
 heroku bulidpacks:add 'https://github.com/heroku/heroku-buildpack-nodejs.git'
 heroku bulidpacks:add 'https://github.com/heroku/heroku-buildpack-ruby.git'
 ```
@@ -63,7 +63,7 @@ You can only use node modules that come with a pre-built version in it. [moderni
 
 ### Use `npm install`
 
-```sh
+```bash
 npm install --save --save-exact modernizr
 ```
 

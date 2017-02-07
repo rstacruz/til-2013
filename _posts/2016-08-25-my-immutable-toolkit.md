@@ -10,7 +10,7 @@ Most people reach for [lodash] for general-purpose JavaScript work. With the rec
 
 I love both lodash and Ramda, but they're a bit too bloated to use for web apps. A simple [lodash.map](https://lodash.com/docs#map) weighs in at a whopping 24 kilobytes:
 
-```sh
+```bash
 $ browserify -r lodash/map | uglifyjs -cm | wc -c
 24895
 ```
@@ -19,7 +19,7 @@ $ browserify -r lodash/map | uglifyjs -cm | wc -c
 
 Ramda's [R.map](http://ramdajs.com/0.21.0/docs/#map) is slimmer, but still hefty at 7kb:
 
-```sh
+```bash
 $ browserify -r ramda/src/pluck | uglifyjs -cm | wc -c
 7750
 ```

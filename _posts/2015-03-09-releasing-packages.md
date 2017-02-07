@@ -29,7 +29,7 @@ There are many change log tools available, but I've found that the sanest soluti
 
 Git Extras comes with the `git release` command, which automates creating a release commit, tags it with the right version, and pushes it.
 
-```sh
+```bash
 git release "v1.0.0"
 ```
 {:.terminal.large.cursor}
@@ -40,7 +40,7 @@ git release "v1.0.0"
 
 Here's how it would work for a typical [npm](http://npmjs.com) package. These tools are language-agnostic, though—this process will also work for non-JavaScript packages.
 
-```sh
+```bash
 vim HISTORY.md
 bump *.json &&
 npm test &&            # Run tests

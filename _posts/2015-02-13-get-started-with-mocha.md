@@ -12,13 +12,13 @@ Testing Node.js packages is easy. Here's the condensed 1-minute guide to setting
 ### Start with a package
 Make a `package.json` file if you don't have one yet, then install your weapons of choice.
 
-```sh
+```bash
 npm init
 # just keep pressing enter.
 # this will create the file `package.json`
 ```
 
-```sh
+```bash
 npm install --save-dev mocha chai
 ```
 

@@ -4,7 +4,7 @@ description: Here's a tip to get the most out of your Ruby development experienc
 tags: [Ruby]
 ---
 
-```sh
+```bash
 bundle install -j3 --path=vendor/bundle
 ```
 {:.terminal.large}

@@ -4,7 +4,7 @@ tags: [CSS]
 description: Need to lighten/darken colors easily? Here's how.
 ---
 
-```sh
+```bash
 $ npm i -g stylus
 $ stylus -i
 ```
@@ -24,7 +24,7 @@ $ stylus -i
 ### One-liner version
 Not quite as elegant, but it can be useful.
 
-```sh
+```bash
 echo "*{a: #ff0 - 10deg}" | stylus -p
 * { a: #ffd500; }
 ```

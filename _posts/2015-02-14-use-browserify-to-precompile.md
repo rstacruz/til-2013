@@ -21,7 +21,7 @@ With this technique, there's no need to maintain a full new directory of compile
 
 ### Install the requisite packages
 
-```sh
+```bash
 npm install --save-dev browserify babelify babel-preset-es2015
 ```
 
