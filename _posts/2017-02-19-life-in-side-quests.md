@@ -2,7 +2,7 @@
 title: Your life is a series of side quests
 tags: [Productivity]
 image: images/side-quest-example.jpg
-description: Video games organize tasks in "quests" or "missions." There's no reason this can't work in real life, too.
+description: Video games organize tasks in quests. There's no reason this can't work in real life, too.
 ---
 
 ![Image]({{ page.image }}){:style='margin-bottom:-10px'}
