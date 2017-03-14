@@ -31,6 +31,7 @@ Fortunately, Redux has built-in provisions for managing side effects: [Middlewar
 Redux middleware is simply a decorator for `dispatch()`. Here's an example where we extend `dispatch()` to perform certain side effects (an AJAX call, in this case) qwhen certain actions come in.
 
 ```js
+// Redux middleware
 function ProfileLoader () {
   return store => dispatch => action {
     dispatch(action) // First pass them through to the reducers.
@@ -47,6 +48,7 @@ function ProfileLoader () {
 ```
 
 ```js
+// Use the middleware in your store
 store = createStore(reducers, {}, applyMiddleware(
   ProfileLoader()
 )
@@ -57,6 +59,7 @@ store = createStore(reducers, {}, applyMiddleware(
 Perhaps the most well-known solution to this is [redux-thunk](https://www.npmjs.com/package/redux-thunk), which allows you to dispatch functions ("thunks").
 
 ```js
+// Using a function as an action via redux-thunk
 store.dispatch((dispatch) => {
   fetch('/my_profile')
     .then(res => res.json())
