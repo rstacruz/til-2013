@@ -68,7 +68,7 @@ store.dispatch((dispatch) => {
 })
 ```
 
-I personally don't like this approach because:
+I personally advise against this approach for a number of reasons:
 
 - It moves logic to your action creators, which were supposed to be very simple pieces of code.
 - It makes actions complicated, when they can just be simple JSON instructions (eg, `{ type: 'profile:load' }`).
