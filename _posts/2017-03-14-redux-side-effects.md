@@ -15,28 +15,25 @@ function reducer (state, action) {
       fetch('/my_profile')
         .then(res => res.json())
         .then(res => {
-          // You CANNOT modify state here in an async callback.
-          // In fact, you can't even dispatch() here!
-          // This won't work and is a bad idea.
           dispatch({ type: 'profile:set', payload: res.body })
-
           // ✗ Error: dispatch is not defined
         })
 
         ...
 ```
 
+You can't modify state here in an async callback. In fact, you can't even `dispatch()` in a reducer! This won't work and is a bad idea; you break the purity of the store reducer.
+
 ## Middleware for side effects
 
 Fortunately, Redux has built-in provisions for managing side effects: [Middleware](http://redux.js.org/docs/advanced/Middleware.html)! You can write your own middleware with business logic. You don't need to use 3rd-party packages other than Redux itself.
 
+Redux middleware is simply a decorator for `dispatch()`. Here's an example where we extend `dispatch()` to perform certain side effects (an AJAX call, in this case) qwhen certain actions come in.
+
 ```js
 function ProfileLoader () {
-  // Middleware is simply a decorator for `dispatch()`.
-  // Here we're extending dispatch() functionality.
   return store => dispatch => action {
-    // First pass them through to the reducers.
-    dispatch(action)
+    dispatch(action) // First pass them through to the reducers.
 
     switch (action.type) {
       case 'profile:load!':
