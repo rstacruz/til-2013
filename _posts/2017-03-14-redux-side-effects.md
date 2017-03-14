@@ -7,7 +7,7 @@ description: Learn to manage impure side effects in a Redux store with middlewar
 [Redux] is the preferred state management pattern for React apps today. Being a very "functional" library, it doesn't like side effects much. This means doing asynchronous actions in a Redux reducer is not just a bad idea, it simply won't work.
 
 ```js
-/* ✗ BAD: This won't work */
+/* ✗ Warning: This won't work! */
 
 function reducer (state, action) {
   switch (action.type) {
@@ -35,11 +35,11 @@ function ProfileLoader () {
   // Middleware is simply a decorator for `dispatch()`.
   // Here we're extending dispatch() functionality.
   return store => dispatch => action {
-    // First pass them through
+    // First pass them through to the reducers.
     dispatch(action)
 
     switch (action.type) {
-      case 'profile:load':
+      case 'profile:load!':
         fetch('/my_profile')
           .then(res => res.json())
           .then(res => dispatch({ type: 'profile:set', payload: res.body }))
@@ -47,7 +47,9 @@ function ProfileLoader () {
     }
   }
 }
+```
 
+```js
 store = createStore(reducers, {}, applyMiddleware(
   ProfileLoader()
 )
