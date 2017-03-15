@@ -28,7 +28,7 @@ You can't modify state here in an async callback. In fact, you can't even `dispa
 
 Fortunately, Redux has built-in provisions for managing side effects: [Middleware](http://redux.js.org/docs/advanced/Middleware.html)! You can write your own middleware with business logic. You don't need to use 3rd-party packages other than Redux itself.
 
-Redux middleware is simply a decorator for `dispatch()`. Here's an example where we extend `dispatch()` to perform certain side effects (an AJAX call, in this case) qwhen certain actions come in.
+Redux middleware is simply a decorator for `dispatch()`. Here's an example where we extend `dispatch()` to perform certain side effects (an AJAX call, in this case) when certain actions come in.
 
 ```js
 // Redux middleware
