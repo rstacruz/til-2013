@@ -25,7 +25,8 @@ collections:
 
 # Default variables
 defaults:
-  - scope:
+  -
+    scope:
       path: ""
     values:
       layout: "article"
