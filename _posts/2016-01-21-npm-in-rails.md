@@ -55,7 +55,7 @@ heroku bulidpacks:add 'https://github.com/heroku/heroku-buildpack-nodejs.git'
 heroku bulidpacks:add 'https://github.com/heroku/heroku-buildpack-ruby.git'
 ```
 
-## Adding JavaScript packgaes
+## Adding JavaScript packages
 
 You can only use node modules that come with a pre-built version in it. [modernizr] won't work. You can try [browserify-rails][].
 
