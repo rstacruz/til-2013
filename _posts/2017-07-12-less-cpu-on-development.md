@@ -8,8 +8,7 @@ Is Rails eating your CPU in development? Try lowering its priority using [renice
 
 ```
 #!/usr/bin/env sh
-pids=$(ps ax | grep -E 'ruby|node|watchman|postgres' | grep -v grep | awk '{print $1}' | tr '\n' ' ')
-sudo renice +15 -p $pids
+sudo renice +15 -p $(ps ax | grep -E 'ruby|node|watchman|postgres' | grep -v grep | awk '{print $1}' | tr '\n' ' ')
 ```
 
 Save this as `renice-dev` into one of your `bin` paths, and give it a `chmod +x renice-dev`. You can type `renice-dev` after you start your development processes to "renice" them.
