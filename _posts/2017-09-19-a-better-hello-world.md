@@ -1,6 +1,6 @@
 ---
 title: A better Hello World
-description: "Hello world" programs aren't as useful today as they were before. Here's what I propose...
+description: "Hello world programs aren't as useful today as they were before. Here's what I propose..."
 tags: [Development]
 ---
 
