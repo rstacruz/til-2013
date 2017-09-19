@@ -1,6 +1,6 @@
 ---
 title: A better Hello World
-description: The "Hello world" program is usually the first introduction to any programming language, but isn't as useful today. Here's a modern alternative.
+description: "Hello world" programs aren't as useful today as they were before. Here's what I propose...
 tags: [Development]
 ---
 
