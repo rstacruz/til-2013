@@ -51,8 +51,8 @@ system 'npm install' if Rails.env.development? || Rails.env.test?
 If you're deploying to Heroku, the default Ruby buildpack doesn't include Node, which you need to use npm. Add both the Node.js and Ruby buildpacks:
 
 ```bash
-heroku bulidpacks:add 'https://github.com/heroku/heroku-buildpack-nodejs.git'
-heroku bulidpacks:add 'https://github.com/heroku/heroku-buildpack-ruby.git'
+heroku buildpacks:add 'https://github.com/heroku/heroku-buildpack-nodejs.git'
+heroku buildpacks:add 'https://github.com/heroku/heroku-buildpack-ruby.git'
 ```
 
 ## Adding JavaScript packages
