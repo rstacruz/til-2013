@@ -1,5 +1,5 @@
 ---
-title: GitHub two-factor authenication guide
+title: GitHub two-factor authentication guide
 description: Secure your GitHub account with these easy steps.
 tags: [Development, GitHub]
 ---
