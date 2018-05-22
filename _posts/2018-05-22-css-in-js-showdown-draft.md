@@ -103,20 +103,20 @@ const Profile = () => (
   </Root>
 )
 
-const Root = styled('div')`
+const Root = styled.section`
   display: flex;
 `
-const Image = styled('div')`
+const Image = styled.img`
   width: 32px;
   height: 32px;
 `
-const Info = styled('div')`
+const Info = styled.div`
   display: flex;
 `
-const Name = styled('div')`
+const Name = styled.span`
   font-weight: bold;
 `
-const Timestamp = styled('div')`
+const Timestamp = styled.div`
   font-size: 0.8em;
 `
 ```
@@ -127,11 +127,11 @@ styled-jsx is (...):
 
 ```js
 const Profile = () => (
-  <div className="Profile">
+  <section className="Profile">
     <div className="image" />
     <div className="info">
-      <div className="name" />
-      <div className="timestamp" />
+      <span className="name" />
+      <span className="timestamp" />
     </div>
 
     <style jsx>{`
@@ -152,7 +152,7 @@ const Profile = () => (
         font-size: 0.8em;
       }
     `}</style>
-  </div>
+  </section>
 )
 ```
 
@@ -169,7 +169,7 @@ Here's how they compare:
 styled-jsx supports PostCSS:
 
 ```js
-const Profile = (children) => (
+const Profile = children => (
   <div className="Profile">
     {children}
 
@@ -181,6 +181,7 @@ const Profile = (children) => (
       }
     `}</style>
   </div>
+)
 ```
 
 This allows you stuff:
