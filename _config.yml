@@ -38,4 +38,5 @@ defaults:
     values:
       layout: "article"
       tags: []
+      secret: false
       author: Rico Sta. Cruz

@@ -4,22 +4,23 @@ type: blog
 {% include head.html %}
 {% include body.html %}
 {% include site-header.html %}
+{% assign posts = site.posts | where: "secret", false %}
 
-{% if site.posts[0] %}
-  {% assign post = site.posts[0] %}
+{% if posts[0] %}
+  {% assign post = posts[0] %}
   {% include post.html post=post content=post.content %}
 {% endif %}
 
-{% if site.posts[1] %}
-  {% assign next = site.posts[1] %}
+{% if posts[1] %}
+  {% assign next = posts[1] %}
   {% include next-article.html page=next class="-lofi" %}
 {% endif %}
 
-{% if site.posts %}
+{% if posts %}
 <div class='post-index' id='toc'>
   <div class='container'>
     <h3 class='bottom-space-1'>Previously on TIL:</h3>
-    {% for post in site.posts %}
+    {% for post in posts %}
     <a class='post-index-item' href="{{ base }}{{ post.url | replace: ".html", "" }}">
         <span class='date'>{{ post.date | date_to_string }}</span>
         <span class='article'>{{ post.title }}</span>

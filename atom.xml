@@ -16,7 +16,8 @@ layout: null
   {% endif %}
   <generator uri="http://jekyllrb.com/">Jekyll</generator>
 
-  {% for post in site.posts limit: 20 %}
+  {% assign posts = site.posts | where: "secret", false %}
+  {% for post in posts limit: 20 %}
   <entry>
     <title type="html"><![CDATA[{% if site.titlecase %}{{ post.title | titlecase | cdata_escape }}{% else %}{{ post.title | cdata_escape }}{% endif %}]]></title>
     {% if post.authors.size > 0 %}
