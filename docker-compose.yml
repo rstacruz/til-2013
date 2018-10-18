@@ -1,0 +1,13 @@
+# This is a docker manifest for development, NOT production.
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    volumes:
+      - .:/app
+    ports:
+      - '25600:25600'
+    command: ['bundle', 'exec', 'jekyll', 'serve', '--safe', '--watch', '--port', '25600']
