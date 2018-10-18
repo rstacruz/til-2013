@@ -9,6 +9,7 @@ permalink: /:title.html
 exclude:
   - "Makefile"
   - "README.md"
+  - "CONTRIBUTING.md"
   - "CNAME"
   - "node_modules"
   - "vendor"
