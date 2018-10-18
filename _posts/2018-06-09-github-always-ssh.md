@@ -2,6 +2,7 @@
 title: Force git to use SSH on GitHub
 description: |
   Make Git always use SSH: `git config --global url."git@github.com:".insteadOf "https://github.com/"`
+tags: [Development]
 ---
 
 ### Always SSH (recommended)

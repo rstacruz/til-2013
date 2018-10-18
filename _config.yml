@@ -9,11 +9,14 @@ permalink: /:title.html
 exclude:
   - "Makefile"
   - "README.md"
+  - "CONTRIBUTING.md"
   - "CNAME"
   - "node_modules"
   - "vendor"
   - "Gemfile"
   - "Gemfile.lock"
+  - "docker-compose.yml"
+  - "Dockerfile-dev"
 sass:
   style: compressed
 
