@@ -8,6 +8,10 @@ services:
       dockerfile: Dockerfile-dev
     volumes:
       - .:/app
+      - rubygems:/usr/local/bundle
     ports:
       - '25600:25600'
     command: ['bundle', 'exec', 'jekyll', 'serve', '--safe', '--watch', '--port', '25600']
+
+volumes:
+  rubygems:
