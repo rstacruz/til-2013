@@ -1,6 +1,6 @@
 # CSS-in-JavaScript
 
-[styled-jsx] has been my preferred way of integrating CSS in JavaScript. It lets me write CSS in a more declarative fashion, just like CSS should be. It leads to code that's easier to understand.
+[styled-jsx] has been my preferred way of integrating CSS in JavaScript. It lets me write CSS in a more declarative fashion. It leads to code that's easier to understand.
 
 Before I tell you why I prefer _styled-jsx_, let's learn about some programming concepts&mdash;It'll all make sense later, trust me!
 
@@ -131,7 +131,7 @@ const Button = styled.a`
 
 ## Declarative CSS with styled-jsx
 
-[styled-jsx] has been my preferred way of integrating CSS in JavaScript. It lets me write CSS in a more declarative fashion, just like CSS should be. It also minimizes the interweaving of CSS and JavaScript code.
+[styled-jsx] lets me write CSS in a declarative fashion. It also minimizes the interweaving of CSS and JavaScript code. This, in my opinion, makes styled-jsx code easier-to-understand, even at the modest cost of a little extra verbosity.
 
 How would you style a danger button differently in _styled-jsx_? Just use CSS classes as you normally would. Simple!
 
