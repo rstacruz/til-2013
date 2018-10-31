@@ -35,7 +35,7 @@ Ruby's gem specification style is _imperative_ because we're issuing instruction
 > - _Set the summary to 'A sample package'._
 > - _Finish building._
 
-On the other hand, JavaScript's _declarative_ style isn't concerned with any instructions or control flow. It's not a code that talks to your system, it's really just a table of keys and values.
+On the other hand, JavaScript's _declarative_ style isn't concerned with any instructions or control flow. It's not a piece of code that talks to your system, it's really just a table of keys and values.
 
 ## Imperative is powerful
 
